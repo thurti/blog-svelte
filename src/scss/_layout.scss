@@ -22,6 +22,8 @@ header{
 }
 
 main{
+  width: 100vw;
+  overflow-x: hidden;
   max-width: em(900px);
   min-height: calc(100vh - 20rem);
   margin: lines(1) auto lines(4) auto;
