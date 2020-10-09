@@ -43,7 +43,7 @@
  <article class="post--single">
 
   <hgroup class="post__hgroup">
-    <PostDate {created_at} format="m 6, y" />
+    <PostDate {created_at} format="m d, y" />
     <PostTitle title={title.replace('<br>', ' - ')} />
   </hgroup>
 
