@@ -19,13 +19,17 @@
     in:fade={{duration: 250}}
     class="post__content"
   >
-    <h1 class="center">Hi, my name is Thomas.</h1>
-    <p>
-      I'm a frontend web developer with a strong focus on JavaScript, HTML & CSS. 
+    <h1 class="text-center">Hi, my name is Thomas.</h1>
+
+    <p class="text-center" style="max-width:20em">
+      I'm a frontend web developer with a strong 
+      focus on JavaScript, HTML & CSS. <br><br>
+
+      I'm not that active on social media, but feel free to 
+      contact me on Twitter <a href="https://twitter.com/_thurti">@_thurti</a> .
+      <br><br>
+      <a href="/" on:click={() => window.history.back()}>Back</a>
     </p>
-    <p>
-      I'm not that active on social media, but feel free to contact me on Twitter <a href="https://twitter.com/_thurti">@_thurti</a> .
-    </p>
-    <p class="center"><a href="/" on:click={() => window.history.back()}>Back</a></p>
+    
   </article>
 </main>

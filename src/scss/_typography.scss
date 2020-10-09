@@ -12,6 +12,10 @@ pre[class*="language-"]{
 }
 
 .post__content{
+    p{
+        hyphens: auto;
+    }
+
     &>* + * {
         margin-top: lines(1);
     }
@@ -66,6 +70,7 @@ blockquote{
 
 a{
     text-underline-offset: .15em;
+    display: inline-block;
     &:hover{
         transition: font-weight 0.3s ease-in-out;
         font-weight: 800;
@@ -78,6 +83,11 @@ a{
 }
 .big{
     font-size: ms(2);
+}
+@media screen and (max-width: $width-tablet) {
+    blockquote{
+        padding: 1.5em;
+    }
 }
 
 @media screen and (max-width: $width-mobile) {

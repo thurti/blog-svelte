@@ -67,8 +67,11 @@
 {:catch error}
 
   <main>
-    <p class="center">{error.message} :/</p>
-    <p class="center"><a href="/">Back Home</a></p>
+    <p class="text-center">
+      {error.message} :/ 
+      <br><br>
+      <a href="/">Back Home</a>
+    </p>
   </main>
   
 {/await}

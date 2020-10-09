@@ -71,17 +71,18 @@
               {...post} 
             />
           {/each}
-        {:else}
-          <p class="center">
+        {:else if params.tag}
+          <p class="text-center">
             Sorry, no posts found for this tag.
+            <br><br>
+            <a href="{config.url}">Home</a>
           </p>
-          <p class="center"><a href="{config.url}">Home</a></p>
         {/if}
     </div>
   {/if}
 
   {#if error}
-    <p class="center">
+    <p class="text-center">
       {error.message} :/ <br>
       Please try again later...
     </p>
