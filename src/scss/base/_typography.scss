@@ -1,0 +1,157 @@
+/**
+* Basic typography settings.
+*/
+
+@import "base";
+@import "../mixins/additional";
+
+@font-face {
+    font-family: "Spartan";
+    src: url('../css/PT Root UI_VF.woff2') format('woff2');
+    font-weight: 1 999;
+    font-display: swap;
+    font-style: normal;
+}
+
+/**
+* Body
+*/
+* html {
+  font-size: 100%;
+}
+
+body {
+    font-family: $font-family;
+    font-weight: 400;
+    color: $font-color;
+    background-color: $bg-color;
+
+    font-feature-settings: "kern" on, "dlig" off, "liga" on, "frac" off, "swsh" off;
+}
+
+
+a{
+    color: $link-color;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+      background-color: $bg-color-dark;
+      color: $font-color-dark;
+    }
+    a{
+        color: $font-color-dark;
+    }
+}
+
+body{
+    margin: 0;
+}
+
+li {
+    margin: 0 0 0 lines(2);
+}
+
+/**
+* Headings
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.25;
+    font-weight: 400;
+    font-style: normal;
+    font-feature-settings: "swsh" off, "kern" on, "dlig" off, "liga" on, "frac" off;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+
+.italic,
+i,
+em {
+    font-style: italic;
+}
+
+.bold,
+b,
+strong {
+    font-weight: bold;
+}
+
+.center{
+    text-align: center;
+}
+
+.font-text{
+  font-family: $font-text;
+}
+
+.font-heading{
+  font-family: $font-heading;
+}
+
+td{
+    vertical-align: baseline;
+}
+
+hr {
+    margin: lines(1) auto;
+   height: 0px;
+   border: 0px;
+   border-bottom: 1px solid $border-color;
+}
+
+//add quotation marks
+blockquote {
+    padding:0 7.5em;
+    font-style: italic;
+
+    p:before{
+        position: relative;
+        right: .125em;
+        content: '\201C';
+    }
+
+    p:after {
+        position: relative;
+        left: .125em;
+        content: '\201D';
+    }
+}
+
+address{
+    font-style: inherit;
+}
+
+/**
+ * Colors
+ */
+.primary{
+  color: $primary-color;
+}
+
+.secondary{
+    color: $secondary-color;
+}
+
+
+::selection {
+    background-color: $font-select-background;
+    color: $font-select;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    ::selection{
+        background-color: $font-select-background-dark;
+        color: $font-select-dark;
+    }
+}

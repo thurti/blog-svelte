@@ -1,0 +1,31 @@
+<script>
+  import {fade} from 'svelte/transition';
+  import {router} from '../components/Router.svelte';
+  import Meta from '../components/Meta.svelte';
+
+  const meta = {
+    title: 'About',
+    description: "Hi, I'm Thomas - frontend web developer who ❤ JavaScript.",
+    slug: 'about',
+    image: 'marker_240.jpg',
+    imageAlt: 'Weird Square Face'
+  }
+</script>
+
+<Meta {meta} />
+
+<main>
+  <article 
+    in:fade={{duration: 250}}
+    class="post__content"
+  >
+    <h1 class="center">Hi, my name is Thomas.</h1>
+    <p>
+      I'm a frontend web developer with a strong focus on JavaScript, HTML & CSS. 
+    </p>
+    <p>
+      I'm not that active on social media, but feel free to contact me on Twitter <a href="https://twitter.com/_thurti">@_thurti</a> .
+    </p>
+    <p class="center"><a href="/" on:click={() => window.history.back()}>Back</a></p>
+  </article>
+</main>

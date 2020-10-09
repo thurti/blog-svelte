@@ -1,0 +1,296 @@
+@import 'mixins/loader';
+
+pre{ 
+  padding: lines(0.25);
+  background: #3e3f37;
+  overflow-x: auto;
+  font-size: em(16px);
+}
+
+/**
+ * POST LISTING
+ **/
+.linked-post{
+  color: inherit;
+  text-decoration: none;
+  font-weight: normal;
+
+  &:hover,
+  &:active,
+  &visited{
+    color: inherit;
+    text-decoration: none;
+    font-weight: normal;
+
+    .post__preview{
+      code{ 
+        opacity: 1;
+        filter: blur(0) hue-rotate(0);
+      }
+    }
+  }
+}
+
+.post__tags,
+.post__date,
+.meta__tags{
+  color: $font-light;
+  font-size: $font-smaller;
+  font-weight: 200;
+}
+
+.post__date,
+.post__heading{
+  font-size: $font-huge;
+}
+
+.post__heading{
+  line-height: lines(1.75);
+  margin-bottom: lines(0.25);
+}
+
+.post__date{
+  text-align: right;
+  line-height: lines(1.75);
+}
+
+.post__more{
+  display: inline-block;
+  margin-top: lines(1);
+}
+
+.post__preview{
+  code{
+    filter: blur(1px) hue-rotate(40deg);
+    
+    transition-property: filter, opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  code[class*="language-"],
+  pre[class*="language-"]{
+    font-size: em(11px);
+    width: 100% !important;
+    white-space: pre-wrap;
+    word-wrap: break-word;   
+    word-break: break-all; 
+  }
+}
+
+@media (max-width: em($width-tablet)) {
+  .post__date,
+  .post__heading{
+    font-size: $font-bigger;
+  }
+
+  .post__date{
+    line-height: lines(1);
+  }
+
+  .post__heading{
+    line-height: lines(1.5);
+  }
+}
+
+
+/**
+ * POST SINGLE
+ **/
+.post--single {
+  .post__hgroup{
+    width: max-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: lines(2);
+    text-align: center;
+  }
+  
+  .post__date{
+    font-size: $font-normal;
+  }
+
+  .post__tags{
+    font-size: $font-smaller;
+  }
+}
+
+.post__content{
+  h1,
+  h2{
+    // text-align: center;
+  }
+  
+  h1,
+  h2{
+    margin-top: lines(2);
+  }
+
+  h2,
+  h3,
+  h4,
+  p,
+  ul{
+    position: relative;
+    max-width: 700px;
+
+    margin-left: auto;
+    margin-right: auto;
+    
+    text-align: justify;
+    hyphens: auto;
+  }
+
+
+  pre{
+    margin: lines(2) 0;
+    border-radius: 2px;
+  }
+
+  p>code{
+    hyphens: none;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: em($width-tablet)) {
+  .post--single {
+    .post__date{
+      font-size: $font-normal;
+    }
+
+    .post__hgroup{
+      margin-bottom: lines(1);
+    }
+  }
+}
+
+
+/**
+ * LOGO
+ **/
+.logo-black{
+  fill: rgba(0,0,0,1);
+}
+
+.logo-white{
+  fill: rgb(255,255,255);
+}
+
+.logo-github{
+  width: 25px;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .logo-black{
+    fill: rgb(74, 74, 77);
+    fill-opacity: 0.5;
+  }
+  
+  .logo-white{
+    fill: $bg-color-dark;
+  }
+
+  .logo-github path{
+    fill: rgb(74, 74, 77);
+  }
+
+  .post__tags,
+  .post__date,
+  .meta__tags{
+    color: $font-color-dark;
+  }
+}
+
+.btn{
+  width: 100%;
+  padding: lines(0.75);
+  
+  background-color: rgb(74, 74, 77);
+  border: 3px solid $font-color;
+  
+  color: $font-color-dark;
+  text-align: center;
+  
+  font-size: $font-big;
+  font-weight: 1000;
+  text-decoration: none;
+  
+  transition: background-color 0.15s ease-in-out;
+
+  &:hover{
+    background-color: lighten(rgb(74, 74, 77), 10);
+  }
+
+  &:active{
+    background-color: darken(rgb(74, 74, 77), 10);
+  }
+}
+
+.post-nav .next-title{
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  font-size: em(14px);
+  font-weight: 400;
+
+  &:before{
+    content:"\00ab";
+  }
+
+  &:after{
+    content: "\00bb";
+  }
+}
+
+@media (max-width: em($width-mobile)) {
+  .post-nav{
+    line-height: lines(0.675);
+    font-size: 0.675em;
+  }
+
+  .btn{
+    padding: lines(0.25);
+  }
+}
+
+/**
+ * HEART
+ **/
+footer a{
+  text-decoration: none;
+}
+
+.heart{
+  color: rgb(125, 125, 125);
+  animation-name: beat;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+@keyframes beat{
+  0% {transform: scale(1)}
+  15% {transform: scale(1.03)}
+  20% {transform: scale(0.98)}
+  35% {transform: scale(1.03)}
+  40% {transform: scale(1)}
+  100% {transform: scale(1)}
+}
+
+@include loader(1rem, 0, $primary-color, x, 0.75s);
+#loader{
+  text-align: center;
+}

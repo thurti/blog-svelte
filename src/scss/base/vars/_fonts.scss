@@ -1,0 +1,35 @@
+$inDesignFactor: 1;
+
+$base-font-size  : 18px;
+$base-line-height: 24px;
+
+$font-text-name     : "Spartan";
+$font-heading-name  : "Spartan";
+
+
+$font-text   : $font-text-name, sans-serif;
+$font-heading: $font-heading-name, sans-serif;
+
+$font-family: $font-text;
+
+$line-height: $base-line-height;
+
+$font-links: $font-text;
+$font-buttons: $font-heading;
+
+
+@function font-em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+@function font-percent($px, $base: $base-font-size) {
+    @return (($px * $inDesignFactor * 100) / 16px) * 1%;
+}
+
+@function font-vw($px, $base: $base-font-size) {
+    @return (($px * $inDesignFactor * 100) / 100vw) * 1vw;
+}
+
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em / $inDesignFactor;
+}

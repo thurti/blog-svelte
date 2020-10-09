@@ -1,0 +1,24 @@
+/**
+* Textbox
+*
+* <p class="textbox">
+*     <span class="textbox__left">text aligned left</span>
+*     <span class="textbox__right">text aligned right</span>
+* </p>
+*/
+@mixin textbox($name: 'textbox') {
+
+    display: table;
+    width: 100%;
+
+    .#{$name}__left {
+        display: table-cell;
+        text-align: left;
+    }
+
+    .#{$name}__right {
+        display: table-cell;
+        text-align: right;
+    }
+
+}

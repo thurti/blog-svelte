@@ -1,0 +1,77 @@
+@import "base";
+
+/**
+* Links
+*/
+a{
+    color:inherit;
+    text-decoration: none;
+}
+p a,
+aside a{
+    position: relative;
+    margin: 0;
+
+    color:$link-color;
+    font-family: $font-links;
+    text-decoration: none;
+
+    &:hover{
+        color:$link-hover;
+        box-shadow: 0 5px 0 -4px $link-hover;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    &[href*="jpg"]:hover{
+        border-bottom: 0;
+        box-shadow: none;
+    }
+
+    &:active{
+        color: $link-active;
+
+        &:after{
+            border-color: $link-active;
+        }
+    }
+
+    &:focus{
+        outline: none;
+    }
+
+    &.no-hover:hover{
+        color: inherit;
+        border-color: transparent;
+        cursor: pointer;
+    }
+
+    &:visited {
+        color: $link-visited;
+
+        &:hover {
+            border-color: $link-visited;
+        }
+    }
+
+    &.no-hover:visited{
+        color: inherit;
+    }
+}
+
+.no-link-styles{
+    a{
+        color: $font-color;
+
+        &:hover{
+            color: $font-color;
+            border-color: transparent;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        &:visited{
+            color: $font-color;
+        }
+    }
+}

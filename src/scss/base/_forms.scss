@@ -1,0 +1,15 @@
+@import "base";
+
+input{
+    box-sizing: border-box;
+
+    &:not([type="checkbox"]){
+        -webkit-appearance: none;
+        border-radius: 0;
+        -webkit-border-radius:0px;
+    }
+
+    &:focus{
+        outline: 0;
+    }
+}

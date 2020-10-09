@@ -1,0 +1,88 @@
+/**
+* Text Modifier
+*/
+.smallcaps {
+    font-feature-settings: "kern" on, "smcp" on;
+}
+
+.center {
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.normal {
+    @include ms-respond(font-size, 0);
+}
+
+.small, small {
+    @include ms-respond(font-size, -0.9);
+}
+
+.big, big {
+    @include ms-respond(font-size, 0.2);
+}
+
+.bigger{
+    @include ms-respond(font-size, 1);
+    line-height: 1.125;
+}
+
+.large {
+    @include ms-respond(font-size, 2);
+    line-height: 1.125;
+}
+
+.huge {
+    @include ms-respond(font-size, 3);
+    line-height: 1.125;
+}
+
+.light {
+    color: $font-light;
+}
+
+.dark {
+    color: $font-dark;
+}
+
+.error {
+    color: $font-error;
+    border-color: $font-error;
+}
+
+.warning {
+    color: $font-warning;
+    border-color: $font-error;
+}
+
+.success {
+    color: $font-success;
+    border-color: $font-error;
+}
+
+/*
+ for light fonts on dark backgrounds
+ */
+.light-font-fix{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin light-font-fix{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin user-select{
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}

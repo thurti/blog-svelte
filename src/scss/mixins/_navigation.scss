@@ -1,0 +1,143 @@
+/**
+* Navigation
+*/
+
+@import "../base/base";
+@import "additional";
+
+/**
+* Base class
+*/
+%nav {
+    box-sizing: border-box;
+
+    cursor: default;
+    
+    ul {
+        margin: 0;
+        padding-left: 0;
+        list-style-type: none;
+    }
+
+    a{
+        width: 100%;
+    }
+
+    a,
+    a:visited {
+        text-decoration: none;
+    }
+}
+
+
+/**
+* Horizontal navigation
+*/
+@mixin nav-horizontal {
+    @extend %nav;
+
+    min-width:100%;
+    max-width: em($max-width);
+
+    & > ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        li {
+            margin: 0;
+        }
+    
+        a {
+            display: inline-block;
+        }
+    }
+
+    &.is-open{
+        overflow: hidden scroll;            
+        max-height: 100%;
+    }
+
+}
+
+
+/**
+* Vertical navigation
+*/
+@mixin nav-vertical {
+    @extend %nav;
+
+    & > ul {
+        padding-left: 0;
+
+        list-style-type: none;
+        text-align: left;
+        
+        li {
+            display: list-item;
+        }
+    
+        a {
+            padding: lines(0.5) 0;
+    
+            font-size: $font-normal;
+            text-align: left;
+        }
+    }
+    
+}
+
+/**
+ * .nav-dropdown[.is-open] > ul.nav-sub > (li > a)*n
+ **/
+@mixin nav-dropdown {
+    @extend %nav;
+
+    position: relative;
+    overflow-y: visible;
+    
+    .nav-sub,
+    .sub-menu{//wordpress
+        min-width: 100%;
+
+        @media screen and (min-width: em($width-tablet)){
+            position: absolute;
+            
+            transform-origin: top;
+            transform: scaleY(0);
+        }
+        
+    }
+
+    &.is-open,
+    &:hover{
+        .nav-sub,
+        .sub-menu{//wordpress
+            transform: scaleY(1);
+        }
+    }
+}
+
+/* TDB */
+@mixin nav-dropdown_transition($duration:0.3s, $easing:linear){
+    // transition: transform $duration $easing;
+    
+    // & > ul{
+    //     transition: transform $duration $easing;
+    // }
+}
+
+
+/**
+* Fixed navigation bar
+*/
+@mixin nav-fixed {
+    position: fixed;
+    top     : 0;
+    z-index : 10;
+
+    backface-visibility: hidden;
+
+    width:100%;
+    max-width: $max-width;
+}
