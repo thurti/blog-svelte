@@ -291,3 +291,15 @@ footer a{
 #loader{
   text-align: center;
 }
+
+video{
+  width: 100%;
+  object-fit: cover;
+
+  border: 1px solid transparent;
+
+ &:focus{
+    outline: none;
+    border: 1px solid lightgray;
+  }
+}
