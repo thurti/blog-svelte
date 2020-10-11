@@ -26,7 +26,7 @@
       focus on JavaScript, HTML & CSS. <br><br>
 
       I'm not that active on social media, but feel free to 
-      contact me on Twitter <a href="https://twitter.com/_thurti">@_thurti</a> .
+      contact me on Twitter <a href="https://twitter.com/_thurti">@_thurti</a> or stalk my code on [github](https://github.com/thurti).
       <br><br>
       <a href="/" on:click={() => window.history.back()}>Back</a>
     </p>
