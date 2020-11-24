@@ -13,9 +13,7 @@
         <span class="next-title">{previous.title}</span>
       </a>
     {:else}
-      <a href="/" class="btn">HOME<br>
-        <span class="next-title">Just going home.</span>
-      </a>
+      <a href="/" class="btn">HOME</a>
     {/if}
 
     {#if next}
