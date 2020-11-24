@@ -90,8 +90,10 @@
 
 </main>
 
-<footer>
-	<a href="/about" title="About">
-		<div class="heart">❤</div>
-	</a>
-</footer>
+{#if posts}
+  <footer>
+    <a href="/about" title="About">
+      <div class="heart">❤</div>
+    </a>
+  </footer>
+{/if}
