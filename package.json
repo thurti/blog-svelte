@@ -5,28 +5,29 @@
     "deploy": "rsync --progress -r public/ t3000.uberspace:~/html",
     "build": "rollup -c && npm run sass-build",
     "dev": "rollup -c -w & npm run sass",
-    "start": "sirv public --single",
+    "start": "sirv public --single & npm run server",
     "sass": "./node_modules/.bin/node-sass --watch --source-map-embed --recursive ./src/scss/style.scss ./public/build/style.css",
-    "sass-build": "./node_modules/.bin/node-sass --recursive --output-style compressed ./src/scss/style.scss ./public/build/style.css"
+    "sass-build": "./node_modules/.bin/node-sass --recursive --output-style compressed ./src/scss/style.scss ./public/build/style.css",
+    "server": "cd ../blog-server && npm run dev"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.1.0",
-    "@rollup/plugin-node-resolve": "^7.1.3",
-    "eslint": "^7.10.0",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "eslint": "^7.14.0",
     "eslint-plugin-svelte3": "^2.7.3",
     "mathsass": "^0.11.0",
     "modularscale-sass": "^3.0.10",
-    "node-sass": "^4.14.1",
-    "rollup": "^1.32.1",
-    "rollup-plugin-livereload": "^1.3.0",
-    "rollup-plugin-svelte": "^5.2.3",
-    "rollup-plugin-terser": "^5.3.1",
-    "svelte": "^3.29.0"
+    "node-sass": "^5.0.0",
+    "rollup": "^2.33.3",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "svelte": "^3.29.7"
   },
   "dependencies": {
-    "marked": "^1.2.0",
-    "navaid": "^1.1.2",
-    "prismjs": "^1.21.0",
-    "sirv-cli": "^0.4.6"
+    "marked": "^1.2.5",
+    "navaid": "^1.2.0",
+    "prismjs": "^1.22.0",
+    "sirv-cli": "^1.0.8"
   }
 }
