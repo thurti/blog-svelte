@@ -1,99 +1,53 @@
 <script context="module">
-   let current_scroll = 0;
+  let current_scroll = 0;
 </script>
+
 <script>
-  import {config} from '../config';
-  import {onMount, onDestroy, tick} from 'svelte';
-  import {fade} from 'svelte/transition';
-  import Meta from '../components/Meta.svelte';
-  import PostListing from '../components/PostListing.svelte';
-  import Loader from '../components/Loader.svelte';
+  import { config } from "../config";
+  import { onDestroy } from "svelte";
+  import Meta from "../components/Meta.svelte";
+  import PostList from "../components/PostList.svelte";
+  import Loader from "../components/Loader.svelte";
+  import ErrorMessage from "../components/ErrorMessage.svelte";
 
   export let params;
-
-  let posts;
-  let error;
-  let loader_timeout;
-  let show_loader = false;
+  export let content; //prepopulate content
 
   const meta = {
-    title: 'Welcome',
-    description: "My development journal about things I've done. Mainly focused on web stuff...",
-    slug: '',
-    image: 'marker_240.jpg',
-    imageAlt: 'Weird Square Face'
-  }
-
-  onMount(() => {
-    getPosts();
-
-    loader_timeout = window.setTimeout(() => {
-      show_loader = true;
-    }, 500);
-  });
+    title: "Welcome",
+    description:
+      "My development journal about things I've done. Mainly focused on web stuff...",
+    slug: "",
+    image: "marker_240.jpg",
+    imageAlt: "Weird Square Face",
+  };
 
   onDestroy(() => {
     current_scroll = window.scrollY;
-    window.clearTimeout(loader_timeout);
   });
 
-  async function getPosts() {
-    try {
-      const url = (params.tag) ? `${config.api}/tag/${params.tag}` : config.api;
+  async function getPosts(params, content) {
+    if (content) { //use prepopulated content
+      return content;
+    } else { //fetch from api
+      const url = params.tag ? `${config.api}/tag/${params.tag}` : config.api;
       const res = await fetch(url);
-      posts = await res.json();
 
-      if (!res.ok) {
-        error = `Error ${posts.error}`;
-      } else {
-        await tick(); //wait for post to render
-        window.scrollTo(0, current_scroll);
+      if (res.ok) {
+        return await res.json();
+      } else {
+        throw new Error(`Error ${json.error}`);
       }
-    } catch (e) { //if fetch fails, aka api server is down
-      error = e;
-      window.clearTimeout(loader_timeout);
-      show_loader = false;
     }
   }
 </script>
 
-<Meta {meta} />
+<Meta {...meta} />
 
-<main class="listing">
-  
-  {#if show_loader && !posts}
-      <Loader />
-  {:else}
-    <div in:fade={{duration: 150}}>
-        {#if posts && posts.length > 0}
-          {#each posts as post}
-            <PostListing 
-              {...post} 
-            />
-          {/each}
-        {:else if params.tag}
-          <p class="text-center">
-            Sorry, no posts found for this tag.
-            <br><br>
-            <a href="{config.url}">Home</a>
-          </p>
-        {/if}
-    </div>
-  {/if}
-
-  {#if error}
-    <p class="text-center">
-      {error.message} :/ <br>
-      Please try again later...
-    </p>
-  {/if}
-
-</main>
-
-{#if posts}
-  <footer>
-    <a href="/about" title="About">
-      <div class="heart">❤</div>
-    </a>
-  </footer>
-{/if}
+{#await getPosts(params, content)}
+  <Loader />
+{:then posts}
+  <PostList {posts} {params} {current_scroll} />
+{:catch error}
+  <ErrorMessage {error} />
+{/await}

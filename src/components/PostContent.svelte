@@ -12,12 +12,8 @@
   export let tags;
   export let github;
   export let content;
-
-  let content_parsed;
-
-  onMount(() => {
-    content_parsed = marked(content);
-  });
+  
+  const content_parsed = marked(content);
 </script>
 
 <article class="post--single">

@@ -12,7 +12,7 @@
   }
 </script>
 
-<Meta {meta} />
+<Meta {...meta} />
 
 <main>
   <article 
