@@ -9,6 +9,7 @@
   import {onMount, onDestroy} from 'svelte';
 
   export let routes = [];
+  export let prepopulate_content; //ssr
 
   let view;
   let params;
@@ -29,4 +30,5 @@
 <svelte:component 
   this={view} 
   {params}
+  content={prepopulate_content}
 />
