@@ -1,6 +1,6 @@
 {
   "name": "svelte-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "deploy": "rsync --progress -r --exclude '.DS_Store' --exclude 'static' public/ t3000.uberspace:~/html",
     "build": "rollup -c && npm run sass-build",
