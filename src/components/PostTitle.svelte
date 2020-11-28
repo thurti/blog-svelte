@@ -1,5 +1,7 @@
 <script>
-  export let title = '';
+  export let title = "";
 </script>
 
-<h1 class="post__heading">{@html title}</h1>
+<h1 class="post__heading">
+  {@html title}
+</h1>

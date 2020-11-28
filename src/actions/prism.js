@@ -44,7 +44,7 @@ export async function prism(node, params) {
 
   /**
    * Returns PrismJs language name form class name. (eg. 'language-javascript')
-   * 
+   *
    * @param {DOMElement} item
    * @returns {(string|boolean)}  Returns language name or false.
    */

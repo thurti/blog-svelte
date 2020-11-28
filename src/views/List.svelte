@@ -27,15 +27,17 @@
   });
 
   async function getPosts(params, content) {
-    if (content) { //use prepopulated content
+    if (content) {
+      //use prepopulated content
       return content;
-    } else { //fetch from api
+    } else {
+      //fetch from api
       const url = params.tag ? `${config.api}/tag/${params.tag}` : config.api;
       const res = await fetch(url);
 
       if (res.ok) {
         return await res.json();
-      } else {
+      } else {
         throw new Error(`Error ${json.error}`);
       }
     }

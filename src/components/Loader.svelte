@@ -1,5 +1,5 @@
 <script>
-import { onMount, onDestroy } from "svelte";
+  import { onMount, onDestroy } from "svelte";
 
   export let delay = 500;
 
@@ -21,9 +21,9 @@ import { onMount, onDestroy } from "svelte";
 {#if show}
   <main>
     <div id="loader">
-      <div class="inner1"></div>
-      <div class="inner2"></div>
-      <div class="inner3"></div><br>
+      <div class="inner1" />
+      <div class="inner2" />
+      <div class="inner3" /><br />
       <span class="small">loading</span>
     </div>
   </main>

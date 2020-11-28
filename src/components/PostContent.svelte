@@ -1,6 +1,5 @@
 <script>
   import { prism } from "../actions/prism";
-  import { onMount } from "svelte";
   import marked from "marked";
   import PostDate from "./PostDate.svelte";
   import PostTitle from "./PostTitle.svelte";
@@ -12,7 +11,7 @@
   export let tags;
   export let github;
   export let content;
-  
+
   const content_parsed = marked(content);
 </script>
 
