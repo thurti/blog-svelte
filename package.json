@@ -8,7 +8,7 @@
     "start": "sirv public --single",
     "sass": "./node_modules/.bin/node-sass --watch --source-map-embed --recursive ./src/scss/style.scss ./public/build/style.css",
     "sass-build": "./node_modules/.bin/node-sass --recursive --output-style compressed ./src/scss/style.scss ./public/build/style.css",
-    "server": "cd ../blog-server && npm run dev"
+    "server": "cd ../blog-server && npm run start"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^16.0.0",
