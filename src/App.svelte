@@ -4,6 +4,8 @@
   import Router from "./components/Router.svelte";
   import { routes } from "./routes";
 
+  export let current_view; //ssr
+  export let params; //ssr
   export let prepopulate_content; //ssr
 </script>
 
@@ -13,4 +15,4 @@
   </a>
 </header>
 
-<Router {routes} {prepopulate_content} />
+<Router {routes} {current_view} {prepopulate_content} />

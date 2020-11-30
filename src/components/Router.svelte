@@ -9,10 +9,10 @@
   import { onMount, onDestroy } from "svelte";
 
   export let routes = [];
+  export let view;
+  export let params;
   export let prepopulate_content; //ssr
-
-  let view;
-  let params;
+  
 
   onMount(() => {
     routes.forEach((route) => {
