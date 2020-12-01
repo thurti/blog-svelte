@@ -9,22 +9,31 @@
   import { onMount, onDestroy } from "svelte";
 
   export let routes = [];
+
+  //ssr
+  export let ssr = false;
   export let view;
   export let params;
-  export let prepopulate_content; //ssr
+  export let prepopulate_content;
   
 
   onMount(() => {
-    routes.forEach((route) => {
-      router.on(route.url, (parameter) => {
-        view = route.view;
-        params = parameter;
+    if (!ssr) {
+      routes.forEach((route) => {
+        router.on(route.url, (parameter) => {
+          view = route.view;
+          params = parameter;
+        });
       });
-    });
-    router.listen();
+      router.listen();
+    }
   });
 
-  onDestroy(router.unlisten);
+  onDestroy(() => {
+    if (!ssr) {
+      router.unlisten();
+    }
+  });
 </script>
 
 <svelte:component this={view} {params} content={prepopulate_content} />

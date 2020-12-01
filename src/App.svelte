@@ -4,9 +4,13 @@
   import Router from "./components/Router.svelte";
   import { routes } from "./routes";
 
-  export let current_view; //ssr
-  export let params; //ssr
-  export let prepopulate_content; //ssr
+  //ssr
+  export let ssr = false;
+  export let viewname;
+  export let params;
+  export let prepopulate_content;
+
+  const view = routes.find((route) => viewname === route.name)?.view;
 </script>
 
 <header>
@@ -15,4 +19,10 @@
   </a>
 </header>
 
-<Router {routes} {current_view} {prepopulate_content} />
+<Router 
+  {routes} 
+  {ssr} 
+  {view} 
+  {params} 
+  {prepopulate_content} 
+/>
