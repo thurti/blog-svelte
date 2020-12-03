@@ -17,7 +17,8 @@
   });
 
   async function getPosts(params) {
-    const url = params.tag ? `${config.api}/tag/${params.tag}` : config.api;
+    const tag = encodeURI(params.tag);
+    const url = params.tag ? `${config.api}/tag/${tag}` : config.api;
     const res = await fetch(url);
 
     if (res.ok) {
