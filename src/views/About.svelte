@@ -1,6 +1,5 @@
 <script>
   import { fade } from "svelte/transition";
-  import { router } from "../components/Router.svelte";
   import Meta from "../components/Meta.svelte";
 
   const meta = {
@@ -29,7 +28,7 @@
       or stalk my code on
       <a href="https://github.com/thurti" title="github">github</a>.
       <br /><br />
-      <a href="/" on:click={() => window.history.back()}>Back</a>
+      <a href="/" on:click|preventDefault={() => window.history.back()}>Back</a>
     </p>
   </article>
 </main>
