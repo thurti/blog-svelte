@@ -15,7 +15,6 @@
   export let view;
   export let params;
   export let prepopulate_content;
-  
 
   onMount(() => {
     if (!ssr) {
@@ -35,5 +34,5 @@
     }
   });
 </script>
-
-<svelte:component this={view} {params} content={prepopulate_content} />
+  
+<svelte:component this={view} {params} {prepopulate_content} />

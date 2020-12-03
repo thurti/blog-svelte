@@ -8,13 +8,13 @@
 
   onMount(() => {
     //show loader if loading takes longer than 500ms
-    loader_timeout = window.setTimeout(() => {
+    loader_timeout = setTimeout(() => {
       show = true;
     }, delay);
   });
 
   onDestroy(() => {
-    window.clearTimeout(loader_timeout);
+    clearTimeout(loader_timeout);
   });
 </script>
 
