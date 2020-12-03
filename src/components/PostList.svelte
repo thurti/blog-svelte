@@ -1,23 +1,37 @@
 <script>
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
+  import Meta from "./Meta.svelte";
   import PostListItem from "./PostListItem.svelte";
 
   export let posts;
   export let params;
   export let current_scroll = 0;
 
+  const meta = {
+    title: "Welcome",
+    description:
+      "My development journal about things I've done. Mainly focused on web stuff...",
+    slug: "",
+    image: "marker_240.jpg",
+    imageAlt: "Weird Square Face",
+  };
+
   onMount(() => {
-    window.scrollTo(0, current_scroll);
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, current_scroll);
+    }
   });
 </script>
+
+<Meta {...meta} />
 
 <main class="listing" in:fade={{ duration: 150 }}>
   {#each posts as post}
     <PostListItem {...post} />
   {/each}
 
-  {#if posts && posts.length == 0 && params.tag}
+  {#if posts?.length == 0 && params?.tag}
     <p class="text-center">
       Sorry, no posts found for this tag.
       <br /><br />
