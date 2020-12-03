@@ -6,21 +6,21 @@ export const routes = [
   {
     url: "/",
     view: List,
-    name: "list",
+    name: "Index"
   },
   {
     url: "/tag/:tag",
     view: List,
-    name: "list_tag",
+    name: "Tag"
   },
   {
     url: "/about",
     view: About,
-    name: "about",
+    name: "About"
   },
   {
     url: "/:slug",
     view: Single,
-    name: "single",
-  },
+    name: "Single"
+  }
 ];
