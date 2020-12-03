@@ -2,7 +2,7 @@
   "name": "svelte-app",
   "version": "0.3.0",
   "scripts": {
-    "deploy": "rsync --progress -r --exclude '.DS_Store' --exclude 'static/media' public/ t3000.uberspace:~/html",
+    "deploy": "rsync --progress --copy-links -r --exclude '.DS_Store' public/ t3000.uberspace:~/html",
     "build": "rollup -c && npm run sass-build",
     "dev": "rollup -c -w & npm run sass & npm run server",
     "start": "sirv public --single",
