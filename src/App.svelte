@@ -10,7 +10,7 @@
   export let params;
   export let prepopulate_content;
 
-  const view = routes.find((route) => viewname === route.name)?.view;
+  const view = routes.find((route) => route.name === viewname)?.view;
 </script>
 
 <header>
@@ -20,7 +20,7 @@
 </header>
 
 <Router 
-  {routes} 
+  {routes}
   {ssr} 
   {view} 
   {params} 
