@@ -11,6 +11,8 @@
     slug: post.slug,
     image: post.previewImage || "marker_240.jpg",
     imageAlt: post.previewImageAlt || "Weird Square Face",
+    twitterCard: post.twitterCard,
+    type: post.type
   };
 </script>
 
