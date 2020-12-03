@@ -2,12 +2,12 @@
   "name": "svelte-app",
   "version": "0.2.0",
   "scripts": {
-    "deploy": "rsync --progress -r --exclude '.DS_Store' --exclude 'static' public/ t3000.uberspace:~/html",
+    "deploy": "rsync --progress -r --exclude '.DS_Store' --exclude 'static/media' public/ t3000.uberspace:~/html",
     "build": "rollup -c && npm run sass-build",
     "dev": "rollup -c -w & npm run sass & npm run server",
     "start": "sirv public --single",
-    "sass": "./node_modules/.bin/node-sass --watch --source-map-embed --recursive ./src/scss/style.scss ./public/build/style.css",
-    "sass-build": "./node_modules/.bin/node-sass --recursive --output-style compressed ./src/scss/style.scss ./public/build/style.css",
+    "sass": "./node_modules/.bin/node-sass --watch --source-map-embed --recursive ./src/scss/style.scss ./public/static/build/style.css",
+    "sass-build": "./node_modules/.bin/node-sass --recursive --output-style compressed ./src/scss/style.scss ./public/static/build/style.css",
     "server": "cd ../blog-server && npm run start"
   },
   "devDependencies": {
@@ -19,6 +19,7 @@
     "modularscale-sass": "^3.0.10",
     "node-sass": "^5.0.0",
     "rollup": "^2.33.3",
+    "rollup-plugin-css-only": "^3.0.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.2",
