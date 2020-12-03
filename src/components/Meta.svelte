@@ -31,8 +31,8 @@
   {/if}
 
   {#if image}
-    <meta property="og:image" content={`${image}`} />
-    <meta property="twitter:image" content={`${image}`} />
+    <meta property="og:image" content={`${config.url}/${image}`} />
+    <meta property="twitter:image" content={`${config.url}/${image}`} />
   {/if}
 
   {#if imageAlt}
