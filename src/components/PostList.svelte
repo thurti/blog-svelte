@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
+  import { prism } from "svelte-prism-action";
   import Meta from "./Meta.svelte";
   import PostListItem from "./PostListItem.svelte";
 
@@ -26,7 +27,7 @@
 
 <Meta {...meta} />
 
-<main class="listing" in:fade={{ duration: 150 }}>
+<main class="listing" in:fade={{ duration: 150 }} use:prism>
   {#each posts as post}
     <PostListItem {...post} />
   {/each}

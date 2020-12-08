@@ -1,5 +1,4 @@
 <script>
-  import Prism from "prismjs";
   import PostDate from "./PostDate.svelte";
   import PostTitle from "./PostTitle.svelte";
 
@@ -24,8 +23,7 @@
     <aside class="post__preview">
       {#if preview}
         <pre>
-        <code
-            class="language-js">{@html Prism.highlight(preview, Prism.languages.javascript, 'javascript')}</code>
+        <code class="language-js">{@html preview}</code>
       </pre>
       {/if}
     </aside>

@@ -1,6 +1,6 @@
 <script>
-  import { prism } from "../actions/prism";
-  import marked from "marked/marked.min";
+  import { prism } from "svelte-prism-action";
+  import marked from "marked";
   import PostDate from "./PostDate.svelte";
   import PostTitle from "./PostTitle.svelte";
   import GithubLink from "./GithubLink.svelte";
