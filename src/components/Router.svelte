@@ -19,10 +19,12 @@
   onMount(() => {
     if (!ssr) {
       routes.forEach((route) => {
-        router.on(route.url, (parameter) => {
-          view = route.view;
-          params = parameter;
-        });
+        if (route.url) {
+          router.on(route.url, (parameter) => {
+            view = route.view;
+            params = parameter;
+          });
+        }
       });
       router.listen();
     }
