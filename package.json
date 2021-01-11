@@ -5,6 +5,7 @@
     "deploy": "rsync --progress --copy-links -r --exclude '.DS_Store' public/ t3000.uberspace:~/html",
     "build": "rollup -c && npm run sass-build",
     "dev": "rollup -c -w & npm run sass & npm run server",
+    "watch": "rollup -c -w & npm run sass",
     "start": "sirv public --single",
     "sass": "./node_modules/.bin/node-sass --watch --source-map-embed --recursive ./src/scss/style.scss ./public/static/build/style.css",
     "sass-build": "./node_modules/.bin/node-sass --recursive --output-style compressed ./src/scss/style.scss ./public/static/build/style.css",
