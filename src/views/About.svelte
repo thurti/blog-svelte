@@ -14,20 +14,33 @@
 <Meta {...meta} />
 
 <main>
-  <article in:fade={{ duration: 250 }} class="post__content">
-    <h1 class="text-center">Hi, my name is Thomas.</h1>
+  <article in:fade={{ duration: 250 }} class="post__content text-center">
+    <h1>Hi, My Name Is Thomas.</h1>
 
-    <p class="text-center" style="max-width:20em">
-      I'm a frontend web developer with a strong focus on JavaScript, HTML &
+    <p style="max-width:20em">
+      I am a frontend web developer with a strong focus on JavaScript, HTML &
       CSS.
-      <br /><br />
-
-      I'm not that active on social media, but feel free to contact me on
-      Twitter
-      <a href="https://twitter.com/_thurti" title="twitter">@_thurti</a>
-      or stalk my code on
+    </p>
+    <p>
+      Feel free to contact me<br>
+      <a href="mailto:contact@thomashurtig.de">contact@thomashurtig.de</a> <br><br>
+      via Twitter
+      <a href="https://twitter.com/_thurti" title="twitter">@_thurti</a> <br>
+      or stalk my code on  
       <a href="https://github.com/thurti" title="github">github</a>.
-      <br /><br />
+    </p>
+    <hr>
+    <h2>I Am Available for Freelance.</h2>
+    <p>
+      For detailed information on my skill set, 
+      check out my <a href="/hire-me">Hire Me</a> page.
+    </p>
+
+    <br>
+    <!-- <img src="static/media/avatar.png" width="200" alt="" class="text-center"> -->
+
+    <br><br>
+    <p class="text-center">
       <a href="/" on:click|preventDefault={() => window.history.back()}>Back</a>
     </p>
   </article>
