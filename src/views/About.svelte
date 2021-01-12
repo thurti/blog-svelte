@@ -18,7 +18,8 @@
   <h1>Hi, My Name Is Thomas.</h1>
 
   <p>
-    I am a frontend web developer with a strong focus on JavaScript, HTML &
+    I am a frontend web developer with a <br>
+    strong focus on JavaScript, HTML &
     CSS.
   </p>
   <p>
@@ -32,7 +33,7 @@
   <hr>
   <h2>I Am Available for Freelance.</h2>
   <p>
-    For detailed information on my skill set, 
+    For detailed information on my skill set, <br>
     check out my <a href="/hire-me">Hire Me</a> page.
   </p>
 
