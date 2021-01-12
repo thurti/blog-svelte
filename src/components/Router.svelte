@@ -23,6 +23,7 @@
           router.on(route.url, (parameter) => {
             view = route.view;
             params = parameter;
+            params.api = route.api;
           });
         }
       });

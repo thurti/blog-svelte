@@ -10,7 +10,7 @@
   export let tags;
 </script>
 
-<a class="post-link no-hover" href="/{slug}" title={slug}>
+<a class="post-link no-hover" href="/articles/{slug}" title={slug}>
   <article class="grid post--listing">
     <PostDate {created_at} format="y m/d" />
     <PostTitle {title} />

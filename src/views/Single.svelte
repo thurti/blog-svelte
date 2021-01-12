@@ -1,29 +1,19 @@
 <script>
-  import { config } from "../config";
+  import { getPosts } from '../functions/api';
   import { fade } from "svelte/transition";
   import Loader from "../components/Loader.svelte";
   import Post from "../components/Post.svelte";
   import ErrorMessage from "../components/ErrorMessage.svelte";
-import Page from "../components/Page.svelte";
+  import Page from "../components/Page.svelte";
 
   export let params;
   export let prepopulate_content;
-
-  async function getPost(params) {
-    const res = await fetch(`${config.api}/${params.slug}`);
-
-    if (res.ok) {
-      return await res.json();
-    } else {
-      throw new Error(`${res.status}: ${res.statusText}`);
-    }
-  }
 </script>
 
 {#if prepopulate_content}
   <Post post={prepopulate_content} />
 {:else}
-  {#await getPost(params)}
+  {#await getPosts(params)}
     <Loader />
   {:then post}
     <div in:fade={{ duration: 150 }}>
