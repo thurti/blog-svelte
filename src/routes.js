@@ -13,15 +13,10 @@ export const routes = [
     name: "Index",
   },
   {
-    url: "/tag/:slug",
-    api: `${config.api}/posts/tag`,
-    view: List,
-    name: "Tag",
-  },
-  {
-    url: "/about",
-    view: About,
-    name: "About"
+    url: "/articles/:slug",
+    api: `${config.api}/posts`,
+    view: ArticleSingle,
+    name: "ArticleSingle",
   },
   {
     url: "/portfolio",
@@ -36,10 +31,15 @@ export const routes = [
     name: "PortfolioSingle",
   },
   {
-    url: "/articles/:slug",
-    api: `${config.api}/posts`,
-    view: ArticleSingle,
-    name: "ArticleSingle",
+    url: "/tag/:slug",
+    api: `${config.api}/posts/tag`,
+    view: List,
+    name: "Tag",
+  },
+  {
+    url: "/about",
+    view: About,
+    name: "About"
   },
   {
     view: NotFound,
