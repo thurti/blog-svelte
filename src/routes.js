@@ -1,6 +1,6 @@
 import { config } from './config';
 import List from "./views/List.svelte";
-import Single from "./views/Single.svelte";
+import ArticleSingle from "./views/ArticleSingle.svelte";
 import About from "./views/About.svelte";
 import NotFound from "./views/NotFound.svelte";
 import PortfolioSingle from "./views/PortfolioSingle.svelte";
@@ -38,8 +38,8 @@ export const routes = [
   {
     url: "/articles/:slug",
     api: `${config.api}/posts`,
-    view: Single,
-    name: "Single",
+    view: ArticleSingle,
+    name: "ArticleSingle",
   },
   {
     view: NotFound,
