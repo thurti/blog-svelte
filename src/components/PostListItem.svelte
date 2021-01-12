@@ -10,8 +10,8 @@
   export let tags;
 </script>
 
-<a class="linked-post" href="/{slug}" title={slug}>
-  <article class="post" style="cursor:pointer">
+<a class="post-link no-hover" href="/{slug}" title={slug}>
+  <article class="grid post--listing">
     <PostDate {created_at} format="y m/d" />
     <PostTitle {title} />
 
@@ -20,7 +20,7 @@
       {@html teaser}
     </section>
 
-    <aside class="post__preview">
+    <aside class="post__preview hide-small">
       {#if preview}
         <pre>
         <code class="language-js">{@html preview}</code>

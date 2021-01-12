@@ -1,0 +1,51 @@
+@mixin media-max-small(){
+  @media (max-width: em($width-small)) {
+    @content;
+  }
+}
+
+@mixin media-max-medium(){
+  @media (max-width: em($width-medium)) {
+    @content;
+  }
+}
+
+@mixin media-max-large(){
+  @media (max-width: em($width-large)) {
+    @content;
+  }
+}
+
+@mixin media-medium(){
+  @media (min-width: em($width-small)) {
+    @content;
+  }
+}
+
+@mixin media-large(){
+  @media (min-width: em($width-medium)) {
+    @content;
+  }
+}
+
+@mixin media-full(){
+  @media (min-width: em($width-large)) {
+    @content;
+  }
+}
+
+@mixin hdpi($ratio: 1.3) {
+  @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+         only screen and (min--moz-device-pixel-ratio: $ratio),
+         only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
+         only screen and (min-resolution: #{round($ratio*96)}dpi),
+         only screen and (min-resolution: #{$ratio}dppx) {
+    @content;
+  }
+}
+
+@mixin media-dark(){
+  @media screen and (prefers-color-scheme: dark) {
+    @content;
+  }
+}

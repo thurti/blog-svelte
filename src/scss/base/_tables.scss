@@ -1,59 +1,32 @@
-@import "base";
-
 /**
  * Tables
  */
-table{
-    width: 100%;
 
-    border-collapse: collapse;
-    border: 1px solid $tables-border-color;
-}
+table {
+  width: 100%;
 
-tbody tr{
-    &:nth-child(2n-1){
-        background-color: $tables-background-color;
-    }
-
-    &:last-child td{
-        border-bottom: 0;
-    }
-
-    &:hover{
-       background-color: $tables-background-hover;
-    }
+  border-collapse: collapse;
+  border: 1px solid $tables-border-color;
+  font-size: $font-small;
 }
 
 th,
-td{
-    font-weight: normal;
-    padding: $tables-padding;
-    border: 1px solid $tables-border-color;
+td {
+  font-weight: normal;
+  padding: $tables-padding;
+  border: 1px solid $tables-border-color;
 }
 
-@media (max-width: em($width-mobile)) {
-    .hide-small{
-        display: none !important;
-    }
-
-    @include table-hide-column('small', 1);
-    @include table-hide-column('small', 2);
-    @include table-hide-column('small', 3);
-    @include table-hide-column('small', 4);
+@include media-max-small {
+  @include table-hide-column("small", 1);
+  @include table-hide-column("small", 2);
+  @include table-hide-column("small", 3);
+  @include table-hide-column("small", 4);
 }
-@media (max-width: em($width-tablet)) {
-    .hide-medium{
-        display: none !important;
-    }
 
-
-    @include table-hide-column('medium', 1);
-    @include table-hide-column('medium', 2);
-    @include table-hide-column('medium', 3);
-    @include table-hide-column('medium', 4);
-}
-@media (max-width: em($width-desktop)) {
-    .hide-large{
-        display: none !important;
-    }
+@include media-max-medium {
+  @include table-hide-column("medium", 1);
+  @include table-hide-column("medium", 2);
+  @include table-hide-column("medium", 3);
+  @include table-hide-column("medium", 4);
 }

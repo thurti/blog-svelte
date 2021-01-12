@@ -1,6 +1,13 @@
-@import "base/reset";
-@import "base/typography";
-
-@import "layout";
+@import "base/base";
 @import "typography";
+@import "layout";
+@import "logo";
+@import "buttons";
+@import "gallery";
+@import "post";
+@import "post_listing";
+@import "post_single";
+@import "post_portfolio";
+@import "post_hero";
+@import "navigation";
 @import "main";

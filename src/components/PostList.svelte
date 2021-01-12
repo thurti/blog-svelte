@@ -27,7 +27,7 @@
 
 <Meta {...meta} />
 
-<main class="listing" in:fade={{ duration: 150 }} use:prism>
+<main in:fade={{ duration: 150 }} use:prism>
   {#each posts as post}
     <PostListItem {...post} />
   {/each}
@@ -42,8 +42,8 @@
 </main>
 
 {#if posts}
-  <footer>
-    <a href="/about" title="About">
+  <footer class="center">
+    <a href="/about" title="About" class="no-hover">
       <div class="heart">❤</div>
     </a>
   </footer>

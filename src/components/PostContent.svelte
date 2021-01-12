@@ -15,19 +15,17 @@
   const content_parsed = marked(content);
 </script>
 
-<article class="post--single">
+<article class="grid post--single" use:prism>
   <hgroup class="post__hgroup">
     <PostDate {created_at} format="m d, y" />
     <PostTitle title={title.replace('<br>', ' - ')} />
   </hgroup>
 
-  <div class="post__content" use:prism>
-    {@html content_parsed}
-  </div>
+  {@html content_parsed}
 </article>
 
-<aside class="meta">
-  <p class="meta__content">
+<aside class="post-meta flow">
+  <p class="post-meta__content">
     {#if github}
       <GithubLink url={github} />,
     {/if}

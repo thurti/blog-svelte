@@ -4,6 +4,7 @@
   import Loader from "../components/Loader.svelte";
   import Post from "../components/Post.svelte";
   import ErrorMessage from "../components/ErrorMessage.svelte";
+import Page from "../components/Page.svelte";
 
   export let params;
   export let prepopulate_content;
@@ -29,6 +30,8 @@
       <Post {post} />
     </div>
   {:catch error}
-    <ErrorMessage {error} />
+    <Page center=true>
+      <ErrorMessage {error} />
+    </Page>
   {/await}
 {/if}

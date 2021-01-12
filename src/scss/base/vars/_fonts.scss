@@ -1,35 +1,42 @@
-$inDesignFactor: 1;
+@import "../../../../node_modules//mathsass//dist//math";
+@import "../../../../node_modules/modularscale-sass/stylesheets/_modularscale.scss";
 
-$base-font-size  : 18px;
-$base-line-height: 24px;
-
-$font-text-name     : "Spartan";
-$font-heading-name  : "Spartan";
-
-
-$font-text   : $font-text-name, sans-serif;
-$font-heading: $font-heading-name, sans-serif;
-
-$font-family: $font-text;
-
+/**
+ * BASE SETTINGS
+ **/
+$base-font-size: 20px;
+$base-line-height: 38px;
 $line-height: $base-line-height;
-
+$font-text-name: "Spartan";
+$font-heading-name: "Spartan";
+$font-text: $font-text-name, sans-serif;
+$font-heading: $font-heading-name, sans-serif;
+$font-family: $font-text;
 $font-links: $font-text;
 $font-buttons: $font-heading;
 
+/**
+* FONT SIZES
+**/
+$modularscale: (
+  base: 1em,
+  ratio: 1.125,
+);
 
-@function font-em($px, $base: $base-font-size) {
-    @return ($px / $base) * 1em;
+$font-smaller: ms(-2);
+$font-small: ms(-1);
+$font-normal: ms(0);
+$font-big: ms(1);
+$font-large: ms(3);
+$font-huge: ms(5);
+
+/**
+ * FUNCTIONS
+ **/
+@function em($px, $base: $font-normal) {
+  @return (($px) / $base) * 1em;
 }
 
-@function font-percent($px, $base: $base-font-size) {
-    @return (($px * $inDesignFactor * 100) / 16px) * 1%;
-}
-
-@function font-vw($px, $base: $base-font-size) {
-    @return (($px * $inDesignFactor * 100) / 100vw) * 1vw;
-}
-
-@function em($px, $base: $base-font-size) {
-    @return ($px / $base) * 1em / $inDesignFactor;
+@function lines($lines) {
+  @return $base-line-height / $base-font-size * $lines * 1rem;
 }

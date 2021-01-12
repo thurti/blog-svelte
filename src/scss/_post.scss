@@ -1,0 +1,44 @@
+.post{
+  margin: lines(3) 0;
+  
+  & > *{
+    grid-column: center;
+    align-self: center;
+  }
+  
+  @include media-medium{
+  
+    & > img,
+    & > picture,
+    & > video,
+    & > pre{
+      grid-column: bleed;
+    }
+  }
+}
+
+.post__date{
+  font-weight: 200;
+  line-height: 1.125;
+}
+
+.post__info{
+  margin-top: lines(1);
+
+  td{
+    vertical-align: middle;
+  }
+  
+  li{
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  :not(:first-child){
+    td:first-child{
+      font-weight: 800;
+      text-align: right;
+    }
+  }
+}

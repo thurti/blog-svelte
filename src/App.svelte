@@ -13,8 +13,8 @@
   const view = routes.find((route) => route.name === viewname)?.view;
 </script>
 
-<header>
-  <a href={config.url} alt="t3000.uber.space">
+<header class="grid">
+  <a href={config.url} alt="t3000.uber.space" class="logo">
     <Logo />
   </a>
 </header>

@@ -1,0 +1,45 @@
+header.grid .logo{
+  margin: 0 auto lines(0.5) auto;
+  grid-column: span left-start / bleed-l;
+
+  @include media-medium{
+    grid-column: bleed-l;
+  }
+}
+
+.logo{
+  display: block;
+  width: lines(2);
+  height: auto;
+  line-height: 0;
+}
+
+.logo__black {
+  fill: rgba(0, 0, 0, 1);
+
+  @include media-dark {
+    fill: rgb(74, 74, 77);
+    fill-opacity: 0.5;
+  }
+}
+
+.logo__white {
+  fill: rgb(255, 255, 255);
+
+  @include media-dark{
+    fill: $bg-color-dark;
+  }
+}
+
+.logo-github {
+  position: relative;
+  height: $font-large;
+  top: 0.5rem;
+  padding: 0 0.25em;
+
+  @include media-dark{
+    path{
+      fill: rgb(74, 74, 77);
+    }
+  }
+}

@@ -2,51 +2,74 @@
 * Additional
 */
 
-@mixin user-select-none {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+@mixin font-face($name, $path: "", $style: normal, $weight: 400) {
+  @font-face {
+    font-family: $name;
+    src: local("#{$name}"), url("#{$path}.woff2") format("woff2"),
+      /* Modern Browsers */ url("#{$path}.woff") format("woff"),
+      /* Modern Browsers */ url("#{$path}.ttf") format("truetype"); /* Safari, Android, iOS */
 
-    -webkit-touch-callout: none;
-    -ms-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-
-    cursor: default;
+    font-style: $style;
+    font-weight: $weight;
+    font-display: swap;
+  }
 }
 
-@mixin font-face($name, $path:'', $style:normal, $weight:400) {
-    @font-face {
-        font-family: $name;
-        src: local('#{$name}'), url('#{$path}.woff2') format('woff2'), /* Modern Browsers */
-             url('#{$path}.woff') format('woff'), /* Modern Browsers */
-             url('#{$path}.ttf')  format('truetype'); /* Safari, Android, iOS */
+@mixin light-font-fix {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-        font-style:   $style;
-        font-weight:  $weight;
-        font-display: swap;
-    }
+@mixin user-select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  cursor: default;
 }
 
 @mixin table-hide-column($name, $column) {
-    .hide-#{$name}--#{$column} {
-        th,
-        td{
-            &:nth-child(#{$column}){
-                display: none !important;
-            }
-        }
+  .hide-#{$name}--#{$column} {
+    th,
+    td {
+      &:nth-child(#{$column}) {
+        display: none !important;
+      }
     }
+  }
 }
 
-@mixin clearfix{
-    &:before,
-    &:after {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin embed-video {
+  float: none;
+  clear: both;
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px; // 25px for youtube, 0 for vimeo
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

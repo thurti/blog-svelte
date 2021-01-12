@@ -1,99 +1,126 @@
-@import "base/base";
-
-html,
-body{
-    font-size: $font-normal;
-    line-height: 1.35em;
+@font-face {
+  font-family: "Spartan";
+  src: url("../css/PT Root UI_VF.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 1 1000;
+  font-stretch: 75% 100%;
 }
 
-code[class*="language-"],
-pre[class*="language-"]{
-    font-size: ms(-3);
+article > * + *{
+  margin-top: lines(1);
 }
 
-.post__content{
-    p{
-        hyphens: auto;
-    }
+pre[class*="language-"] {
+  margin: lines(1) 0 0 0;
+}
 
-    &>* + * {
-        margin-top: lines(1);
-    }
-
-    img{
-        margin-top: lines(1.5);
-    }
+main {
+  p,
+  .hyphens {
+    hyphens: auto;
+  }
 }
 
 h1,
 h2,
-h3{
-    font-family: $font-heading;
-    font-weight: 900;
-    line-height: lines(1.5);
+h3 {
+  font-family: $font-heading;
+  font-weight: 800;
 }
 
-h1{
+h1 {
+  font-size: $font-large;
+  line-height: 1.25em;
+
+  @include media-medium{
     font-size: $font-huge;
+  }
 }
 
-h2{
-    font-size: $font-bigger;
+h2 {
+  font-size: $font-big;
+  line-height: 1.25em;
+  
+  @include media-medium{
+    font-size: $font-large;
+  }
 }
 
-h3{
-    font-size: $font-normal;
+h3 {
+  font-size: $font-normal;
+
+  @include media-medium{
+    font-size: $font-big;
+  }
+}
+
+a {
+  display: inline-block;
+  text-underline-offset: 0.075em;
+
+  &:hover {
+    transition: font-weight 0.3s ease-in-out;
+    font-weight: 600;
+  }
+
+  &:focus{
+    text-decoration: none;
+  }
+}
+
+.small {
+  font-weight: 200;
+  font-size: $font-small;
+}
+.big {
+  font-size: $font-big;
 }
 
 i,
 em,
 blockquote p{
-    display: inline-block;
-    font-style: normal;
-    transform: skewX(-8deg) translateX(3px);
+  font-weight: 400;
+  color: lighten($font-color, 10);
 
-    font-weight: 300;
+  //fake italic
+  display: inline-block;
+  font-style: normal;
+  transform: skewX(-7deg);
+  font-size: 0.98em;
 
-    strong &,
-    b &{
-        font-weight: inherit;
-    }
-
-    &::first-line{
-        text-indent: -3px;
-    }
+  @include media-dark{
+    color: lighten($font-dark-light, 5);
+  }
 }
 
-blockquote{
-    text-align: center;
+blockquote {
+  text-align: center;
+
+  @include media-medium{
+    padding: 0 3em;
+  }
 }
 
-a{
-    text-underline-offset: .15em;
-    display: inline-block;
-    &:hover{
-        transition: font-weight 0.3s ease-in-out;
-        font-weight: 800;
-    }
+code[class*="language-"],
+pre[class*="language-"] {
+  font-size: $font-small;
 }
 
-.small{
-    font-weight: 100;
-    font-size: ms(-6);
-}
-.big{
-    font-size: ms(2);
-}
-@media screen and (max-width: $width-tablet) {
-    blockquote{
-        padding: 1.5em;
-    }
+pre {
+  padding: lines(0.25);
+  background: #3e3f37;
+  overflow-x: auto;
+  font-size: em(16px);
 }
 
-@media screen and (max-width: $width-mobile) {
-    .post__content{
-        li{
-            margin-left: lines(1.25);
-        }
-    }
+@include media-dark {
+  .small{
+    font-weight: 400;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 500;
+  }
 }

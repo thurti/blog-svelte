@@ -1,0 +1,21 @@
+.post--single{
+  @extend .post;
+
+  @include media-large{
+    column-gap: lines(2);
+  }
+}
+
+.post__hgroup{
+  text-align: center;
+}
+
+.post-meta{
+  border-top: 1px solid $border-color;
+  padding-top: lines(0.5);
+  text-align: center;
+}
+
+.post-meta__tags{
+  margin-top: lines(0.5);
+}

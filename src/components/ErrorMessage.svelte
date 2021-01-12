@@ -2,13 +2,11 @@
   export let error;
 </script>
 
-<main>
-  <p class="text-center">
-    Something went wrong.
-    <br />
-    {error.message}
-    :/
-    <br /><br />
-    <a href="/">Back Home</a>
-  </p>
-</main>
+<h2>Sorry :/</h2>
+<p>
+  Something went wrong.
+  <br />
+  {error.message}
+  <br /><br />
+  <a href="/">Back Home</a>
+</p>

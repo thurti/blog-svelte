@@ -4,18 +4,18 @@
 </script>
 
 <footer>
-  <nav class="post-nav">
+  <nav class="nav--post">
     {#if previous}
       <a href="/{previous.slug}" title={previous.slug} class="btn">
-        PREVIOUS<br />
-        <span class="next-title">{previous.title}</span>
+        <span class="bold">PREVIOUS</span><br />
+        <span class="btn__sub font-light small text-ellipsis">{previous.title}</span>
       </a>
     {:else}<a href="/" class="btn">HOME</a>{/if}
 
     {#if next}
       <a href="/{next.slug}" title={next.slug} class="btn">
-        NEXT<br />
-        <span class="next-title">{next.title}</span>
+        <span class="bold">NEXT</span><br />
+        <span class="btn__sub font-light small text-ellipsis">{next.title}</span>
       </a>
     {/if}
   </nav>

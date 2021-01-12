@@ -1,0 +1,51 @@
+button,
+.btn,
+.button,
+a.btn,
+a.button {
+  --bg: #{darken($bg-color, 7)};
+  --border: #{lighten($font-color, 10)};
+
+  @include media-dark{
+    --bg: #{lighten($bg-color-dark, 7)};
+    --border: #{darken($font-color-dark, 20)};
+  }
+
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+
+  height: auto;
+
+  margin: 0 0.5em;
+  padding: 0.25em 0.5em;
+  
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  
+  background-color: var(--bg);
+  border: 2px solid var(--border);
+
+  transition: background-color 0.15s ease-in-out;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+
+  &:active {
+    transform: scale(0.99);
+    outline: 0;
+  }
+}
+
+.btn__sub{
+  &:before {
+    content: "\00ab";
+  }
+
+  &:after {
+    content: "\00bb";
+  }
+}

@@ -1,41 +1,28 @@
 /**
 * Color definitions.
 */
-
-$primary-color        : rgb(201, 198, 178);               
-
-$primary-color-light  : rgb(205, 202, 184);     
-$primary-color-dark   : rgb(156, 149, 110);     
-
-$secondary-color      : $primary-color;               
-$secondary-color      :rgb(241, 241, 235);               
-
-$secondary-color-light: lighten( $secondary-color, 5);  
-$secondary-color-dark : darken( $secondary-color, 5);  
-$white                :rgb(255, 255, 255);
-$gray                 : rgb(128, 128, 128);
-$grey                 : $gray;
-$gray-dark            : rgb(55,55,55);
-
-$color-primary: $primary-color;
-$color-secondary: $secondary-color;
-
+$primary: grey;
+$white: rgb(255, 255, 255);
+$gray: rgb(128, 128, 128);
+$grey: $gray;
+$gray-dark: rgb(55, 55, 55);
+$bg-color: rgb(244, 244, 244);
 
 /**
 * Font colors
 */
+$font-color: rgb(52, 52, 52);
+$font-light: lighten($font-color, 10);
+$font-dark: darken($font-color, 10);
+$font-error: #f54740;
+$font-warning: #fdc856;
+$font-success: #49b86e;
 
-$font-color  : rgb(40, 40, 40);
-$font-light  : lighten($font-color, 10);
-$font-dark   : darken($font-color, 10);
-$font-error  : #F54740;
-$font-warning: #FDC856;
-$font-success: #49B86E;
-
-$bg-color: rgb(244, 244, 244);
-
-//dark mode
-$font-color-dark  : #c1bab0;
+/**
+ * DARK MODE
+ */
+$font-color-dark: #c1bab0;
+$font-dark-light: darken($font-color-dark, 10);
 $bg-color-dark: #1f1f1f;
 
 $font-select: $font-color;
@@ -47,24 +34,25 @@ $font-select-background-dark: lightseagreen;
 /**
 * Link colors
 */
-$link-color : #006eff;
-$link-hover : darken($link-color,10);
+$link-color: #006eff;
+$link-hover: darken($link-color, 5);
 $link-active: lighten($link-hover, 10);
-$link-visited: $link-color;
+$link-visited: lighten($link-color, 15);
 
+$link-color-dark: $font-color-dark;
+$link-hover-dark: lighten($link-color-dark, 10);
+$link-active-dark: lighten($link-hover-dark, 10);
+$link-visited-dark: darken($link-color-dark, 15);
 
 /**
  * Borders
  */
-$border-color: rgb(0, 0, 0);
+$border-color: grey;
 $border-radius: 0px;
-
 
 /**
 * Forms
 */
-$forms-border-color      : $border-color;
+$forms-border-color: $border-color;
 $forms-border-color-focus: darken($border-color, 10);
-$forms-background-color  : $white;
-
-
+$forms-background-color: $white;

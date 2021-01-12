@@ -1,9 +1,10 @@
 <script>
+  import Page from "../components/Page.svelte";
   import ErrorMessage from "../components/ErrorMessage.svelte";
 
   export let prepopulate_content;
 </script>
 
-<main>
+<Page center=true>
   <ErrorMessage error={prepopulate_content.error} />
-</main>
+</Page>

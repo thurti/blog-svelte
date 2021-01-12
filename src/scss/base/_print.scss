@@ -1,51 +1,80 @@
-.print-show{
-    display: none;
+/**
+ * BASIC PRINT STYLES
+ */
+ 
+.print-show {
+  display: none;
 }
 
-@media print{
-    .print-hide{
-        display: none !important;
-    }
+@media print {
+  .print-hide {
+    display: none !important;
+  }
 
-    .print-show{
-        display: inherit !important;
-    }
+  .print-show {
+    display: inherit !important;
+  }
 
-    .container > header,
-    .container > nav,
-    .container > footer,
-    aside,
-    #page_overlay,
-    [class*="overlay"]{
-        display: none;
-    }
+  header,
+  nav,
+  footer,
+  aside,
+  #page_overlay,
+  [class*="overlay"] {
+    display: none;
+  }
 
-    * {
-        background: transparent !important;
-        text-shadow: none !important;
-        filter:none !important;
-        -ms-filter: none !important;
-    } /* Black prints faster: h5bp.com/s */
+  * {
+    background: transparent !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  } /* Black prints faster: h5bp.com/s */
 
-    a, a:hover, a:visited {border:0; text-decoration: underline; }
-    :not(header) a[href]:after { content: " (" attr(href) ")"; }
+  a,
+  a:hover,
+  a:visited {
+    border: 0;
+    text-decoration: underline;
+  }
+  :not(header) a[href]:after {
+    content: " (" attr(href) ")";
+  }
 
-    table a[href]:after{content: '';}
-    table a,
-    table a:visited{
-        text-decoration: none;
-    }
+  table a[href]:after {
+    content: "";
+  }
+  table a,
+  table a:visited {
+    text-decoration: none;
+  }
 
-    thead { display: table-header-group; } /* h5bp.com/t */
+  thead {
+    display: table-header-group;
+  } /* h5bp.com/t */
 
-    tr, img { page-break-inside: avoid; }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
 
-    img { max-width: 100% !important; }
+  img {
+    max-width: 100% !important;
+  }
 
-    @page { margin: 0.5cm; }
+  @page {
+    margin: 0.5cm;
+  }
 
-    p, h2, h3 { orphans: 3; widows: 3; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-    h2, h3 { page-break-after: avoid; }
-
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }

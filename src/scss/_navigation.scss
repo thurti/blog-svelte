@@ -1,0 +1,54 @@
+.nav{
+  display: flex;
+  justify-content: space-evenly;
+
+  li{
+    margin: 0;
+    padding: 0 lines(0.5);
+    list-style: none;
+    text-align: center;
+    
+    &.is-active{
+      font-weight: 800;
+    }
+  }
+  
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.nav--main{
+  @extend .nav;
+  
+  grid-column: span center-start / bleed-r;
+  align-items: center;
+  
+  ul {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+      
+    a{
+      padding: lines(0.125);
+    }
+    
+    @include media-medium{
+      width: 100%;
+      flex-flow: row;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.nav--post{
+  @extend .nav;
+
+  min-height: lines(2);
+  
+  & > a{
+    flex-grow: 1;
+    margin: 0.1em;
+  }
+}
