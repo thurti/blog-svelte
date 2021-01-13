@@ -8,8 +8,14 @@ import PortfolioSingle from "./views/PortfolioSingle.svelte";
 
 export const routes = [
   {
+    url: "/",
+    api: `${config.api}/posts/tag/home`,
+    view: ContentLoader,
+    component: PostList
+  },
+  {
     url: "/articles",
-    api: `${config.api}/posts`,
+    api: `${config.api}/posts/tag/article`,
     view: ContentLoader,
     component: PostList,
   },

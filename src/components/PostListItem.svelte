@@ -3,6 +3,7 @@
   import PostTitle from "./PostTitle.svelte";
 
   export let slug;
+  export let category = "articles";
   export let title;
   export let teaser;
   export let preview;
@@ -10,7 +11,7 @@
   export let tags;
 </script>
 
-<a class="post-link no-hover" href="/articles/{slug}" title={slug}>
+<a class="post-link no-hover" href="/{category}/{slug}" title={slug}>
   <article class="grid post--listing">
     <PostDate {created_at} format="y m/d" />
     <PostTitle {title} />
