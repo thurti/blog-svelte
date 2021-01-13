@@ -35,7 +35,8 @@ export const routes = [
   {
     url: "/portfolio/:slug",
     api: `${config.api}/posts`,
-    view: PortfolioSingle,
+    view: ContentLoader,
+    component: PortfolioSingle
   },
   {
     url: "/tag/:slug",
