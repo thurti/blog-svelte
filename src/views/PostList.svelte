@@ -4,6 +4,7 @@
   import { prism } from "svelte-prism-action";
   import Meta from "../components/Meta.svelte";
   import PostListItem from "../components/PostListItem.svelte";
+  import FooterHeart from "../components/FooterHeart.svelte";
 
   export let content;
   export let params;
@@ -42,9 +43,5 @@
 </main>
 
 {#if content}
-  <footer class="center">
-    <a href="/about" title="About" class="no-hover">
-      <div class="heart">❤</div>
-    </a>
-  </footer>
+  <FooterHeart />
 {/if}
