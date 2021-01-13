@@ -5,6 +5,7 @@ import PostSingle from "./views/PostSingle.svelte";
 import About from "./views/About.svelte";
 import NotFound from "./views/NotFound.svelte";
 import PortfolioSingle from "./views/PortfolioSingle.svelte";
+import PortfolioList from "./views/PortfolioList.svelte";
 
 export const routes = [
   {
@@ -29,6 +30,7 @@ export const routes = [
     url: "/portfolio",
     api: `${config.api}/posts/tag/portfolio`,
     view: ContentLoader,
+    component: PortfolioList
   },
   {
     url: "/portfolio/:slug",
