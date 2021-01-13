@@ -1,7 +1,7 @@
 <script>
   import { fade } from 'svelte/transition';
   import Meta from "../components/Meta.svelte";
-  import PostContent from "../components/PostContent.svelte";
+  import Post from "../components/Post.svelte";
   import PostFooter from "../components/PostFooter.svelte";
 
   export let content;
@@ -12,6 +12,6 @@
 <Meta {title} {...content.meta} />
 
 <main in:fade={{ duration: 150 }}>
-  <PostContent {...content} />
+  <Post {...content} />
 </main>
 <PostFooter {...content} />
