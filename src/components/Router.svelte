@@ -13,6 +13,7 @@
   //ssr
   export let ssr = false;
   export let view;
+  export let component;
   export let params;
   export let prepopulate_content;
 
@@ -22,6 +23,7 @@
         if (route.url) {
           router.on(route.url, (parameter) => {
             view = route.view;
+            component = route.component;
             params = parameter;
             params.api = route.api;
           });
@@ -38,4 +40,4 @@
   });
 </script>
   
-<svelte:component this={view} {params} {prepopulate_content} />
+<svelte:component this={view} {component} {params} {prepopulate_content} />

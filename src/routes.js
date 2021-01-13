@@ -1,6 +1,7 @@
 import { config } from './config';
-import List from "./views/List.svelte";
-import ArticleSingle from "./views/ArticleSingle.svelte";
+import ContentLoader from "./views/ContentLoader.svelte";
+import PostList from "./views/PostList.svelte";
+import PostSingle from "./views/PostSingle.svelte";
 import About from "./views/About.svelte";
 import NotFound from "./views/NotFound.svelte";
 import PortfolioSingle from "./views/PortfolioSingle.svelte";
@@ -9,40 +10,36 @@ export const routes = [
   {
     url: "/",
     api: `${config.api}/posts`,
-    view: List,
-    name: "Index",
+    view: ContentLoader,
+    component: PostList,
   },
   {
     url: "/articles/:slug",
     api: `${config.api}/posts`,
-    view: ArticleSingle,
-    name: "ArticleSingle",
+    view: ContentLoader,
+    component: PostSingle,
   },
   {
     url: "/portfolio",
     api: `${config.api}/posts/tag/portfolio`,
-    view: List,
-    name: "PortfolioList",
+    view: ContentLoader,
   },
   {
     url: "/portfolio/:slug",
     api: `${config.api}/posts`,
     view: PortfolioSingle,
-    name: "PortfolioSingle",
   },
   {
     url: "/tag/:slug",
     api: `${config.api}/posts/tag`,
-    view: List,
-    name: "Tag",
+    view: ContentLoader,
+    component: PostList
   },
   {
     url: "/about",
     view: About,
-    name: "About"
   },
   {
     view: NotFound,
-    name: "NotFound"
   }
 ];

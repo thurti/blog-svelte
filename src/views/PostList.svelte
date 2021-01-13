@@ -2,10 +2,10 @@
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   import { prism } from "svelte-prism-action";
-  import Meta from "./Meta.svelte";
-  import PostListItem from "./PostListItem.svelte";
+  import Meta from "../components/Meta.svelte";
+  import PostListItem from "../components/PostListItem.svelte";
 
-  export let posts;
+  export let content;
   export let params;
   export let current_scroll = 0;
 
@@ -28,11 +28,11 @@
 <Meta {...meta} />
 
 <main in:fade={{ duration: 150 }} use:prism>
-  {#each posts as post}
+  {#each content as post}
     <PostListItem {...post} />
   {/each}
 
-  {#if posts?.length == 0 && params?.tag}
+  {#if content?.length == 0 && params?.tag}
     <p class="text-center">
       Sorry, no posts found for this tag.
       <br /><br />
@@ -41,7 +41,7 @@
   {/if}
 </main>
 
-{#if posts}
+{#if content}
   <footer class="center">
     <a href="/about" title="About" class="no-hover">
       <div class="heart">❤</div>
