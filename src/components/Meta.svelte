@@ -7,9 +7,9 @@
 
   export let title = "";
   export let description = "";
-  export let image = "";
-  export let imageAlt = "";
-  export let slug = "";
+  export let image = `${config.url}/static/media/marker_240.jpg`;
+  export let imageAlt = "Weird square face.";
+  export let url = "";
   export let twitterCard = "summary_large_image"; //'summary'
   export let type;
 
@@ -19,9 +19,9 @@
 <svelte:head>
   {#if title}
     <title>{title_site}</title>
-    <meta name="title" content={title_site} />
-    <meta property="og:title" content={title_site} />
-    <meta property="twitter:title" content={title_site} />
+    <meta name="title" content={title} />
+    <meta property="og:title" content={title} />
+    <meta property="twitter:title" content={title} />
   {/if}
 
   {#if description}
@@ -40,9 +40,9 @@
     <meta property="twitter:image:alt" content={imageAlt} />
   {/if}
 
-  {#if slug}
-    <meta property="og:url" content={`${config.url}/${slug}`} />
-    <meta property="twitter:url" content={`${config.url}/${slug}`} />
+  {#if url}
+    <meta property="og:url" content={`${config.url}/${url}`} />
+    <meta property="twitter:url" content={`${config.url}/${url}`} />
   {/if}
 
   {#if type}

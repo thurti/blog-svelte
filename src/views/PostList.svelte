@@ -10,10 +10,10 @@
   export let current_scroll = 0;
 
   const meta = {
-    title: "Welcome",
+    title: "Articles",
     description:
-      "My development journal about things I've done. Mainly focused on web stuff...",
-    slug: "",
+      "This is my personal web development journal about things I've learned.",
+    url: "articles",
     image: "marker_240.jpg",
     imageAlt: "Weird Square Face",
   };

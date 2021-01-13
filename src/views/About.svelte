@@ -4,6 +4,7 @@
 
   const meta = {
     title: "About",
+    url: "about",
     description: "Hi, I'm Thomas - frontend web developer who ❤ JavaScript.",
     slug: "about",
     image: "marker_240.jpg",

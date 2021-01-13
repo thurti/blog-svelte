@@ -6,18 +6,10 @@
 
   export let content;
 
-  const meta = {
-    title: content.title.replace("<br>", " - "),
-    description: content.description,
-    slug: content.slug,
-    image: content.previewImage || "marker_240.jpg",
-    imageAlt: content.previewImageAlt || "Weird Square Face",
-    twitterCard: content.twitterCard,
-    type: content.type
-  };
+  const title = content.title.replace("<br>", " - ");
 </script>
 
-<Meta {...meta} />
+<Meta {title} {...content.meta} />
 
 <main in:fade={{ duration: 150 }}>
   <PostContent {...content} />
