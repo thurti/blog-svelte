@@ -19,7 +19,7 @@ import PostTitle from "./PostTitle.svelte";
     </hgroup>
     
     <picture class="gallery__image">
-      <img src="{config.url}/{hero}.jpg" alt="">
+      <img src="{hero.src}.jpg" alt="{hero.alt}" width="{hero.width}" height="{hero.height}" loading="lazy">
       <!-- add webp, avij -->
     </picture>
   </article>
