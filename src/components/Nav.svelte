@@ -24,7 +24,7 @@
   </div>
 
   <div class="header__small hide-small">
-    <a href={config.url} alt="t3000.uber.space" class="logo" on:click|preventDefault={() => show = !show}>
+    <a href={config.url} alt="t3000.uber.space" class="logo no-focus" on:click|preventDefault={() => show = !show}>
       <Logo />
     </a>
   </div>
