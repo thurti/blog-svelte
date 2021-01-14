@@ -10,6 +10,14 @@
     
     &.is-active{
       font-weight: 800;
+
+      a{
+        outline: 2px solid $font-select-background;
+  
+        @include media-dark{
+          outline: 2px solid $font-select-background-dark;
+        }
+      }
     }
   }
   
