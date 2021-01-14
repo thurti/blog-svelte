@@ -24,7 +24,7 @@
     margin-top: lines(1.25);
   }
 
-  @media(min-width: em(1300px)){
+  @include media-medium{
 
     column-gap: lines(1);
 
@@ -54,6 +54,7 @@
       img,
       video{
         min-height: 100%;
+        margin: 0 auto;
         object-fit: cover;
       }
     }
