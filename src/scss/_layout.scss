@@ -52,6 +52,57 @@ footer{
   max-width: em($max-width);
 }
 
+
+header{
+  position: relative;
+  width: 100vw;
+
+  @include media-medium{
+    height: lines(2);
+    overflow: hidden;
+    will-change: transform;
+  }
+}
+
+._header{
+  position: absolute;
+  width: 100%;
+  height: lines(2);
+  top: 0;
+}
+
+.header__nav{
+  @extends ._header;
+  
+  @include media-medium{
+    transition: transform 0.15s linear;
+    transform: translateY(#{lines(-3)});
+  }
+
+  .show-nav &{
+    transform: translateY(0);
+  }
+}
+
+.header__small{
+  @extend ._header;
+
+  transition: transform 0.15s linear;
+  transform: translate(calc(50vw - #{lines(1.5)}), 0);
+    
+  .show-nav &{
+    transform: translate(calc(50vw - #{lines(1.5)}), #{lines(-3)});
+  }
+}
+
+main{
+  margin-top: lines(2);
+
+  @include media-medium{
+    margin-top: lines(3);
+  }
+}
+
 header,
 main{
   @include media-max-medium{
@@ -60,5 +111,5 @@ main{
 }
 
 footer{
-  margin: lines(2) auto 0;
+  margin: lines(1) auto 0;
 }

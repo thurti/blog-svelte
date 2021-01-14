@@ -1,12 +1,9 @@
 .post--portfolio{
   @extend .post;
-
-  margin-top: lines(1);
 }
 
 .portfolio-gallery{
   grid-column: bleed;
-  margin-top: lines(2);
 
   .post__date{
     font-size: $font-smaller;

@@ -40,6 +40,13 @@
       justify-content: flex-end;
     }
   }
+
+  padding-bottom: lines(0.5);
+  border-bottom: 1px solid $border-color;
+
+  @include media-medium{
+    border: 0;
+  }
 }
 
 .nav--post{

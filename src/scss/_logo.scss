@@ -1,12 +1,3 @@
-header.grid .logo{
-  margin: 0 auto lines(0.5) auto;
-  grid-column: span left-start / bleed-l;
-
-  @include media-medium{
-    grid-column: bleed-l;
-  }
-}
-
 .logo{
   display: block;
   width: lines(2);
@@ -41,5 +32,15 @@ header.grid .logo{
     path{
       fill: rgb(74, 74, 77);
     }
+  }
+}
+
+.header__nav .logo{
+  margin: 0 auto lines(0.5) auto;
+  grid-column: span left-start / bleed-l;
+
+  @include media-medium{
+    grid-column: bleed-l;
+    justify-self: end;
   }
 }

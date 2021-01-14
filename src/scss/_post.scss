@@ -1,5 +1,5 @@
 .post{
-  margin: lines(3) 0;
+  margin: 0 0 lines(3) 0;
   
   & > *{
     grid-column: center;
@@ -41,7 +41,7 @@
     }
   }
 
-  @media (min-width: em($width-medium)) and (max-width: em(1400px)){
+  @media (max-width: em(420px)), (min-width: em($width-medium)) and (max-width: em(1400px)) {
     border: 0;
 
     thead,
