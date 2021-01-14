@@ -11,7 +11,7 @@
 
 <Meta {title} {...content.meta} />
 
-<main>
+<main in:fade={{duration: 150}}>
   <Portfolio {...content} />
 </main>
 <PostFooter {...content} />
