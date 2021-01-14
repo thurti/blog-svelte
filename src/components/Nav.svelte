@@ -1,5 +1,6 @@
 <script>
   import { config } from '../config';
+  import { router_current } from '../store'; 
   import Logo from "./Logo.svelte";
   
   export let items;
@@ -12,7 +13,7 @@
   <nav class="nav--main">
     <ul>
       {#each items as item}
-        <li class="is-active"><a href="{item.url}">{item.title}</a></li>
+        <li class:is-active={item.title !== "Home" && $router_current.includes(item.url)}><a href="{item.url}">{item.title}</a></li>
       {/each}
     </ul>
   </nav>

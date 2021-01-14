@@ -1,4 +1,5 @@
 <script context="module">
+  import { router_current } from '../store'; 
   import Navaid from "navaid";
   import NotFound from "../views/NotFound.svelte";
 
@@ -24,6 +25,7 @@
           router.on(route.url, (parameter) => {
             view = route.view;
             component = route.component;
+            $router_current = route.url;
             params = parameter;
             params.api = route.api;
           });
