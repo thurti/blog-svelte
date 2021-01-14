@@ -1,8 +1,8 @@
 <script>
   import { config } from "./config";
-  import Logo from "./components/Logo.svelte";
   import Router from "./components/Router.svelte";
   import { routes } from "./routes";
+  import Nav from "./components/Nav.svelte";
 
   //ssr
   export let ssr = false;
@@ -11,13 +11,10 @@
   export let prepopulate_content;
 
   const view = routes.find((route) => route.name === viewname)?.view;
+  const nav_items = routes.filter(route => route.title ?? false);
 </script>
 
-<header class="grid">
-  <a href={config.url} alt="t3000.uber.space" class="logo">
-    <Logo />
-  </a>
-</header>
+<Nav items={nav_items} />
 
 <Router 
   {routes}

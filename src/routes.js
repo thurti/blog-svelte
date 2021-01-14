@@ -11,12 +11,14 @@ export const routes = [
   {
     url: "/",
     api: `${config.api}/posts/tag/home`,
+    title: "Home",
     view: ContentLoader,
     component: PostList
   },
   {
     url: "/articles",
     api: `${config.api}/posts/tag/article`,
+    title: "Articles",
     view: ContentLoader,
     component: PostList,
   },
@@ -29,6 +31,7 @@ export const routes = [
   {
     url: "/portfolio",
     api: `${config.api}/posts/tag/portfolio`,
+    title: "Portfolio",
     view: ContentLoader,
     component: PortfolioList
   },
@@ -46,6 +49,7 @@ export const routes = [
   },
   {
     url: "/about",
+    title: "About",
     view: About,
   },
   {

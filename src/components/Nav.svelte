@@ -1,15 +1,19 @@
 <script>
+  import { config } from '../config';
+  import Logo from "./Logo.svelte";
+  
   export let items;
-
-  //create store with current nav and check for is-active
-  //create views Article, Portfolio, PortfolioList
-  //check if show nav is set
 </script>
 
-<nav class="nav--main">
-  <ul>
-    {#each items as item}
-      <li class="is-active"><a href="{item.url}">{item.title}</a></li>
-    {/each}
-  </ul>
-</nav>
+<header class="grid">
+  <a href={config.url} alt="t3000.uber.space" class="logo">
+    <Logo />
+  </a>
+  <nav class="nav--main">
+    <ul>
+      {#each items as item}
+        <li class="is-active"><a href="{item.url}">{item.title}</a></li>
+      {/each}
+    </ul>
+  </nav>
+</header>
