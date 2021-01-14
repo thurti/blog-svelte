@@ -27,6 +27,19 @@ import Link from "./Link.svelte";
     </tr>
     {/if}
 
+    {#if technology}
+    <tr>
+      <td>Tech</td>
+      <td>
+        <ul>
+          {#each technology as name}
+            <li>{name}</li>
+          {/each}
+        </ul>
+      </td>
+    </tr>
+    {/if}
+
     {#if design}
     <tr>
       <td>Design</td>
@@ -40,26 +53,13 @@ import Link from "./Link.svelte";
     </tr>
     {/if}
 
-    {#if technology}
-    <tr>
-      <td><span class="text-ellipsis">Technology</span></td>
-      <td>
-        <ul>
-          {#each technology as name}
-            <li>{name}</li>
-          {/each}
-        </ul>
-      </td>
-    </tr>
-    {/if}
-
     {#if credits}
     <tr>
       <td>Credits</td>
       <td class="flow-small">
         {#each credits as credit}
           <p class="text-capitalize">
-          <Link href={credit.url} title={credit.name} text={credit.name} />: <br>
+            <Link href={credit.url} title={credit.name} text={credit.name} />: <br>
             {credit.work.join(', ')}
           </p>
         {/each}
