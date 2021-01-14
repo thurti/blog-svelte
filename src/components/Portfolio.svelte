@@ -22,7 +22,7 @@
 
     <hgroup class="post__hgroup">
       <PostDate {created_at} format="m d, y" />
-      <PostTitle title={title.replace(' ', ' - ')} />
+      <PostTitle {title} />
     </hgroup>
   
     <PortfolioInfo {...info} />
