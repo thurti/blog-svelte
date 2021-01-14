@@ -23,10 +23,9 @@
 }
 
 .post__info{
-  margin-top: lines(1);
-
   td{
     vertical-align: middle;
+    border-color: darken($bg-color, 15);
   }
   
   li{
@@ -39,6 +38,41 @@
     td:first-child{
       font-weight: 800;
       text-align: right;
+    }
+  }
+
+  @media (min-width: em($width-medium)) and (max-width: em(1400px)){
+    border: 0;
+
+    thead,
+    tbody,
+    tr,
+    td{
+      display: block;
+      text-align: left !important;
+    }
+
+    td{
+      padding: lines(0.25) 0 lines(0.25);
+      border :0;
+    }
+
+    tr:first-child{
+      border-bottom: 1px solid $bg-color;
+      padding-bottom: lines(0.5);
+      margin-bottom: lines(0.5);
+    }
+    
+    tr:not(:first-child) td:first-child{
+      padding-bottom: 0;
+    }
+    
+    tr:not(:first-child) td:last-child{
+      padding-top: 0;
+    }
+
+    tr:last-child td{
+      padding-bottom: 0;
     }
   }
 }

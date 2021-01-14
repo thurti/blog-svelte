@@ -4,11 +4,12 @@
   margin: lines(1) 0;
   padding: lines(1) lines(1) lines(2) lines(1);  
   
-  @include media-medium{
+  @include media-large{
     column-gap: lines(1);
   }
-
+  
   @include media-full{
+    column-gap: lines(2);
     padding: lines(2) lines(2) lines(3) lines(2);
   }
 }
@@ -16,9 +17,9 @@
 .post__hgroup{
   .post-hero &{
     grid-column: center;
-    margin-bottom: lines(1);
+    margin-bottom: lines(0.5);
 
-    @include media-medium{
+    @include media-large{
       grid-column: left-col;
       text-align: left;
     }
@@ -31,12 +32,8 @@
     height: 100%;
     margin-top: 0;
 
-    @include media-medium{
+    @include media-large{
       grid-column: left-col;
-    }
-    
-    td{
-      border-color: darken($bg-color, 15);
     }
   }
 }
@@ -46,20 +43,20 @@
     grid-column: bleed;
     margin-top: lines(1.25);
 
-    @include media-medium{
+    @include media-large{
       grid-column: span center-start / right-end;
       grid-row: 1 / span 2;
     }
 
     picture,
-      video{
-        height: 100%;
-      }
+    video{
+      height: 100%;
+    }
 
     img,
     video{
+      min-width: 100%;
       min-height: 100%;
-      margin: 0 auto;
       object-fit: cover;
     }
   }
