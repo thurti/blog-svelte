@@ -9,6 +9,8 @@
   export let preview;
   export let created_at;
   export let tags;
+
+  const tag_list = tags.filter(tag => !['home', 'article'].includes(tag)).join(', ');
 </script>
 
 <a class="post-link no-hover" href="/{category}/{slug}" title={slug}>
@@ -17,7 +19,7 @@
     <PostTitle {title} />
 
     <section class="post__teaser">
-      <div class="small post__tags">{tags.join(', ')}</div>
+      <div class="small post__tags text-capitalize">{tag_list}</div>
       {@html teaser}
     </section>
 
