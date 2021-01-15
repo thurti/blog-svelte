@@ -1,0 +1,30 @@
+.header{
+  position: absolute;
+  width: 100%;
+  height: lines(2);
+  top: 0;
+}
+
+.header__nav{
+  @extends .header;
+  
+  @include media-medium{
+    transition: transform 0.15s linear;
+    transform: translateY(#{lines(-3)});
+  }
+
+  .show-nav &{
+    transform: translateY(0);
+  }
+}
+
+.header__small{
+  @extend .header;
+
+  transition: transform 0.15s linear;
+  transform: translate(calc(50vw - #{lines(1.5)}), 0);
+    
+  .show-nav &{
+    transform: translate(calc(50vw - #{lines(1.5)}), #{lines(-3)});
+  }
+}
