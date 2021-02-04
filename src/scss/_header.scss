@@ -9,11 +9,12 @@
   @extends .header;
   
   @include media-medium{
-    transition: transform 0.15s linear;
+    transition: transform 0.3s linear 1s;
     transform: translateY(#{lines(-3)});
   }
 
   .show-nav &{
+    transition-delay: 0s;
     transform: translateY(0);
   }
 }
@@ -25,10 +26,11 @@
     margin: 0 auto;
   }
   
-  transition: transform 0.15s linear;
+  transition: transform 0.3s linear 1s;
   transform: translateY(0);
     
   .show-nav &{
+    transition-delay: 0s;
     transform: translateY(#{lines(-3)});
   }
 }
