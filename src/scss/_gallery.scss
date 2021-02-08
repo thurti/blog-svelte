@@ -2,13 +2,20 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .gallery__item{
   flex-grow: 1;
-  width: lines(8);
+  flex-shrink: 1;
+  flex-basis: 0;
+
   margin: 0 lines(0.5) lines(1);
+
+  &:first-child{
+    flex-basis: 100%;
+  }
+
 }
 
 .gallery__image,
@@ -18,7 +25,11 @@
 
 .gallery__image{
   display: block;
-  height: lines(8);
+  height: lines(6);
+
+  .gallery__item:first-child &{
+    height: lines(8);
+  }
   
   img{
     height: 100%;
