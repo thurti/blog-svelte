@@ -17,7 +17,7 @@
 .post__hgroup{
   .post-hero &{
     grid-column: center;
-    margin-bottom: lines(0.5);
+    margin-bottom: lines(1);
 
     @include media-large{
       grid-column: left-col;
@@ -39,10 +39,8 @@
 }
 
 .post-hero__image{
-  
   .post-hero &{
     grid-column: bleed;
-    margin-top: lines(1.25);
 
     @include media-large{
       grid-column: span center-start / right-end;
@@ -52,6 +50,7 @@
     picture,
     video{
       height: 100%;
+      padding-bottom: lines(1.25);
     }
 
     img,

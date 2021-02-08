@@ -10,6 +10,15 @@ article > * + *{
   margin-top: lines(1);
 }
 
+article {
+  :not(picture) > img,
+  picture,
+  video,
+  pre{
+    margin-top: lines(1.25);
+  }
+}
+
 pre[class*="language-"] {
   margin: lines(1) 0 0 0;
 }
