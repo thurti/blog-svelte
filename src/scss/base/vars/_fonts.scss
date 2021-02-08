@@ -33,7 +33,7 @@ $font-huge: ms(5);
 /**
  * FUNCTIONS
  **/
-@function em($px, $base: $font-normal) {
+@function em($px, $base: $base-font-size) {
   @return (($px) / $base) * 1em;
 }
 

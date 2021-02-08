@@ -111,15 +111,22 @@ blockquote {
 }
 
 code[class*="language-"],
-pre[class*="language-"] {
+pre[class*="language-"],
+code {
   font-size: $font-small;
+  background: #3e3f37;
 }
 
 pre {
   padding: lines(0.25);
   background: #3e3f37;
   overflow-x: auto;
-  font-size: em(16px);
+}
+
+p > code{
+  font-size: $font-smaller;
+  border-radius: 2px;
+  padding: lines(.125);
 }
 
 @include media-dark {
