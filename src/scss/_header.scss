@@ -1,36 +1,42 @@
-.header{
-  position: absolute;
-  width: 100%;
-  height: lines(2);
-  top: 0;
+%header{
+  @include media-medium{
+    position: absolute;
+    width: 100%;
+    height: lines(2);
+    top: 0;
+  }
 }
 
 .header__nav{
-  @extends .header;
+  @extend %header;
   
   @include media-medium{
-    transition: transform 0.3s linear 1s;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
     transform: translateY(#{lines(-3)});
+
+    .show-nav &{
+      transition-delay: 0s;
+      transform: translateY(0);
+    }
   }
 
-  .show-nav &{
-    transition-delay: 0s;
-    transform: translateY(0);
-  }
 }
 
 .header__small{
-  @extend .header;
+  @extend %header;
 
-  .logo{
-    margin: 0 auto;
-  }
-  
-  transition: transform 0.3s linear 1s;
-  transform: translateY(0);
+  @include media-medium{
+    .logo{
+      margin: 0 auto;
+    }
     
-  .show-nav &{
-    transition-delay: 0s;
-    transform: translateY(#{lines(-3)});
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    transform: translateY(0);
+      
+    .show-nav &{
+      transition-delay: 0s;
+      transform: translateY(#{lines(-3)});
+    }
   }
+
 }

@@ -55,7 +55,6 @@ footer{
 
 header{
   position: relative;
-  width: 100vw;
 
   @include media-medium{
     height: lines(2);
@@ -66,10 +65,6 @@ header{
 
 main{
   margin-top: lines(2);
-
-  @include media-medium{
-    margin-top: lines(3);
-  }
 }
 
 header,

@@ -30,7 +30,11 @@
 .nav--main{
   @extend .nav;
   
-  grid-column: span center-start / bleed-r;
+  @include media-medium{
+    grid-column: span center-start / bleed-r;
+    margin-right: lines(1);
+  }
+  
   align-items: center;
   
   ul {
