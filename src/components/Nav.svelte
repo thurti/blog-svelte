@@ -6,6 +6,14 @@
   export let items;
 
   $:show = $nav_show;
+  
+  function isActive(nav_item, current) {
+    if (nav_item.title === "Home"){
+      return current === "/";
+    } else {
+      return current.includes(nav_item.url);
+    }
+  }
 </script>
 
 <header class:show-nav={show}>
@@ -17,7 +25,7 @@
     <nav class="nav--main">
       <ul>
         {#each items as item}
-          <li class:is-active={item.title !== "Home" && $router_current.includes(item.url)}><a href="{item.url}">{item.title}</a></li>
+          <li class:is-active={isActive(item, $router_current)}><a href="{item.url}">{item.title}</a></li>
         {/each}
       </ul>
     </nav>
