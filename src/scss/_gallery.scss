@@ -12,10 +12,11 @@
 
   margin: 0 lines(0.5) lines(1);
 
-  &:first-child{
-    flex-basis: 100%;
+  @include media-medium{
+    &:first-child{
+      flex-basis: 100%;
+    }
   }
-
 }
 
 .gallery__image,
@@ -27,8 +28,10 @@
   display: block;
   height: lines(6);
 
-  .gallery__item:first-child &{
-    height: lines(8);
+  @include media-medium{
+    .gallery__item:first-child &{
+      height: lines(8);
+    }
   }
   
   img{
