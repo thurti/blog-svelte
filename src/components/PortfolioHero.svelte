@@ -1,4 +1,6 @@
 <script>
+import Picture from "./Picture.svelte";
+
   export let src;
   export let alt;
   export let width;
@@ -6,7 +8,15 @@
 </script>
 
 <div class="post-hero__image">
-  <picture>
-    <img src="{src}.jpg" alt="{alt}" {width} {height} loading="lazy">
-  </picture>
+  <Picture
+    {src}
+    {alt}
+    {width}
+    {height}
+    sizes={[
+      "(min-width: 1800px) 1200px",
+      "(min-width: 1200px) 68vw",
+      "90vw"
+    ]}
+  />
 </div>

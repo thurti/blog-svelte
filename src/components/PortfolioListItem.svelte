@@ -1,7 +1,8 @@
 <script>
   import { config } from "../config";
+  import Picture from "./Picture.svelte";
   import PostDate from "./PostDate.svelte";
-import PostTitle from "./PostTitle.svelte";
+  import PostTitle from "./PostTitle.svelte";
 
   export let slug;
   export let title;
@@ -18,9 +19,13 @@ import PostTitle from "./PostTitle.svelte";
       <PostTitle {title} type="h3" />
     </hgroup>
     
-    <picture class="gallery__image">
-      <img src="{hero.src}.jpg" alt="{hero.alt}" width="{hero.width}" height="{hero.height}" loading="lazy">
-      <!-- add webp, avij -->
-    </picture>
+    <Picture
+      classname="gallery__image"
+      {...hero}
+      sizes={[
+        "(min-width: 1010px) 938px",
+        "90vw"
+      ]}
+    />
   </article>
 </a>
