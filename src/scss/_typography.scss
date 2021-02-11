@@ -124,9 +124,10 @@ pre {
 }
 
 p > code{
-  font-size: $font-smaller;
+  position: relative;
   border-radius: 2px;
   padding: lines(.125);
+  bottom: lines(0.05);
 }
 
 @include media-dark {
