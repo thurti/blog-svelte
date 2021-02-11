@@ -59,7 +59,7 @@ import Link from "./Link.svelte";
       <td class="flow-small">
         {#each credits as credit}
           <p class="text-capitalize">
-            <Link href={credit.url} title={credit.name} text={credit.name} />: <br>
+            <Link href={credit.url} title={credit.name} text={credit.name} />: 
             {credit.work.join(', ')}
           </p>
         {/each}

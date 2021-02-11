@@ -1,5 +1,5 @@
 <script>
-import Picture from "./Picture.svelte";
+  import Picture from "./Picture.svelte";
 
   export let src;
   export let alt;

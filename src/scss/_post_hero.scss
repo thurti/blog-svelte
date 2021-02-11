@@ -2,25 +2,32 @@
   grid-column: span left-start / right-end;
 
   margin: 0 0 lines(1);
-  padding: lines(1) lines(1) lines(2) lines(1);  
+  padding: lines(1) lines(1) lines(2);  
   
-  @include media-large{
-    column-gap: lines(1);
+  display: flex;
+  flex-wrap: wrap;
+
+  &>.left{
+    flex-grow: 1;
+    flex-basis: 300px;
+
+    @media (min-width: em(1026px)) {
+      padding-right: lines(1);
+    }
   }
-  
-  @include media-full{
-    column-gap: lines(2);
-    padding: lines(2) lines(2) lines(3) lines(2);
+
+  &>.right{
+    flex-grow: 5;
+    flex-shrink: 1;
+    flex-basis: 650px;
   }
 }
 
 .post__hgroup{
   .post-hero &{
-    grid-column: center;
     margin-bottom: lines(1);
-
-    @include media-large{
-      grid-column: left-col;
+    
+    @media (min-width: em(1026px)) {
       text-align: left;
     }
   }
@@ -28,24 +35,15 @@
 
 .post__info{
   .post-hero &{
-    grid-column: center;
-    height: 100%;
-    margin-top: 0;
-    
-    @include media-large{
-      grid-column: left-col;
-    }
+    margin: auto;
+    max-width: em(550px);
   }
 }
 
 .post-hero__image{
   .post-hero &{
-    grid-column: bleed;
-
-    @include media-large{
-      grid-column: span center-start / right-end;
-      grid-row: 1 / span 2;
-    }
+    height: 100%;
+    max-height: 100%;
 
     picture,
     video{
@@ -55,8 +53,7 @@
 
     img,
     video{
-      min-width: 100%;
-      min-height: 100%;
+      height: 100%;
       object-fit: cover;
     }
   }

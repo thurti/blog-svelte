@@ -18,15 +18,19 @@
 
 <article class="grid post--portfolio">
 
-  <div class="grid post-hero animated-bg-color">
+  <div class="post-hero animated-bg-color">
 
-    <hgroup class="post__hgroup">
-      <PostDate {created_at} format="m d, y" />
-      <PostTitle {title} />
-    </hgroup>
-  
-    <PortfolioInfo {...info} />
-    <PortfolioHero {...hero} />
+    <div class="left">
+      <hgroup class="post__hgroup">
+        <PostDate {created_at} format="m d, y" />
+        <PostTitle {title} />
+      </hgroup>
+
+      <PortfolioInfo {...info} />
+    </div>
+    <div class="right">
+      <PortfolioHero {...hero} />
+    </div>
   </div>
 
   {@html content_parsed}
