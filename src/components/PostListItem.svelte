@@ -1,4 +1,5 @@
 <script>
+  import Picture from "./Picture.svelte";
   import PostDate from "./PostDate.svelte";
   import PostTitle from "./PostTitle.svelte";
 
@@ -9,6 +10,7 @@
   export let preview;
   export let created_at;
   export let tags;
+  export let hero;
 
   const tag_list = tags.filter(tag => !['home', 'article'].includes(tag)).join(', ');
 </script>
@@ -25,9 +27,11 @@
 
     <aside class="post__preview hide-small">
       {#if preview}
-        <pre>
-        <code class="language-js">{@html preview}</code>
-      </pre>
+        <pre class="preview-content">
+          <code class="language-js">{@html preview}</code>
+        </pre>
+      {:else if hero}
+        <Picture {...hero} classname="preview-content" />
       {/if}
     </aside>
   </article>

@@ -1,6 +1,10 @@
 .post--listing {
   @extend .post;
 
+  & > *{
+    align-self: unset;
+  }
+
   column-gap: lines(1);
   grid-template-rows: auto auto;
 }
@@ -38,24 +42,26 @@
   grid-column: left-col;
   grid-row: 2;
   justify-self: right;
+  height: 100%;
 
   max-width: lines(6);
 
-  pre{
-    min-height: 100%;
-  }
+  .preview-content{
+    margin: 0 0 0 lines(0.5);
 
-  code {
     filter: blur(1px) hue-rotate(40deg);
 
     transition-property: filter, opacity;
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
+
+    img{
+      // height: 100%;
+    }
   }
 
   code[class*="language-"],
   pre[class*="language-"] {
-    margin: 0;
     font-size: $font-smaller;
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -77,7 +83,7 @@
   display: block;
 
   &:hover{
-    .post__preview code {
+    .post__preview .preview-content {
       filter: blur(0) hue-rotate(0);
     }
   }
