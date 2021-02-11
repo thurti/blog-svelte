@@ -25,7 +25,7 @@
 .post__heading {
   
   .post--listing &{
-    grid-column: center;
+    grid-column: span center-start / bleed-r;
     grid-row: 1;
 
     margin-top: 0;
@@ -64,7 +64,11 @@
 }
 
 .post__teaser {
-  grid-column: span center-start / center-end;
+  grid-column: span center-start / bleed-r;
+  @include media-large{
+    grid-column: center;
+  }
+
   grid-row: 2;
   align-self: start;
 }
