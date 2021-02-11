@@ -1,8 +1,17 @@
 .post-hero{
   grid-column: span left-start / right-end;
 
-  margin: 0 0 lines(1);
-  padding: lines(1) lines(1) lines(2);  
+  margin: 0;
+  padding: lines(1) lines(0.5) lines(0.5);
+
+  @include media-medium{
+    padding: lines(1) lines(1) lines(1);
+  }
+
+  @media (min-width: em(1024px)) {
+    margin: 0 0 lines(1);
+    padding-bottom: lines(2);
+  }
   
   display: flex;
   flex-wrap: wrap;
@@ -11,7 +20,7 @@
     flex-grow: 1;
     flex-basis: 300px;
 
-    @media (min-width: em(1026px)) {
+    @media (min-width: em(1024px)) {
       padding-right: lines(1);
     }
   }
@@ -27,7 +36,7 @@
   .post-hero &{
     margin-bottom: lines(1);
     
-    @media (min-width: em(1026px)) {
+    @media (min-width: em(1024px)) {
       text-align: left;
     }
   }

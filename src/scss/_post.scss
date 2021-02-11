@@ -41,7 +41,7 @@
     }
   }
 
-  &.no-table{
+  @include media-max-small{
     border: 0;
 
     thead,
@@ -53,14 +53,12 @@
     }
 
     td{
-      padding: lines(0.25) 0 lines(0.25);
       border :0;
     }
 
     tr:first-child{
-      border-bottom: 1px solid $bg-color;
-      padding-bottom: lines(0.5);
-      margin-bottom: lines(0.5);
+      border-top: 1px solid darken($bg-color, 15);
+      padding-top: lines(0.5);
     }
     
     tr:not(:first-child) td:first-child{

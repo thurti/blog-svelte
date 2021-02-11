@@ -1,5 +1,13 @@
 .post--portfolio{
   @extend .post;
+
+  padding: 0;
+
+  @include media-max-small{
+    & > *:not(.post-hero) {
+      padding: 0 lines(0.5);
+    }
+  }
 }
 
 .portfolio-gallery{

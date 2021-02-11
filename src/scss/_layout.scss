@@ -68,8 +68,8 @@ main{
 }
 
 header,
-main{
-  @include media-max-medium{
+main > *{
+  @include media-max-small{
     padding: 0 lines(0.5);
   }
 }
