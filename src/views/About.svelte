@@ -16,12 +16,14 @@
 
 <Page center=true>
   
-  <h1>Hi, My Name Is Thomas.</h1>
-
+  <h1>Hi, my name is Thomas.</h1>
   <p>
-    I am a frontend web developer with a <br>
-    strong focus on JavaScript, HTML &
-    CSS.
+    I'm a web developer from Germany. <br>
+    I create frontend applications based on <br>
+    <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>.
+  </p>
+  <p>
+    I also have experience in creating backends with <code>PHP</code> or <code>NodeJs</code>.
   </p>
   <p>
     Feel free to contact me<br>
