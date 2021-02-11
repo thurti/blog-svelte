@@ -30,7 +30,7 @@
       <GithubLink url={github} />,
     {/if}
     created by
-    <a href="/about">Thomas Hurtig</a><br />
+    <a href="/about">Thomas</a><br />
   </p>
   <Tags {tags} />
 </aside>
