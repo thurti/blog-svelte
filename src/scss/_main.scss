@@ -35,12 +35,13 @@ img{
   background: linear-gradient(120deg, rgba(113,6,144,1) 0%, rgba(13,13,199,1) 30%, rgb(2, 180, 141) 100%);
 
   
-  animation-duration: 10s;
-  animation-delay: 0.2s;
+  animation-duration: 20s;
+  animation-delay: 1s;
   animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   animation-iteration-count: infinite;
   animation-direction: alternate;
   
+  filter: hue-rotate(25deg) saturate(0.75);
   filter: hue-rotate(35deg) saturate(0.75);
   animation-name: bgcolor-1;
   
@@ -48,8 +49,17 @@ img{
     0% {
       filter: hue-rotate(35deg) saturate(0.75);
     }
+    25%{
+      filter: hue-rotate(25deg) saturate(0.75);
+    }
+    50% {
+      filter: hue-rotate(35deg) saturate(0.75);
+    }
+    75%{
+      filter: hue-rotate(45deg) saturate(0.75);
+    }
     100% {
-      filter: hue-rotate(85deg) saturate(0.75);
+      filter: hue-rotate(35deg) saturate(0.75);
     }
   }
 }

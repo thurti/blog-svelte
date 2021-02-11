@@ -28,22 +28,22 @@
     }
 
     &:nth-child(2n-1) .gallery__title{
-      animation-duration: 2s;
+      animation-duration: 5s;
       animation-delay: 1s;
     }
 
     &:nth-child(3n-1) .gallery__title{
-      animation-duration: 3s;
+      animation-duration: 6s;
       animation-delay: 2s;
     }
 
     &:nth-child(4n-1) .gallery__title{
-      animation-duration: 4s;
+      animation-duration: 7s;
       animation-delay: 3s;
     }
 
     &:nth-child(5n-1) .gallery__title{
-      animation-duration: 5s;
+      animation-duration: 8s;
       animation-delay: 4s;
     }
   }
