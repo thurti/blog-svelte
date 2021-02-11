@@ -41,8 +41,8 @@
   {/if}
 
   {#if url}
-    <meta property="og:url" content={`${config.url}/${url}`} />
-    <meta property="twitter:url" content={`${config.url}/${url}`} />
+    <meta property="og:url" content={`${config.url}${url}`} />
+    <meta property="twitter:url" content={`${config.url}${url}`} />
   {/if}
 
   {#if type}

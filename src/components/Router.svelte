@@ -29,6 +29,8 @@
             $nav_show = route.nav_show ?? true;
             params = parameter;
             params.api = route.api;
+            params.title = route.title;
+            params.url = route.url;
           });
         }
       });
