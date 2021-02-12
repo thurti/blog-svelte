@@ -1,7 +1,18 @@
 @include loader(1rem, 0, $primary, x, 0.75s);
 
 .page-title{
-  margin: lines(2) 0 lines(2);
+  margin: lines(1) 0;
+  padding: 0 lines(0.5);
+  
+  @include media-medium{
+    margin: lines(2) 0 lines(2);
+  }
+
+  &.text-only{
+    @include media-medium{
+      margin: lines(3) 0 0;
+    }
+  }
   
   h1,
   h2,
@@ -9,19 +20,18 @@
     grid-column: center;
     padding: 0 lines(1) lines(.5);
     
-    border-bottom: 1px solid $border-color;
-
     font-weight: 300;
     text-align: center;
+    
+    border-bottom: 1px solid $border-color;
   }
 
   h1{
     font-size: $font-giant;
-  }
 
-
-  &.text-only{
-    margin: lines(3) 0 0;
+    @include media-max-small{
+      border-bottom: none;
+    }
   }
 }
 
