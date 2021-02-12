@@ -1,6 +1,6 @@
 <script>
+  import Picture from "./Picture.svelte";
   import PostDate from "./PostDate.svelte";
-  import PostPreview from "./PostPreview.svelte";
   import PostTitle from "./PostTitle.svelte";
 
   export let slug;
@@ -25,6 +25,14 @@
       {@html teaser}
     </section>
 
-    <PostPreview {preview} {hero} />
+    <aside class="post__preview hide-small">
+      {#if preview}
+        <pre class="preview-content">
+          <code class="language-js">{@html preview}</code>
+        </pre>
+      {:else if hero}
+        <Picture {...hero} classname="preview-content" />
+      {/if}
+    </aside>
   </article>
 </a>
