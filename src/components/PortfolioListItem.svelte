@@ -16,7 +16,7 @@
   <article>
     <hgroup class="gallery__title animated-bg-color a1">
       <PostDate {created_at} format="m y" />
-      <PostTitle {title} type="h3" />
+      <PostTitle title={title_short || title} type="h3" />
     </hgroup>
     
     <Picture
