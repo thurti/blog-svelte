@@ -37,8 +37,8 @@
     <code>HTML</code>, <code>CSS</code> and <code>JavaScript</code> <br>
     powered by <i>backends</i> based on <br><code>NodeJs</code> or <code>PHP</code>.
   </p>
-  <p>For detailed information on my skill set,
-    check out my <a href="/hire-me" title="Hire Me">Hire Me</a> page.</p>
+  <p>For detailed information on my skill set 
+    check out my <a href="/about" title="About">About</a> page.</p>
 </Page>
 
 <PageTitle title="Recent" h="2" />
