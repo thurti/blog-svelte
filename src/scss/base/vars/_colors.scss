@@ -34,7 +34,7 @@ $font-select-background-dark: lightseagreen;
 /**
 * Link colors
 */
-$link-color: #006eff;
+$link-color: darken($font-select-background, 20);
 $link-hover: darken($link-color, 5);
 $link-active: lighten($link-hover, 10);
 $link-visited: lighten($link-color, 15);
