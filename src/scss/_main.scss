@@ -12,6 +12,10 @@
     @include media-medium{
       margin: lines(2) 0 0;
     }
+
+    h1{
+      grid-column: center;
+    }
   }
   
   h1,
@@ -32,6 +36,11 @@
     @include media-max-small{
       border-bottom: none;
     }
+  }
+
+  h2{
+    grid-column: bleed;
+    font-size: $font-huge;
   }
 }
 
