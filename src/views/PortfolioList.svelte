@@ -29,7 +29,7 @@
 <PageTitle title="Portfolio" />
     
 <main class="grid" in:fade={{ duration: 150 }}>
-  <div class="gallery portfolio-gallery">
+  <div class="gallery-portfolio highlight-first">
 
     {#each content as post}
       <PortfolioListItem {...post} />

@@ -1,0 +1,9 @@
+.gallery-portfolio{
+  @extend .gallery;
+  
+  grid-column: bleed;
+
+  .gallery__item{
+    min-width: em(250px);
+  }
+}

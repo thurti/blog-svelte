@@ -6,6 +6,7 @@
 
   export let slug;
   export let title;
+  export let title_short;
   export let hero;
   export let created_at;
 
@@ -14,7 +15,7 @@
 
 <a href="{url}" class="gallery__item post-link no-hover">
   <article>
-    <hgroup class="gallery__title animated-bg-color a1">
+    <hgroup class="gallery__title animated-bg-color">
       <PostDate {created_at} format="m y" />
       <PostTitle title={title_short || title} type="h3" />
     </hgroup>
