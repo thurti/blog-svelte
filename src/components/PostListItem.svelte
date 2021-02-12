@@ -31,7 +31,13 @@
           <code class="language-js">{@html preview}</code>
         </pre>
       {:else if hero}
-        <Picture {...hero} classname="preview-content" />
+        <Picture 
+          classname="preview-content" 
+          {...hero} 
+          sizes={[
+            "167px"
+          ]}
+        />
       {/if}
     </aside>
   </article>
