@@ -2,7 +2,6 @@
   import Picture from "./Picture.svelte";
   import PostDate from "./PostDate.svelte";
   import PostTitle from "./PostTitle.svelte";
-  import { prism } from "svelte-prism-action";
 
   export let slug;
   export let category;
