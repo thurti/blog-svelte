@@ -3,19 +3,25 @@
 .page-title{
   margin: lines(2) 0 lines(2);
   
-  h1 {
+  h1,
+  h2,
+  h3 {
     grid-column: center;
     padding: 0 lines(1) lines(.5);
     
     border-bottom: 1px solid $border-color;
 
-    font-size: $font-giant;
     font-weight: 300;
     text-align: center;
   }
 
+  h1{
+    font-size: $font-giant;
+  }
+
+
   &.text-only{
-    margin: lines(4) 0 0;
+    margin: lines(3) 0 0;
   }
 }
 
