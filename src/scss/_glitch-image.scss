@@ -1,0 +1,17 @@
+.glitch-image{
+  position: relative;
+  overflow: hidden;
+
+  img{
+    display: block;
+    position: absolute;
+
+    margin: 0;
+    transition: transform .5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+
+  &:hover{
+    cursor: pointer;
+    img {transform: translate(0,0) !important;}
+  }
+}

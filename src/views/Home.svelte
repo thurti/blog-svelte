@@ -7,6 +7,7 @@
   import Page from "../components/Page.svelte";
   import PageTitle from "../components/PageTitle.svelte";
   import RecentListItem from "../components/RecentListItem.svelte";
+import GlitchImage from "../components/GlitchImage.svelte";
 
   export let content;
   export let params;
@@ -35,13 +36,18 @@
   <p style="line-height: 1.75">
     I create <i>frontend applications</i> with <br>
     <code>HTML</code>, <code>CSS</code> and <code>JavaScript</code> <br>
-    powered by <i>backends</i> based on <br><code>NodeJs</code> or <code>PHP</code>.
+    powered by <i>backends</i> based on <br><code>NodeJs</code>, <code>PHP</code> and the <code>Cloud™️</code>.
   </p>
   <p>For detailed information on my skill set 
-    check out my <a href="/about" title="About">About</a> page.</p>
+    check out my <a href="/about" title="About">About</a> page.
+  </p>
+
+  <p class="center" style="margin-top: 5rem">
+    <GlitchImage src="static/img/head_2.jpg" width="250" height="250" slize="7" />
+  </p>
 </Page>
 
-<PageTitle title="Recent" h="2" />
+<PageTitle title="Recent Posts" h="2" />
 
 <main in:fade={{ duration: 150 }} class="grid">
   <div class="gallery-recent">
