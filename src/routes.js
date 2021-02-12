@@ -53,7 +53,7 @@ export const routes = [
   {
     url: "/about",
     title: "About",
-    view: About,
+    view: About
   },
   {
     view: NotFound,

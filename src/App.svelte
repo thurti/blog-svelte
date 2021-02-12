@@ -11,7 +11,7 @@
   export let prepopulate_content;
 
   const view = routes.find((route) => route.name === viewname)?.view;
-  const nav_items = routes.filter(route => route.title ?? false);
+  const nav_items = routes.filter(route => (route.title && !route.hide) ?? false);
 </script>
 
 <Nav items={nav_items} />
