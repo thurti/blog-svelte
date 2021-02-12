@@ -1,5 +1,6 @@
 import { config } from './config';
 import ContentLoader from "./views/ContentLoader.svelte";
+import Home from "./views/Home.svelte";
 import PostList from "./views/PostList.svelte";
 import PostSingle from "./views/PostSingle.svelte";
 import About from "./views/About.svelte";
@@ -11,9 +12,9 @@ export const routes = [
   {
     url: "/",
     api: `${config.api}/posts/tag/home`,
-    title: "Home",
+    title: "Hello",
     view: ContentLoader,
-    component: PostList
+    component: Home
   },
   {
     url: "/articles",

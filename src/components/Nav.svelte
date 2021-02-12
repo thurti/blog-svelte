@@ -8,7 +8,7 @@
   $:show = $nav_show;
   
   function isActive(nav_item, current) {
-    if (nav_item.title === "Home"){
+    if (nav_item.title === "Hello"){
       return current === "/";
     } else {
       return current.includes(nav_item.url);
@@ -25,7 +25,7 @@
     <nav class="nav--main">
       <ul>
         {#each items as item}
-          <li class:is-active={isActive(item, $router_current)}><a href="{item.url}">{item.title}</a></li>
+          <li class:is-active={isActive(item, $router_current)}><a href="{item.url}" title="{item.title}">{item.title}</a></li>
         {/each}
       </ul>
     </nav>
