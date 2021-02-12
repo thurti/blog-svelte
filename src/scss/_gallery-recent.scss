@@ -1,0 +1,27 @@
+.gallery-recent{
+  @extend .gallery;
+
+  grid-column: bleed;
+
+  .gallery__item{
+    flex-basis: 200px;
+  }
+
+  .gallery__image{
+    .preview-content {
+      margin: 0;
+      height: 100%;
+      
+      code,
+      pre {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        font-size: $font-smaller;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+    }
+  }
+}
