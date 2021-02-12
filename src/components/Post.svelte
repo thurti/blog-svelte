@@ -18,7 +18,7 @@
 <article class="grid post--single" use:prism>
   <hgroup class="post__hgroup">
     <PostDate {created_at} format="m d, y" />
-    <PostTitle title={title.replace('<br>', ' - ')} />
+    <PostTitle {title} />
   </hgroup>
 
   {@html content_parsed}
