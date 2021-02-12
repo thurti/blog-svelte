@@ -37,14 +37,14 @@
   
 </article>
 
-<aside class="post-meta flow">
+<aside class="post-meta flow happy-border">
   <div class="post-meta__content">
     <h3>
       Hey, my name is Thomas.
     </h3>
     <p>
       I'm a freelance web developer based in Germany. <br>
-      You can <a href="/hire-me">Hire Me.</a>
+      You can <a href="/about">Hire Me.</a>
     </p>
   </div>
   <Tags {tags} />  

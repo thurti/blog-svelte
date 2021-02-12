@@ -31,23 +31,17 @@
 
   margin: 0 lines(0.5) lines(1);
   
-  border: 2px solid transparent;
   transform: scale(1);
 
   &:hover{
-    border-image: linear-gradient(120deg, rgba(113,6,144,1) 0%, rgba(13,13,199,1) 30%, rgb(2, 180, 141) 100%);
-    border-image-slice: 1;
+
+    img{
+      transform: scale(1.1);
+    }
   }
 
   &:active{
     transform: scale(.995);
-  }
-
-  &:nth-child(2n-1):hover img{
-    transform: scale(1.1, 1.05);
-  }
-  &:nth-child(3n-1):hover img{
-    transform: scale(1.05, 1.1);
   }
 
   & > article{

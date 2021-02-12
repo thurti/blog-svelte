@@ -7,15 +7,34 @@
     padding: 0 lines(0.5);
     list-style: none;
     text-align: center;
+
+    @extend .happy-border;
+    border: 2px solid;
+
+    &:nth-child(1) {border-width: 2px 0 0 0px;}
+    &:nth-child(2) {border-width: 0 0 2px 2px;}
+    &:nth-child(3) {border-width: 2px 2px 0 2px;}
+    &:nth-child(4) {border-width: 0px 2px 0 0px;}
     
     &.is-active{
       font-weight: 800;
 
       a{
-        outline: 2px solid $font-select-background;
+        border-bottom: 2px solid $font-select-background;
   
         @include media-dark{
-          outline: 2px solid $font-select-background-dark;
+          border-bottom: 2px solid $font-select-background-dark;
+        }
+      }
+
+      &:nth-child(2){
+        a{
+          border-bottom-color: transparent;
+          border-top: 2px solid $font-select-background;
+    
+          @include media-dark{
+            border-top: 2px solid $font-select-background-dark;
+          }
         }
       }
     }
@@ -24,6 +43,8 @@
   a{
     text-decoration: none;
     color: inherit;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
   }
 }
 
