@@ -4,6 +4,7 @@
   import PortfolioListItem from "../components/PortfolioListItem.svelte";
   import FooterHeart from "../components/FooterHeart.svelte";
   import Meta from "../components/Meta.svelte";
+  import PageTitle from "../components/PageTitle.svelte";
 
   export let content;
   export let current_scroll = 0;
@@ -24,6 +25,8 @@
 </script>
 
 <Meta {...meta} />
+
+<PageTitle title="Portfolio" />
     
 <main class="grid" in:fade={{ duration: 150 }}>
   <div class="gallery portfolio-gallery">

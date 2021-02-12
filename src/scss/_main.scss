@@ -1,5 +1,24 @@
 @include loader(1rem, 0, $primary, x, 0.75s);
 
+.page-title{
+  margin: lines(2) 0 lines(2);
+  
+  h1 {
+    grid-column: center;
+    padding: 0 lines(1) lines(.5);
+    
+    border-bottom: 1px solid $border-color;
+
+    font-size: $font-giant;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  &.text-only{
+    margin: lines(4) 0 0;
+  }
+}
+
 #loader {
   text-align: center;
 }
