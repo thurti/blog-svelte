@@ -5,7 +5,6 @@
   import Meta from "../components/Meta.svelte";
   import PostListItem from "../components/PostListItem.svelte";
   import FooterHeart from "../components/FooterHeart.svelte";
-  import Page from "../components/Page.svelte";
   import PageTitle from "../components/PageTitle.svelte";
 
   export let content;
