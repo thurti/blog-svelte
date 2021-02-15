@@ -20,10 +20,21 @@ a.button {
   background-color: var(--color-btn-bg);
   border: 2px solid var(--color-btn-border);
 
+  &.no-style{
+    background: transparent;
+    border: 0;
+    
+    &:focus,
+    &:active{
+      outline: 0;
+    }
+  }
+
   transition: background-color 0.15s ease-in-out;
 
   &:hover {
     filter: brightness(90%);
+    cursor: pointer;
   }
 
   &:active {
