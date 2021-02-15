@@ -43,7 +43,7 @@ import GlitchImage from "../components/GlitchImage.svelte";
   </p>
 
   <p class="center" style="margin-top: 5rem">
-    <GlitchImage src="static/img/head_2.jpg" width="250" height="250" slize="7" />
+    <GlitchImage src="static/img/head.jpg" width="250" height="250" slize="7" />
   </p>
 </Page>
 
