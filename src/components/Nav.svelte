@@ -1,6 +1,7 @@
 <script>
   import { config } from '../config';
   import { router_current, nav_show } from '../store'; 
+  import DarkModeToggle from './DarkModeToggle.svelte';
   import Logo from "./Logo.svelte";
   
   export let items;
@@ -36,4 +37,9 @@
       <Logo />
     </a>
   </div>
+
+  <div class="grid header__darkmode">
+    <DarkModeToggle enabled={true} />
+  </div>
+
 </header>

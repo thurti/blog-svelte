@@ -40,3 +40,12 @@
   }
 
 }
+
+.header__darkmode{
+  padding: lines(.2);
+
+  button{
+    grid-column: right;
+    justify-self: end;
+  }
+}

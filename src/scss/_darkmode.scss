@@ -1,0 +1,42 @@
+.darkmode-toggle{
+  display: block;
+  
+  width: 45px;
+  height: 45px;
+
+  .icon {
+    display: block;
+    width: 50%;
+    height: 50%;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
+
+  .icon-sun,
+  .icon-moon{
+    transition-property: transform, color;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .icon-sun{
+    transform: translate(0,0) scale(1.5);
+  }
+
+  .icon-moon{
+    transform: translate(125%,25%) scale(0.8);
+  }
+
+  &.enabled{
+
+    .icon-sun{
+      transform: translate(125%, -75%) scale(0.8);
+    }
+
+    .icon-moon{
+      transform: translate(-50%,100%) scale(1.4);
+    }
+  }
+
+}

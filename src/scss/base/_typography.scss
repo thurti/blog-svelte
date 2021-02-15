@@ -17,7 +17,7 @@ body {
   font-feature-settings: "kern" on, "dlig" off, "liga" on, "frac" off,
     "swsh" off;
 
-  .dark &{
+  &.dark{
     font-weight: 400;
   }
 }

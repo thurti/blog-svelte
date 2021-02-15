@@ -6,6 +6,12 @@
   font-stretch: 75% 100%;
 }
 
+body{
+  transition-property: background-color, color;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
 article > * + *{
   margin-top: lines(1);
 }

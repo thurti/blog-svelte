@@ -3,6 +3,8 @@
   width: lines(2);
   height: auto;
   line-height: 0;
+
+  transition: fill .3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .logo__black {

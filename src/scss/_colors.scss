@@ -55,7 +55,7 @@
   @include theme-light();
 }
 
-:root.dark{
+:root .dark{
   @include theme-dark();
 }
 
@@ -65,7 +65,7 @@
     @include theme-dark();
   }
 
-  :root.light{
+  :root .light{
     @include theme-light();
   }
 }
