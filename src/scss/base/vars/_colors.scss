@@ -1,58 +1,53 @@
-/**
-* Color definitions.
-*/
-$primary: grey;
-$white: rgb(255, 255, 255);
-$gray: rgb(128, 128, 128);
-$grey: $gray;
-$gray-dark: rgb(55, 55, 55);
-$bg-color: rgb(244, 244, 244);
+$color-primary: grey;
+$color-white: rgb(255, 255, 255);
+$color-border: grey;
 
-/**
-* Font colors
-*/
-$font-color: rgb(52, 52, 52);
-$font-light: lighten($font-color, 10);
-$font-dark: darken($font-color, 10);
-$font-error: #f54740;
-$font-warning: #fdc856;
-$font-success: #49b86e;
+$color-font-error: #f54740;
+$color-font-warning: #fdc856;
+$color-font-success: #49b86e;
 
-/**
- * DARK MODE
- */
-$font-color-dark: #c1bab0;
-$font-dark-light: darken($font-color-dark, 10);
-$bg-color-dark: #1f1f1f;
+$color-forms-border: $color-border;
+$color-forms-border-focus: darken($color-border, 10);
+$color-forms-background: $color-white;
 
-$font-select: $font-color;
-$font-select-background: lightseagreen;
 
-$font-select-dark: $font-color;
-$font-select-background-dark: lightseagreen;
+//LIGHT THEME
+$color-gray: rgb(100, 87, 87);
+$color-bg: rgb(244, 244, 244);
 
-/**
-* Link colors
-*/
-$link-color: darken($font-select-background, 20);
-$link-hover: darken($link-color, 5);
-$link-active: lighten($link-hover, 10);
-$link-visited: lighten($link-color, 15);
+$color-font: rgb(52, 52, 52);
+$color-font-light: lighten($color-font, 10);
+$color-font-dark: darken($color-font, 10);
 
-$link-color-dark: $font-color-dark;
-$link-hover-dark: lighten($link-color-dark, 10);
-$link-active-dark: lighten($link-hover-dark, 10);
-$link-visited-dark: darken($link-color-dark, 15);
+$color-font-select: $color-font;
+$color-font-select-background: lightseagreen; 
 
-/**
- * Borders
- */
-$border-color: grey;
-$border-radius: 0px;
+$color-link: darken($color-font-select-background, 20);
+$color-link-hover: darken($color-link, 5);
+$color-link-active: lighten($color-link-hover, 10);
+$color-link-visited: lighten($color-link, 15);
 
-/**
-* Forms
-*/
-$forms-border-color: $border-color;
-$forms-border-color-focus: darken($border-color, 10);
-$forms-background-color: $white;
+$color-btn-bg: #e2e2e2;
+$color-btn-border: #4e4e4e;
+
+$color-logo-black: rgba(0, 0, 0, 1);
+$color-logo-white: var($color-bg);
+
+
+//DARK THEME
+$color-gray-dark: rgb(55, 55, 55);
+$color-bg-dark: #1f1f1f;
+
+$color-font-dark: #c1bab0;
+$color-font-light-dark: darken($color-font-dark, 10);
+
+$color-link-dark: $color-font-dark;
+$color-link-hover-dark: lighten($color-link-dark, 10);
+$color-link-active-dark: lighten($color-link-hover-dark, 10);
+$color-link-visited-dark: darken($color-link-dark, 15);
+
+$color-btn-bg-dark: #343435;
+$color-btn-border-dark: #c1bab0;
+
+$color-logo-black-dark: rgba(74, 74, 77, 0.5);
+$color-logo-white-dark: $color-bg-dark;

@@ -25,7 +25,7 @@
 .post__info{
   td{
     vertical-align: middle;
-    border-color: darken($bg-color, 15);
+    border-color: darken($color-bg, 15);
   }
   
   li{
@@ -57,7 +57,7 @@
     }
 
     tr:first-child{
-      border-top: 1px solid darken($bg-color, 15);
+      border-top: 1px solid darken($color-bg, 15);
       padding-top: lines(0.5);
     }
     

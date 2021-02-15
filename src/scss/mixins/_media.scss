@@ -46,6 +46,6 @@
 
 @mixin media-dark(){
   @media screen and (prefers-color-scheme: dark) {
-    @content;
+      @content;
   }
 }

@@ -3,14 +3,6 @@ button,
 .button,
 a.btn,
 a.button {
-  --bg: #{darken($bg-color, 7)};
-  --border: #{lighten($font-color, 10)};
-
-  @include media-dark{
-    --bg: #{lighten($bg-color-dark, 7)};
-    --border: #{darken($font-color-dark, 20)};
-  }
-
   display: flex;
   flex-flow: wrap;
   justify-content: center;
@@ -25,8 +17,8 @@ a.button {
   text-align: center;
   text-decoration: none;
   
-  background-color: var(--bg);
-  border: 2px solid var(--border);
+  background-color: var(--color-btn-bg);
+  border: 2px solid var(--color-btn-border);
 
   transition: background-color 0.15s ease-in-out;
 

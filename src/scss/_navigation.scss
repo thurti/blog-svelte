@@ -35,7 +35,7 @@
   @extend .nav;
 
   padding-bottom: lines(0.5);
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid var(--color-border);
 
   align-items: center;
 
@@ -67,21 +67,13 @@
 
     &.is-active{
       a{
-        border-bottom: 2px solid $font-select-background;
-  
-        @include media-dark{
-          border-bottom: 2px solid $font-select-background-dark;
-        }
+        border-bottom: 2px solid var(--color-font-select-background);
       }
   
       &:nth-child(2){
         a{
           border-bottom-color: transparent;
-          border-top: 2px solid $font-select-background;
-    
-          @include media-dark{
-            border-top: 2px solid $font-select-background-dark;
-          }
+          border-top: 2px solid var(--color-font-select-background);
         }
       }
     }

@@ -6,7 +6,7 @@ table {
   width: 100%;
 
   border-collapse: collapse;
-  border: 1px solid $tables-border-color;
+  border: 1px solid var(--color-border);
   font-size: $font-small;
 }
 
@@ -14,7 +14,7 @@ th,
 td {
   font-weight: normal;
   padding: $tables-padding;
-  border: 1px solid $tables-border-color;
+  border: 1px solid var(--color-border);
 }
 
 @include media-max-small {

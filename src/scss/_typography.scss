@@ -89,17 +89,13 @@ i,
 em,
 blockquote p{
   font-weight: 400;
-  color: lighten($font-color, 10);
+  color: var(--color-font-light);
 
   //fake italic
   display: inline-block;
   font-style: normal;
   transform: skewX(-7deg);
   font-size: 0.98em;
-
-  @include media-dark{
-    color: lighten($font-dark-light, 5);
-  }
 }
 
 blockquote {
@@ -128,7 +124,7 @@ p > code{
   border-radius: 2px;
   padding: lines(.125);
   bottom: lines(0.05);
-  color: $font-color-dark;
+  color: $color-font-dark;
 }
 
 @include media-dark {

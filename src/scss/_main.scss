@@ -1,4 +1,4 @@
-@include loader(1rem, 0, $primary, x, 0.75s);
+@include loader(1rem, 0, grey, x, 0.75s);
 
 .page-title{
   margin: lines(1) 0;
@@ -29,7 +29,7 @@
     text-align: center;
     
     @extend .happy-border;
-    border-bottom: 2px solid $border-color;
+    border-bottom: 2px solid var(--color-border);
     border-width: 0 0 2px 0;
   }
 
@@ -68,13 +68,13 @@ img{
 }
 
 .animated-bg-color{
-  color: $bg-color;
+  color: $color-bg;
 
   @include media-dark{
-    color: darken($bg-color, 10);
+    color: darken($color-bg, 10);
 
     a{
-      color: darken($bg-color, 10);
+      color: darken($color-bg, 10);
     }
   }
 

@@ -1,0 +1,71 @@
+@mixin theme-dark{
+  --color-gray: #{$color-gray-dark};
+  --color-bg: #{$color-bg-dark};
+
+  --color-font: #{$color-font-dark};
+  --color-font-light: #{$color-font-light-dark};
+
+  --color-link: var(--color-font);
+  --color-link-hover: #{$color-link-hover-dark};
+  --color-link-active: #{$color-link-active-dark};
+  --color-link-visited: #{$color-link-visited-dark};
+
+  --color-btn-bg: #{$color-btn-bg-dark};
+  --color-btn-border: #{$color-btn-border-dark};
+
+  --color-logo-black: #{$color-logo-black-dark};
+  --color-logo-white: var(--color-bg);
+}
+
+@mixin theme-light{
+  --color-gray: #{$color-gray};
+  --color-bg: #{$color-bg};
+
+  --color-font: #{$color-font};
+  --color-font-light: #{$color-font-light};
+
+  --color-link: #{$color-link};
+  --color-link-hover: #{$color-link-hover};
+  --color-link-active: #{$color-link-active};
+  --color-link-visited: #{$color-link-visited};
+
+  --color-btn-bg: #{$color-btn-bg};
+  --color-btn-border: #{$color-btn-border};
+
+  --color-logo-black: #{$color-logo-black};
+  --color-logo-white: var(--color-bg);
+}
+
+:root{
+  --color-primary: #{$color-primary};
+  --color-white: #{$color-white};
+  --color-border: #{$color-border};
+
+  --color-font-error: #{$color-font-error};
+  --color-font-warning: #{$color-font-warning};
+  --color-font-success: #{$color-font-success};
+
+  --color-font-select: var(--color-font);
+  --color-font-select-background: #{$color-font-select-background}; 
+
+  --color-forms-border: var(--color-border);
+  --color-forms-border-focus: #{$color-forms-border-focus};
+  --color-forms-background: var(--color-white);
+
+  @include theme-light();
+}
+
+:root.dark{
+  @include theme-dark();
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    @include theme-dark();
+  }
+
+  :root.light{
+    @include theme-light();
+  }
+}
