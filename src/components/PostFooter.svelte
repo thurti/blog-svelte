@@ -10,7 +10,7 @@
         <span class="bold">PREVIOUS</span><br />
         <span class="btn__sub font-light small text-ellipsis">{previous.title}</span>
       </a>
-    {:else}<a href="/" class="btn">HOME</a>{/if}
+    {:else}<a href="/#" class="btn" title="Back" on:click={() => window?.history.back()}>BACK</a>{/if}
 
     {#if next}
       <a href="/{next.slug}" title={next.slug} class="btn">
