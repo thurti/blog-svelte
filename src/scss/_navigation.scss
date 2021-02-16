@@ -41,8 +41,12 @@
 
   @include media-medium{
     grid-column: span center-start / bleed-r;
-    margin-right: lines(0.5);
+    margin-right: lines(2);
     border: 0;
+  }
+
+  @media(min-width: 1024px){
+    margin-right: lines(1.25);
   }
   
   ul {

@@ -31,15 +31,12 @@
       </ul>
     </nav>
   </div>
-
+  
   <div class="header__small hide-small">
     <a href={config.url} alt="t3000.uber.space" class="logo no-focus" on:click|preventDefault={() => show = !show}>
       <Logo />
     </a>
   </div>
-
-  <div class="grid header__darkmode">
-    <DarkModeToggle enabled={true} />
-  </div>
-
+  
+  <DarkModeToggle enabled={true} />
 </header>
