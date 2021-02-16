@@ -1,10 +1,16 @@
 <script>
   export let tags;
 
-  tags = tags.filter(tag => tag !== "home");
+  const tags_html = tags.filter(tag => tag !== "home")
+                        .reduce((acc, tag) => {
+                          const url = encodeURI(`/tag/${tag}`);
+                          return `${acc}<a href="${url}">${tag}</a>, `
+                        }, "")
+                        .replace(/,\s$/, ''); //remvoe last comma
+
 </script>
 
-<p class="post-meta__tags text-capitalize">
+<p class="post-meta__tags text-capitalize small">
   <b>Tags:</b>&nbsp;
-  {#each tags as tag}<a href="/tag/{tag}">{tag}</a>,&nbsp;{/each}
+  {@html tags_html}
 </p>
