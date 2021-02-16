@@ -1,10 +1,11 @@
 <script>
   import marked from "marked";
+import GithubLink from "./GithubLink.svelte";
   import PortfolioHero from "./PortfolioHero.svelte";
   import PortfolioInfo from "./PortfolioInfo.svelte";
   import PostDate from "./PostDate.svelte";
+  import PostMeta from "./PostMeta.svelte";
   import PostTitle from "./PostTitle.svelte";
-  import Tags from "./Tags.svelte";
 
   export let title;
   export let created_at;
@@ -37,15 +38,4 @@
   
 </article>
 
-<aside class="post-meta flow happy-border">
-  <div class="post-meta__content">
-    <h3>
-      Hey, my name is Thomas.
-    </h3>
-    <p>
-      I'm a freelance web developer based in Germany. <br>
-      You can <a href="/about">Hire Me.</a>
-    </p>
-  </div>
-  <Tags {tags} />  
-</aside>
+<PostMeta {tags} />

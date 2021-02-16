@@ -3,8 +3,8 @@
   import marked from "marked";
   import PostDate from "./PostDate.svelte";
   import PostTitle from "./PostTitle.svelte";
-  import GithubLink from "./GithubLink.svelte";
-  import Tags from "./Tags.svelte";
+  import PostMeta from "./PostMeta.svelte";
+import GithubLink from "./GithubLink.svelte";
 
   export let title;
   export let created_at;
@@ -22,15 +22,12 @@
   </hgroup>
 
   {@html content_parsed}
+
+  {#if github}
+    <p class="center">
+      <GithubLink url={github} text="Code on Github" />
+    </p>
+  {/if}
 </article>
 
-<aside class="post-meta flow">
-  <p class="post-meta__content">
-    {#if github}
-      <GithubLink url={github} />,
-    {/if}
-    created by
-    <a href="/about">Thomas</a><br />
-  </p>
-  <Tags {tags} />
-</aside>
+<PostMeta {tags} github_url={github} github_text="Code on Github" />

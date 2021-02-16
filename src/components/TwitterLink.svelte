@@ -1,11 +1,14 @@
 <script>
   export let url = "https://twitter.com/@_thurti";
   export let text = "";
+
+  const noText = (text === "") ? true : false;
 </script>
 
 <a href={url} title="Twitter">
   <svg 
-    class="logo-twitter" 
+    class="icon-logo logo-twitter" 
+    class:noText
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg">
