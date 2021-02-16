@@ -15,7 +15,8 @@
   fill: var(--color-logo-white);
 }
 
-.logo-github {
+.logo-github,
+.logo-twitter {
   position: relative;
   height: $font-large;
   top: 0.5rem;
@@ -24,6 +25,13 @@
   path{
     fill: var(--color-logo-black);
   }
+}
+
+.logo-twitter{
+  height: 2.25rem;
+  top: 1rem;
+  left: 0.5rem;
+  padding: 0;
 }
 
 .header__nav .logo{
