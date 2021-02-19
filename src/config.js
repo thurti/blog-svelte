@@ -5,6 +5,7 @@ export const config = {
   twitter: '@_thurti',
   img_sizes: [
     1940,
+    1500,
     1200,
     970,
     640,
