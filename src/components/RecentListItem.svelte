@@ -26,8 +26,8 @@
         classname="gallery__image"
         {...hero}
         sizes={[
-          "(min-width: 1010px) 938px",
-          "90vw"
+          "(min-width: 605px) 456px",
+          "85vw"
         ]}
       />
     {:else if meta?.image}

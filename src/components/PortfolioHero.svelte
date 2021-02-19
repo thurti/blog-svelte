@@ -14,9 +14,9 @@
     {width}
     {height}
     sizes={[
-      "(min-width: 1800px) 1200px",
-      "(min-width: 1200px) 68vw",
-      "90vw"
+      "90vw",
+      "(min-width: 1024px) 67vw",
+      "(min-width: 80em) 1140px"
     ]}
   />
 </div>
