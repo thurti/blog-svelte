@@ -52,10 +52,6 @@ footer{
   max-width: em($max-width);
 }
 
-main{
-  margin-top: lines(1);
-}
-
 main > *{
   @include media-max-small{
     padding: 0 lines(0.5);

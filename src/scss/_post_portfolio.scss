@@ -2,6 +2,7 @@
   @extend .post;
 
   padding: 0;
+  margin-top: 0;
 
   @include media-max-small{
     & > *:not(.post-hero) {

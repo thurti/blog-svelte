@@ -14,7 +14,6 @@
     }
 
     h1{
-      grid-column: center;
       border:0;
     }
   }
@@ -25,7 +24,7 @@
     grid-column: center;
     padding: 0 lines(1) lines(.5);
     
-    font-weight: 350;
+    font-weight: 450;
     text-align: center;
     
     @extend .happy-border;
