@@ -1,10 +1,11 @@
 <script>
   import { prism } from "svelte-prism-action";
+  import { img2picture } from '../functions/img2picture';
   import marked from "marked";
   import PostDate from "./PostDate.svelte";
   import PostTitle from "./PostTitle.svelte";
   import PostMeta from "./PostMeta.svelte";
-import GithubLink from "./GithubLink.svelte";
+  import GithubLink from "./GithubLink.svelte";
 
   export let title;
   export let created_at;
@@ -12,7 +13,10 @@ import GithubLink from "./GithubLink.svelte";
   export let github;
   export let content;
 
-  const content_parsed = marked(content);
+  const content_parsed = img2picture(marked(content), [
+    "(max-width:972px) 100vw",
+    "972px"
+  ]);
 </script>
 
 <article class="grid post--single" use:prism>

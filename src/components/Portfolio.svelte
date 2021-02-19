@@ -1,6 +1,6 @@
 <script>
   import marked from "marked";
-import GithubLink from "./GithubLink.svelte";
+  import { img2picture } from '../functions/img2picture';
   import PortfolioHero from "./PortfolioHero.svelte";
   import PortfolioInfo from "./PortfolioInfo.svelte";
   import PostDate from "./PostDate.svelte";
@@ -14,7 +14,10 @@ import GithubLink from "./GithubLink.svelte";
   export let content;
   export let tags;
 
-  const content_parsed = marked(content);
+  const content_parsed = img2picture(marked(content), [
+    "(max-width:972px) 100vw",
+    "972px"
+  ]);
 </script>
 
 <article class="grid post--portfolio">
