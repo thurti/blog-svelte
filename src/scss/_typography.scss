@@ -23,6 +23,11 @@ article {
   pre{
     margin-top: lines(1.25);
   }
+
+  h2,
+  h3{
+    margin-top: lines(2);
+  }
 }
 
 pre[class*="language-"] {

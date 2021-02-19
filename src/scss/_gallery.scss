@@ -76,6 +76,11 @@
 
 .gallery__title{
   padding-bottom: lines(0.25);
+
+  h2,
+  h3{
+    margin-top: 0;
+  }
   
   @include media-medium{
     padding: lines(0.5);

@@ -15,7 +15,7 @@
 </script>
 
 <div class="glitch-image" style={`width: ${width}px; height: ${height}px`}>
-  <div class="clip-circle">
+  <div class="clip-circle" style="width: 100%; height: 100%">
     {#each slizes_idx as slize, idx}
       <img 
         {src} 

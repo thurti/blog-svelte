@@ -61,3 +61,11 @@ main > *{
 footer{
   margin: lines(1) auto 0;
 }
+
+.flex{
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  justify-content: space-around;
+}
