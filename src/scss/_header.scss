@@ -5,9 +5,10 @@
   align-items: center;
 
   background: var(--color-nav-bg);
-
+  border: 0;
+  
   .light &{
-    border: 0;
+    border-bottom: 2px solid transparent;
   }
   
   @include media-dark{
