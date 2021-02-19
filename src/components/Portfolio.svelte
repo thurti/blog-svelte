@@ -15,7 +15,7 @@
   export let tags;
 
   const content_parsed = img2picture(marked(content), [
-    "(max-width:972px) 100vw",
+    "(max-width:972px) 90vw",
     "972px"
   ]);
 </script>
