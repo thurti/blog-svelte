@@ -94,9 +94,6 @@ a {
 i,
 em,
 blockquote p{
-  font-weight: 400;
-  color: var(--color-font-light);
-
   //fake italic
   display: inline-block;
   font-style: normal;
@@ -106,6 +103,7 @@ blockquote p{
 
 blockquote {
   text-align: center;
+  font-weight: 400;
 
   @include media-medium{
     padding: 0 3em;

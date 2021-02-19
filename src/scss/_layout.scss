@@ -52,22 +52,10 @@ footer{
   max-width: em($max-width);
 }
 
-
-header{
-  position: relative;
-
-  @include media-medium{
-    height: lines(2);
-    overflow: hidden;
-    will-change: transform;
-  }
-}
-
 main{
   margin-top: lines(1);
 }
 
-header,
 main > *{
   @include media-max-small{
     padding: 0 lines(0.5);

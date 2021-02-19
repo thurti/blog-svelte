@@ -5,7 +5,7 @@
   padding: 0 lines(0.5);
   
   @include media-medium{
-    margin: lines(2) 0 lines(2);
+    margin: lines(3) 0 lines(2);
   }
 
   &.text-only{
@@ -25,7 +25,7 @@
     grid-column: center;
     padding: 0 lines(1) lines(.5);
     
-    font-weight: 300;
+    font-weight: 350;
     text-align: center;
     
     @extend .happy-border;

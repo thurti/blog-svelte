@@ -33,31 +33,24 @@
 
 .nav--main{
   @extend .nav;
-
-  padding-bottom: lines(0.5);
-  border-bottom: 1px solid var(--color-border);
-
+  
+  // border-bottom: 1px solid var(--color-border);
+  
   align-items: center;
 
   @include media-medium{
-    grid-column: span center-start / bleed-r;
-    margin-right: lines(2);
-    border: 0;
-  }
-
-  @media(min-width: 1024px){
-    margin-right: lines(1.25);
+    grid-column: center;
+    justify-self: center;
+    margin: 0;
+    // border: 0;
   }
   
   ul {
     display: flex;
     flex-flow: column;
-    justify-content: center;
     
-    @include media-medium{
-      width: 100%;
+    @media (min-width: em(455px)) {
       flex-flow: row;
-      justify-content: flex-end;
     }
   }
 

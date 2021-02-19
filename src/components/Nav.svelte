@@ -18,7 +18,7 @@
 </script>
 
 <header class:show-nav={show}>
-  <div class="grid header__nav">
+  <div class="grid header__nav happy-border">
     <a href={config.url} alt="t3000.uber.space" class="logo">
       <Logo />
     </a>
@@ -30,13 +30,7 @@
         {/each}
       </ul>
     </nav>
-  </div>
   
-  <div class="header__small hide-small">
-    <a href={config.url} alt="t3000.uber.space" class="logo no-focus" on:click|preventDefault={() => show = !show}>
-      <Logo />
-    </a>
-  </div>
-  
-  <DarkModeToggle enabled={true} />
+    <DarkModeToggle enabled={true} />
+  </div>  
 </header>

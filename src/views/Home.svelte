@@ -34,9 +34,9 @@ import GlitchImage from "../components/GlitchImage.svelte";
 
 <Page center = {true}>
   <p style="line-height: 1.75">
-    I create <i>frontend applications</i> with <br>
+    I create frontend applications with <br>
     <code>HTML</code>, <code>CSS</code> and <code>JavaScript</code> <br>
-    powered by <i>backends</i> based on <br><code>NodeJs</code>, <code>PHP</code> and the <code>Cloud™️</code>.
+    powered by backends based on <br><code>NodeJs</code>, <code>PHP</code> and the <code>Cloud™️</code>.
   </p>
   <p>For detailed information on my skill set 
     check out my <a href="/about" title="About">About</a> page.
