@@ -7,7 +7,7 @@
 
 <script>
   import { onMount, onDestroy } from "svelte";
-  import { router_current, nav_show } from '../store'; 
+  import { router_current } from '../store'; 
 
   export let routes = [];
 
@@ -26,7 +26,6 @@
             view = route.view;
             component = route.component;
             $router_current = route.url;
-            $nav_show = route.nav_show ?? true;
             params = parameter;
             params.api = route.api;
             params.title = route.title;

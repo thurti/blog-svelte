@@ -27,8 +27,7 @@ export const routes = [
     url: "/articles/:slug",
     api: `${config.api}/posts`,
     view: ContentLoader,
-    component: PostSingle,
-    nav_show: false
+    component: PostSingle
   },
   {
     url: "/portfolio",
@@ -41,8 +40,7 @@ export const routes = [
     url: "/portfolio/:slug",
     api: `${config.api}/posts`,
     view: ContentLoader,
-    component: PortfolioSingle,
-    nav_show: false
+    component: PortfolioSingle
   },
   {
     url: "/tag/:slug",

@@ -1,13 +1,11 @@
 <script>
   import { config } from '../config';
-  import { router_current, nav_show } from '../store'; 
+  import { router_current } from '../store'; 
   import DarkModeToggle from './DarkModeToggle.svelte';
   import Logo from "./Logo.svelte";
   
   export let items;
 
-  $:show = $nav_show;
-  
   function isActive(nav_item, current) {
     if (nav_item.title === "Hello"){
       return current === "/";
@@ -17,7 +15,7 @@
   }
 </script>
 
-<header class:show-nav={show}>
+<header>
   <div class="grid header__nav happy-border">
     <a href={config.url} alt="t3000.uber.space" class="logo">
       <Logo />
