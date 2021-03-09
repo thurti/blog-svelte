@@ -89,6 +89,9 @@ import PageTitle from '../components/PageTitle.svelte';
   <hr>
   <div class="flex">
     <div>
+      <img src="static/img/head@2x.jpg" alt="Face" width="200" height="200" class="clip-circle" style="transform: rotate(-6deg)">
+    </div>
+    <div>
       <h2>Contact Me</h2>
       <p>
         Feel free to contact me<br>
@@ -98,9 +101,6 @@ import PageTitle from '../components/PageTitle.svelte';
         or Github
         <a href="https://github.com/thurti" title="github">github</a>
       </p>
-    </div>
-    <div>
-      <img src="static/img/head@2x.jpg" alt="Face" width="200" height="200" class="clip-circle">
     </div>
   </div>
 </Page>

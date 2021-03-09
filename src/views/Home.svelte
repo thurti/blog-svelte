@@ -43,7 +43,7 @@ import GlitchImage from "../components/GlitchImage.svelte";
   </p>
 
   <p class="center" style="margin-top: 5rem">
-    <a href="/about" title="About Me">
+    <a href="/about" title="About Me" style="transform: rotate(-6deg)">
       <GlitchImage src="static/img/head@2x.jpg" width="250" height="250" slize="7" />
     </a>
   </p>
