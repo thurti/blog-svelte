@@ -1,12 +1,18 @@
 <script>
+  import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
   import Meta from "../components/Meta.svelte";
   import Portfolio from "../components/Portfolio.svelte";
   import PostFooter from "../components/PostFooter.svelte";
+  import { page_scroll } from '../store';
 
   export let content;
 
   const title = content.title.replace("<br>", " - ");
+
+  onMount(() => {
+    window.scrollTo(0, $page_scroll);
+  })
 </script>
 
 <Meta {title} {...content.meta} />

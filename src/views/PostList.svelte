@@ -6,10 +6,10 @@
   import PostListItem from "../components/PostListItem.svelte";
   import FooterHeart from "../components/FooterHeart.svelte";
   import PageTitle from "../components/PageTitle.svelte";
+  import { page_scroll } from '../store';
 
   export let content;
   export let params;
-  export let current_scroll = 0;
 
   const meta = {
     title: params.title,
@@ -20,10 +20,8 @@
   };
 
   onMount(() => {
-    if (typeof window !== "undefined") {
-      window.scrollTo(0, current_scroll);
-    }
-  });
+    window.scrollTo(0, $page_scroll);
+  })
 </script>
 
 <Meta {...meta} />

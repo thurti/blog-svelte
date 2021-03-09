@@ -1,3 +1,4 @@
-import { writable } from 'svelte/store';
+import { derived, readable, writable } from 'svelte/store';
 
-export const router_current = writable("/");
+export const url = writable("/");
+export const page_scroll = writable(0);

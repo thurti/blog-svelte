@@ -1,6 +1,6 @@
 <script>
   import { config } from '../config';
-  import { router_current } from '../store'; 
+  import { url } from '../store';
   import DarkModeToggle from './DarkModeToggle.svelte';
   import Logo from "./Logo.svelte";
   
@@ -24,7 +24,7 @@
     <nav class="nav--main">
       <ul>
         {#each items as item}
-          <li class:is-active={isActive(item, $router_current)}><a href="{item.url}" title="{item.title}">{item.title}</a></li>
+          <li class:is-active={isActive(item, $url)}><a href="{item.url}" title="{item.title}">{item.title}</a></li>
         {/each}
       </ul>
     </nav>

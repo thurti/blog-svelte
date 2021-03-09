@@ -7,7 +7,7 @@
 
 <script>
   import { onMount, onDestroy } from "svelte";
-  import { router_current } from '../store'; 
+  import { url, page_scroll } from '../store'; 
 
   export let routes = [];
 
@@ -18,18 +18,30 @@
   export let params;
   export let prepopulate_content;
 
+  const scroll_positions = new Map();
+
+  function storeScrollPosition() {
+    scroll_positions.set($url, window.scrollY); //store scroll before change view
+    $url = window.location.pathname;
+    $page_scroll = scroll_positions.get($url);
+  }
+
   onMount(() => {
     if (!ssr) {
       routes.forEach((route) => {
         if (route.url) {
           router.on(route.url, (parameter) => {
-            view = route.view;
-            component = route.component;
-            $router_current = route.url;
+
             params = parameter;
             params.api = route.api;
             params.title = route.title;
             params.url = route.url;
+
+            if (typeof window !== "undefined")
+              storeScrollPosition();
+            
+            view = route.view;
+            component = route.component;
           });
         }
       });

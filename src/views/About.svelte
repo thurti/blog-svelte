@@ -1,7 +1,9 @@
 <script>
+  import { onMount } from 'svelte';
   import Page from '../components/Page.svelte';
   import Meta from "../components/Meta.svelte";
-import PageTitle from '../components/PageTitle.svelte';
+  import PageTitle from '../components/PageTitle.svelte';
+  import { page_scroll } from '../store';
 
   const meta = {
     title: "About",
@@ -11,6 +13,10 @@ import PageTitle from '../components/PageTitle.svelte';
     image: "marker_240.jpg",
     imageAlt: "Weird Square Face",
   };
+
+  onMount(() => {
+    window.scrollTo(0, $page_scroll);
+  })
 </script>
 
 <Meta {...meta} />
