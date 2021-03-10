@@ -2,6 +2,7 @@
   import Link from "./Link.svelte";
 
   export let description;
+  export let website;
   export let client;
   export let design;
   export let technology;
@@ -13,6 +14,19 @@
     <tr>
       <td colspan="2" class="hyphens">{description}</td>
     </tr>
+
+    {#if website}
+    <tr>
+      <td>Website</td>
+      <td>
+        <Link 
+          href={website.url} 
+          title={website.title}
+          text={website.title}
+          />
+      </td>
+    </tr>
+    {/if}
 
     {#if client}
     <tr>

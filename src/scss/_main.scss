@@ -81,7 +81,7 @@ img{
   background: linear-gradient(120deg, rgba(113,6,144,1) 0%, rgba(13,13,199,1) 30%, rgb(2, 180, 141) 100%);
 
   
-  animation-duration: 20s;
+  animation-duration: 10s;
   animation-delay: 1s;
   animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   animation-iteration-count: infinite;
@@ -127,4 +127,16 @@ img{
   td{
     width: 50%;
   }
+}
+
+.browser{
+  overflow: hidden;
+
+  border: 0px solid transparent;
+  border-top: 40px solid transparent;
+  border-image: url('/static/img/browser.svg') 100% 0 0 0;
+  background-color: rgb(51 54 55);
+  border-radius: 3px;
+
+  filter: drop-shadow(0 0 2px var(--color-shadow));
 }

@@ -17,6 +17,8 @@
   --color-logo-white: var(--color-bg);
 
   --color-nav-bg: #{$color-nav-bg-dark};
+
+  --color-shadow: transparent;
 }
 
 @mixin theme-light{
@@ -38,6 +40,8 @@
   --color-logo-white: var(--color-bg);
   
   --color-nav-bg: #{$color-nav-bg};
+
+  --color-shadow: #ececec;
 }
 
 :root{

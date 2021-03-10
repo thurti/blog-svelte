@@ -5,10 +5,12 @@
   export let alt;
   export let width;
   export let height;
+  export let browser = false;
 </script>
 
 <div class="post-hero__image">
   <Picture
+    classname={browser ? 'browser' : ''}
     {src}
     {alt}
     {width}

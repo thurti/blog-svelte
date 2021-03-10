@@ -1,7 +1,7 @@
 import Picture from '../components/Picture.svelte';
 
 export function img2picture(html, sizes = []) {
-  const images = html.match(/<picture>\s*<img[^>]*\/?>\s*<\/picture>/g);
+  const images = html.match(/<picture( class="\w*")?>\s*<img[^>]*\/?>\s*<\/picture>/g);
   const tmp = document.createElement('div');
 
   images?.forEach(image => {
