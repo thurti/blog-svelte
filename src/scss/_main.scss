@@ -87,7 +87,6 @@ img{
   animation-iteration-count: infinite;
   animation-direction: alternate;
   
-  filter: hue-rotate(25deg) saturate(0.75);
   filter: hue-rotate(35deg) saturate(0.75);
   animation-name: bgcolor-1;
   
@@ -130,7 +129,15 @@ img{
 }
 
 .browser{
+  &:not(video){
+    height: max-content;
+  }
+
   overflow: hidden;
+
+  @include media-max-large{
+    margin: lines(0.5);
+  }
 
   border: 0px solid transparent;
   border-top: 40px solid transparent;
@@ -138,5 +145,5 @@ img{
   background-color: rgb(51 54 55);
   border-radius: 3px;
 
-  filter: drop-shadow(0 0 2px var(--color-shadow));
+  filter: drop-shadow(0 0 3px var(--color-shadow));
 }
