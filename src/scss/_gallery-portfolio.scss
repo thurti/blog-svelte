@@ -12,8 +12,12 @@
     max-height: 80vh;
 
     img{
-        padding-top: lines(4.25);
-        object-position: top;
+      object-position: top;
+      padding-top: lines(3.25);
+      
+      @include media-medium{
+          padding-top: lines(4.25);
+        }
     }
   }
 
