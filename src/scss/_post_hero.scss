@@ -68,13 +68,15 @@
     }
 
     :not(.browser) {
-      picture,
+      img,
       video{
         height: 100%;
-        padding-bottom: lines(1.25);
+        
+        @media (max-width: em(1110px)){
+          padding: lines(0.5) lines(0.5) lines(1);
+        }
       }
       img,
-      picture,
       video{
         height: 100%;
         object-fit: cover;
