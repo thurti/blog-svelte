@@ -8,7 +8,8 @@
 
   export let content;
 
-  const title = content.title.replace("<br>", " - ");
+  const title = content.title.replace("<br>", " - ")
+                             .replace(/<[^>]*>/g, '');
 
   onMount(() => {
     window.scrollTo(0, $page_scroll);
