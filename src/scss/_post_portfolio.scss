@@ -5,7 +5,7 @@
   margin-top: 0;
 
   @include media-max-small{
-    & > *:not(.post-hero) {
+    & > *:not(.post-hero):not(.browser) {
       padding: 0 lines(0.5);
     }
   }
