@@ -1,5 +1,4 @@
 <script>
-  import { config } from "./config";
   import Router from "./components/Router.svelte";
   import { routes } from "./routes";
   import Nav from "./components/Nav.svelte";
