@@ -2,7 +2,7 @@
 
   @include media-medium{
     display: grid;
-    max-width: 100%;
+    max-width: em($max-width);
 
     /**
       * (-- LEFT-COL --) CENTER (-- RIGHT-COL --)
@@ -46,6 +46,7 @@
 }
 
 header,
+.page-title,
 main,
 footer{
   margin: 0 auto;
