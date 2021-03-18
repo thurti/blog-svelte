@@ -51,9 +51,10 @@
   max-width: lines(6);
 
   .preview-content{
+    height: 100%;
     margin: 0 0 0 lines(0.5);
 
-    filter: blur(1px) hue-rotate(40deg);
+    filter: blur(1px);
 
     transition-property: filter, opacity;
     transition-duration: 0.2s;
@@ -66,6 +67,11 @@
     white-space: pre-wrap;
     word-wrap: break-word;
     word-break: break-all;
+  }
+
+  img{
+    height: 100%;
+    object-fit: cover;    
   }
 }
 
@@ -84,7 +90,7 @@
 
   &:hover{
     .post__preview .preview-content {
-      filter: blur(0) hue-rotate(0);
+      filter: blur(0);
     }
   }
 }

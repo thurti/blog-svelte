@@ -45,6 +45,8 @@ export const routes = [
   {
     url: "/tag/:slug",
     api: `${config.api}/posts/tag`,
+    title: 'Tag',
+    hide: true,
     view: ContentLoader,
     component: PostList
   },

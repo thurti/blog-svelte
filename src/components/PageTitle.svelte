@@ -6,10 +6,10 @@
 
 <div class={`grid page-title ${classname}`}>
   {#if h == 1}
-    <h1>{title}</h1>
+    <h1>{@html title}</h1>
   {:else if h == 2}
-    <h2>{title}</h2>
+    <h2>{@html title}</h2>
   {:else if h == 3}
-    <h3>{title}</h3>
+    <h3>{@html title}</h3>
   {/if}
 </div>

@@ -19,6 +19,8 @@
     imageAlt: "Weird Square Face",
   };
 
+  const title = params.title === "Tag" ? `Tag: <q>${params.slug}</q>` : params.title; 
+
   onMount(() => {
     window.scrollTo(0, $page_scroll);
   })
@@ -26,7 +28,7 @@
 
 <Meta {...meta} />
 
-<PageTitle title={params.title} />
+<PageTitle {title} />
 
 <main in:fade={{ duration: 150 }} use:prism>
   {#each content as post}
