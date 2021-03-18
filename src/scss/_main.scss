@@ -1,16 +1,16 @@
 @include loader(1rem, 0, grey, x, 0.75s);
 
 .page-title{
-  margin: lines(1) 0;
+  margin: lines(1) auto;
   padding: 0 lines(0.5);
   
   @include media-medium{
-    margin: lines(3) 0 lines(2);
+    margin: lines(3) auto lines(2);
   }
 
   &.text-only{
     @include media-medium{
-      margin: lines(3) 0 0;
+      margin: lines(3) auto 0;
     }
 
     h1{
@@ -66,28 +66,30 @@ img{
   display: block;
 }
 
+.bg-color{
+  background: linear-gradient(120deg, rgba(113,6,144,1) 0%, rgba(13,13,199,1) 30%, rgb(2, 180, 141) 100%);
+  filter: hue-rotate(35deg) saturate(0.75);
+}
+
 .animated-bg-color{
+  @extend .bg-color;
+
   color: $color-bg;
 
   @include media-dark{
-    color: darken($color-bg, 10);
+    color: darken($color-bg, 5);
 
     a{
-      color: darken($color-bg, 10);
+      color: darken($color-bg, 5);
     }
   }
 
-  background: rgb(60, 84, 108);
-  background: linear-gradient(120deg, rgba(113,6,144,1) 0%, rgba(13,13,199,1) 30%, rgb(2, 180, 141) 100%);
-
-  
   animation-duration: 10s;
   animation-delay: 1s;
   animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   animation-iteration-count: infinite;
   animation-direction: alternate;
   
-  filter: hue-rotate(35deg) saturate(0.75);
   animation-name: bgcolor-1;
   
   @keyframes bgcolor-1 {

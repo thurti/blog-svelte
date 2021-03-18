@@ -1,9 +1,34 @@
 .gallery-portfolio{
   @extend .gallery;
   
-  grid-column: bleed;
+  grid-column: span left / right;
 
   .gallery__item{
-    min-width: em(250px);
+    flex-basis: em(300px);
+  }
+
+  .gallery__image{
+    height: auto;
+    max-height: 80vh;
+
+    img{
+        padding-top: lines(4.25);
+        object-position: top;
+    }
+  }
+
+  .gallery__title{
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    width: 100%;
+
+    @extend .happy-border;
+    border: 0;
+    border-top: 3px solid black;
+
+    &:not(.animated-bg-color){
+      background:#2e2b33;
+    }
   }
 }

@@ -29,8 +29,8 @@
 <main class="grid" in:fade={{ duration: 150 }}>
   <div class="gallery-portfolio highlight-first">
 
-    {#each content as post}
-      <PortfolioListItem {...post} />
+    {#each content as post, idx}
+      <PortfolioListItem {...post} {idx} />
     {/each}
 
     {#if content?.length == 0}
