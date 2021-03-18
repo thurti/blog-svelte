@@ -12,7 +12,7 @@
 <table class="post__info">
   <tbody>
     <tr>
-      <td colspan="2" class="hyphens">{description}</td>
+      <td colspan="2" class="hyphens">{@html description}</td>
     </tr>
 
     {#if website}
