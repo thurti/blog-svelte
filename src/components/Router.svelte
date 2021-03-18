@@ -1,13 +1,13 @@
 <script context="module">
   import Navaid from "navaid";
-  import NotFound from "../views/NotFound.svelte";
   
-  export const router = Navaid("/", () => (view = NotFound));
+  export let router;
 </script>
 
 <script>
   import { onMount, onDestroy } from "svelte";
   import { url, page_scroll } from '../store'; 
+  import NotFound from "../views/NotFound.svelte";
 
   export let routes = [];
 
@@ -27,6 +27,8 @@
   }
 
   onMount(() => {
+    router = Navaid("/", () => view = NotFound);
+
     if (!ssr) {
       routes.forEach((route) => {
         if (route.url) {
