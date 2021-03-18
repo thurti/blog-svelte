@@ -1,6 +1,9 @@
 {
   "name": "svelte-app",
   "version": "0.3.1",
+  "browserslist": [
+    "defaults"
+  ],
   "scripts": {
     "deploy": "rsync --progress --copy-links -r --exclude '.DS_Store' public/ t3000.uberspace:~/html",
     "build": "rollup -c && npm run sass-build",
@@ -9,28 +12,30 @@
     "start": "sirv public --single",
     "sass": "sass --watch ./src/scss/style.scss ./public/static/build/style.css",
     "sass-build": "sass ./src/scss/style.scss ./public/static/build/style.css && uglifycss --output ./public/static/build/style.css ./public/static/build/style.css",
-    "server": "cd ../blog-server && npm run start"
+    "server": "cd ../blog-server && npm run start",
+    "compat": "compat --jsEnv ie11 --htmlEnvs ie11 -r -t ./src"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-node-resolve": "^11.0.0",
-    "eslint": "^7.14.0",
-    "eslint-plugin-svelte3": "^2.7.3",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "eslint": "^7.22.0",
+    "eslint-plugin-compat": "^3.9.0",
+    "eslint-plugin-svelte3": "^3.1.2",
     "mathsass": "^0.11.0",
     "modularscale-sass": "^3.0.10",
-    "rollup": "^2.34.1",
-    "rollup-plugin-css-only": "^3.0.0",
+    "rollup": "^2.41.5",
+    "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
-    "svelte": "^3.31.0",
+    "svelte": "^3.35.0",
     "uglifycss": "^0.0.29"
   },
   "dependencies": {
-    "marked": "^1.2.5",
+    "marked": "^2.0.1",
     "navaid": "^1.2.0",
-    "prismjs": "^1.22.0",
-    "sirv-cli": "^1.0.8",
+    "prismjs": "^1.23.0",
+    "sirv-cli": "^1.0.11",
     "svelte-prism-action": "^1.0.5"
   }
 }
