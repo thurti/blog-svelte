@@ -1,8 +1,12 @@
 <script>
-import { onMount } from "svelte";
-
-
   export let key = "t3000-darkmode";
+  let enabled = true;
+
+  if (typeof window !== "undefined") {
+    enabled = JSON.parse(window?.localStorage.getItem(key)) ?? window?.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    setBodyClass(enabled);
+  }
 
   function setBodyClass(enabled) {
     if (enabled) {
@@ -16,14 +20,9 @@ import { onMount } from "svelte";
 
   function toggle() {
     enabled = !enabled;
-    window?.localStorage.setItem(key, enabled);
+    window.localStorage.setItem(key, enabled);
     setBodyClass(enabled);
   }
-
-
-  let enabled = JSON.parse(window?.localStorage.getItem(key)) ?? window?.matchMedia('(prefers-color-scheme: dark)').matches;
-
-  setBodyClass(enabled);
 </script>
 
 <button class="no-style darkmode-toggle" class:enabled on:click={toggle} title="{(enabled) ? 'Enable Light Mode' : 'Enable Dark Mode'}">

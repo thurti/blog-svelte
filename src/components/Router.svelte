@@ -6,7 +6,7 @@
 
 <script>
   import { onMount, onDestroy } from "svelte";
-  import { url, page_scroll } from '../store'; 
+  import { url, page_scroll } from '../store';
   import NotFound from "../views/NotFound.svelte";
 
   export let routes = [];
@@ -39,8 +39,9 @@
             params.title = route.title;
             params.url = route.url;
 
-            if (typeof window !== "undefined")
+            if (typeof window !== "undefined") {
               storeScrollPosition();
+            }
             
             view = route.view;
             component = route.component;
