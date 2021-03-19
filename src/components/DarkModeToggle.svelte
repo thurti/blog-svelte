@@ -3,7 +3,7 @@
   let enabled = true;
 
   if (typeof window !== "undefined") {
-    enabled = JSON.parse(window?.localStorage.getItem(key)) ?? window?.matchMedia('(prefers-color-scheme: dark)').matches;
+    enabled = JSON.parse(window.localStorage.getItem(key)) ?? window.matchMedia('(prefers-color-scheme: dark)').matches;
     
     setBodyClass(enabled);
   }

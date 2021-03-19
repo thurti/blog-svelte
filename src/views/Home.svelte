@@ -9,8 +9,7 @@
   import { page_scroll } from '../store';
   import { scrollWindowTo } from '../actions/scrollWindowTo';
 
-  export let content;
-  export let params;
+  export let content = [];
 
   const meta = {
     title: "Hello",
@@ -50,14 +49,6 @@
       <RecentListItem {...post} />
     {/each}
   </div>
-
-  {#if content?.length == 0 && params?.tag}
-    <p class="text-center">
-      Sorry, no posts found for this tag.
-      <br /><br />
-      <a href="/">Home</a>
-    </p>
-  {/if}
 </main>
 
 {#if content}

@@ -5,7 +5,7 @@
   import Meta from "../components/Meta.svelte";
   import PageTitle from "../components/PageTitle.svelte";
 
-  export let content;
+  export let content = [];
 
   const meta = {
     title: "Portfolio",
@@ -27,13 +27,13 @@
       <PortfolioListItem {...post} {idx} />
     {/each}
 
-    {#if content?.length == 0}
+    {#if content.length == 0}
       <p class="text-center">
         Sorry, there is no content yet.
         <br /><br />
         <a href="/">Home</a>
       </p>  
-      {/if}
+    {/if}
   </div>
 </main>
 

@@ -6,8 +6,8 @@
   import FooterHeart from "../components/FooterHeart.svelte";
   import PageTitle from "../components/PageTitle.svelte";
 
-  export let content;
-  export let params;
+  export let content = [];
+  export let params = {};
 
   const title = params.title === "Tag" ? `Tag: ${params.slug}` : params.title; 
 
@@ -29,7 +29,7 @@
     <PostListItem {...post} />
   {/each}
 
-  {#if content?.length == 0 && params?.tag}
+  {#if content.length == 0 && params.tag}
     <p class="text-center">
       Sorry, no posts found for this tag.
       <br /><br />
