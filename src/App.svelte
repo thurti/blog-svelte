@@ -2,7 +2,6 @@
   import Router from "./components/Router.svelte";
   import { routes } from "./routes";
   import Nav from "./components/Nav.svelte";
-import About from "./views/About.svelte";
 
   //ssr
   export let ssr = false;
