@@ -15,7 +15,9 @@
   <svelte:component this={component} content={prepopulate_content} {params} />
 {:else}
   {#await getPosts(params)}
-    <Loader />
+    <div style="margin-top: 6rem">
+      <Loader />
+    </div>
   {:then content}
     <svelte:component this={component} {content} {params} />
     <div style="display:none" use:scrollWindowTo={$page_scroll}></div>
