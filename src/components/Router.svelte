@@ -13,11 +13,12 @@
 
   //ssr
   export let ssr = false;
-  export let view;
-  export let component;
+  export let route;
   export let params;
   export let prepopulate_content;
 
+  let view = route?.view;
+  let component = route?.component;
   const scroll_positions = new Map();
 
   function storeScrollPosition() {

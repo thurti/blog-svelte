@@ -2,6 +2,7 @@
   import Router from "./components/Router.svelte";
   import { routes } from "./routes";
   import Nav from "./components/Nav.svelte";
+import About from "./views/About.svelte";
 
   //ssr
   export let ssr = false;
@@ -9,7 +10,7 @@
   export let params;
   export let prepopulate_content;
 
-  const view = routes.find((route) => route.name === viewname)?.view;
+  const route = routes.find((route) => route.name === viewname);
   const nav_items = routes.filter(route => (route.title && !route.hide) ?? false);
 </script>
 
@@ -18,7 +19,7 @@
 <Router 
   {routes}
   {ssr} 
-  {view} 
+  {route} 
   {params} 
   {prepopulate_content} 
 />

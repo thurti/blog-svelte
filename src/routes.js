@@ -10,6 +10,7 @@ import PortfolioList from "./views/PortfolioList.svelte";
 
 export const routes = [
   {
+    name: "Home",
     url: "/",
     api: `${config.api}/posts/tag/home`,
     title: "Hello",
@@ -17,6 +18,7 @@ export const routes = [
     component: Home
   },
   {
+    name: "PostList",
     url: "/articles",
     api: `${config.api}/posts/tag/article`,
     title: "Articles",
@@ -24,12 +26,14 @@ export const routes = [
     component: PostList,
   },
   {
+    name: "PostSingle",
     url: "/articles/:slug",
     api: `${config.api}/posts`,
     view: ContentLoader,
     component: PostSingle
   },
   {
+    name: "PortfolioList",
     url: "/portfolio",
     api: `${config.api}/posts/tag/portfolio`,
     title: "Portfolio",
@@ -37,12 +41,14 @@ export const routes = [
     component: PortfolioList
   },
   {
+    name: "PortfolioSingle",
     url: "/portfolio/:slug",
     api: `${config.api}/posts`,
     view: ContentLoader,
     component: PortfolioSingle
   },
   {
+    name: "Tag",
     url: "/tag/:slug",
     api: `${config.api}/posts/tag`,
     title: 'Tag',
@@ -51,11 +57,13 @@ export const routes = [
     component: PostList
   },
   {
+    name: "About",
     url: "/about",
     title: "About",
     view: About
   },
   {
+    name: "NotFound",
     view: NotFound,
   }
 ];
