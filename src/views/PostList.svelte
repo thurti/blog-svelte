@@ -9,15 +9,15 @@
   export let content;
   export let params;
 
+  const title = params.title === "Tag" ? `Tag: <q>${params.slug}</q>` : params.title; 
+
   const meta = {
-    title: params.title,
+    title: title,
     description: "This is my personal web development journal about things I've done and learned.",
     url: params.url,
     image: "marker_240.jpg",
     imageAlt: "Weird Square Face",
   };
-
-  const title = params.title === "Tag" ? `Tag: <q>${params.slug}</q>` : params.title; 
 </script>
 
 <Meta {...meta} />
