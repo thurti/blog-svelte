@@ -1,6 +1,8 @@
 import Picture from '../components/Picture.svelte';
 
 export function img2picture(html, sizes = []) {
+  if (typeof document === "undefined") return html; //nodejs ssr
+
   const images = html.match(/<picture( class="\w*")?>\s*<img[^>]*\/?>\s*<\/picture>/g);
   const tmp = document.createElement('div');
 
