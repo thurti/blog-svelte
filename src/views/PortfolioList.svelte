@@ -1,11 +1,9 @@
 <script>
-  import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   import PortfolioListItem from "../components/PortfolioListItem.svelte";
   import FooterHeart from "../components/FooterHeart.svelte";
   import Meta from "../components/Meta.svelte";
   import PageTitle from "../components/PageTitle.svelte";
-  import { page_scroll } from '../store';
 
   export let content;
 
@@ -16,10 +14,6 @@
     image: "marker_240.jpg",
     imageAlt: "Weird Square Face",
   };
-
-  onMount(() => {
-    window.scrollTo(0, $page_scroll);
-  })
 </script>
 
 <Meta {...meta} />

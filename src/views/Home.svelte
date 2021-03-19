@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   import Meta from "../components/Meta.svelte";
   import FooterHeart from "../components/FooterHeart.svelte";
@@ -8,6 +7,7 @@
   import RecentListItem from "../components/RecentListItem.svelte";
   import GlitchImage from "../components/GlitchImage.svelte";
   import { page_scroll } from '../store';
+  import { scrollWindowTo } from '../actions/scrollWindowTo';
 
   export let content;
   export let params;
@@ -19,11 +19,9 @@
     image: "marker_240.jpg",
     imageAlt: "Weird Square Face",
   };
-
-  onMount(() => {
-    window.scrollTo(0, $page_scroll);
-  })
 </script>
+
+<svelte:window use:scrollWindowTo={$page_scroll} />
 
 <Meta {...meta} />
 

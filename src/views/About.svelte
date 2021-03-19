@@ -1,9 +1,9 @@
 <script>
-  import { onMount } from 'svelte';
   import Page from '../components/Page.svelte';
   import Meta from "../components/Meta.svelte";
   import PageTitle from '../components/PageTitle.svelte';
   import { page_scroll } from '../store';
+  import { scrollWindowTo } from '../actions/scrollWindowTo';
 
   const meta = {
     title: "About",
@@ -13,11 +13,9 @@
     image: "marker_240.jpg",
     imageAlt: "Weird Square Face",
   };
-
-  onMount(() => {
-    window.scrollTo(0, $page_scroll);
-  })
 </script>
+
+<svelte:window use:scrollWindowTo={$page_scroll} />
 
 <Meta {...meta} />
 

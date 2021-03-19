@@ -1,12 +1,10 @@
 <script>
-  import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   import { prism } from "svelte-prism-action";
   import Meta from "../components/Meta.svelte";
   import PostListItem from "../components/PostListItem.svelte";
   import FooterHeart from "../components/FooterHeart.svelte";
   import PageTitle from "../components/PageTitle.svelte";
-  import { page_scroll } from '../store';
 
   export let content;
   export let params;
@@ -20,10 +18,6 @@
   };
 
   const title = params.title === "Tag" ? `Tag: <q>${params.slug}</q>` : params.title; 
-
-  onMount(() => {
-    window.scrollTo(0, $page_scroll);
-  })
 </script>
 
 <Meta {...meta} />
