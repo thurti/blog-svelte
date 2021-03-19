@@ -37,11 +37,9 @@
     check out my <a href="/about" title="About">About</a> page.
   </p>
 
-  <p class="center" style="margin-top: 5rem">
-    <a href="/about" title="About Me" style="transform: rotate(-6deg)">
-      <GlitchImage src="static/img/head@2x.jpg" width="250" height="250" slize="7" />
-    </a>
-  </p>
+  <a href="/about" title="About Me" class="center" style="margin-top: 5rem; width:100%; transform: rotate(-6deg)">
+    <GlitchImage src="/static/img/head@2x.jpg" width="250" height="250" slize="7" />
+  </a>
 </Page>
 
 <PageTitle title="Recent Posts" h="2" />

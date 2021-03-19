@@ -20,18 +20,12 @@
       <img 
         {src} 
         {alt} 
-        style={`
-          clip-path: inset(0 ${slizes_idx[idx]}% 0 ${slizes_idx_reversed[idx]}%);
-          transform: translate(0,${rand(0,randomize)}%)
-        `}
+        style={`clip-path: inset(0 ${slizes_idx[idx]}% 0 ${slizes_idx_reversed[idx]}%); transform: translate(0,${rand(0,randomize)}%)`}
         >
       <img 
         {src} 
         {alt} 
-        style={`
-          clip-path: inset(${slizes_idx[idx]}% 0 ${slizes_idx_reversed[idx]}% 0);
-          transform: translate(${rand(-randomize,0)}%, 0)
-        `}
+        style={`clip-path: inset(${slizes_idx[idx]}% 0 ${slizes_idx_reversed[idx]}% 0); transform: translate(${rand(-randomize,0)}%, 0)`}
         >
     {/each}
   </div>
