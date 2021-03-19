@@ -9,7 +9,7 @@
   export let content;
   export let params;
 
-  const title = params.title === "Tag" ? `Tag: <q>${params.slug}</q>` : params.title; 
+  const title = params.title === "Tag" ? `Tag: ${params.slug}` : params.title; 
 
   const meta = {
     title: title,
