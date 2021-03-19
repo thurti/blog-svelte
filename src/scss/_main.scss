@@ -131,10 +131,6 @@ img{
 }
 
 .browser{
-  &:not(video){
-    height: max-content;
-  }
-
   margin-top: lines(2);
   overflow: hidden;
 
