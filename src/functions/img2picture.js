@@ -7,7 +7,7 @@ export function img2picture(html, sizes = []) {
   const tmp = document.createElement('div');
 
   images?.forEach(image => {
-    tmp.innerHTML = image;
+    tmp.innerHTML = image.replace(/src="[^"]*"/g, ""); //remove src to prevent loading lo-res img
     const img = tmp.querySelector('img');
 
     const props = {
