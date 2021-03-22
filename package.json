@@ -1,6 +1,6 @@
 {
   "name": "svelte-app",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "browserslist": [
     "defaults"
   ],
@@ -12,8 +12,7 @@
     "start": "sirv public --single",
     "sass": "sass --watch ./src/scss/style.scss ./public/static/build/style.css",
     "sass-build": "sass ./src/scss/style.scss ./public/static/build/style.css && uglifycss --output ./public/static/build/style.css ./public/static/build/style.css",
-    "server": "cd ../blog-server && npm run dev",
-    "compat": "compat --jsEnv ie11 --htmlEnvs ie11 -r -t ./src"
+    "server": "cd ../blog-server && npm run dev"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
