@@ -93,7 +93,7 @@
   <hr>
   <div class="flex">
     <div>
-      <img src="static/img/head@2x.jpg" alt="Face" width="200" height="200" class="clip-circle" style="transform: rotate(-6deg)">
+      <img src="static/img/head_c@2x.jpg" alt="Face" width="200" height="200" class="clip-circle" style="transform: rotate(-6deg)">
     </div>
     <div>
       <h2>Contact Me</h2>

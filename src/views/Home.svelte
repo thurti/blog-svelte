@@ -37,7 +37,7 @@
   </p>
 
   <a href="/about" title="About Me" class="center" style="margin-top: 5rem; width:100%; transform: rotate(-6deg)">
-    <GlitchImage src="/static/img/head@2x.jpg" width="250" height="250" slize="7" />
+    <GlitchImage src="/static/img/head_c@2x.jpg" width="250" height="250" slize="7" />
   </a>
 </Page>
 
