@@ -6,5 +6,5 @@
 </script>
 
 <Page center=true>
-  <ErrorMessage error={prepopulate_content.error} />
+  <ErrorMessage error={prepopulate_content?.error ?? {message: '404 - Page Not Found'}} />
 </Page>
