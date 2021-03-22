@@ -34,13 +34,34 @@
       ;
   }
 
-  @include media-full{
+  .pull-left,
+  .pull-right{
+    margin-top: lines(0.5);
+    padding: 0 lines(0.5);
+    font-size: $font-smaller;
+    align-self: baseline;
+  }
+
+  picture + .pull-right,
+  video + .pull-right{
+    &:before{
+      font-weight: 600;
+      content: 'Fig.: ';
+    }
+  }
+
+  @media (min-width: em($max-width)){
+
     > .pull-left{
       grid-column: left;
     }
     
     > .pull-right{
       grid-column: right;
+    }
+
+    .browser + .pull-right{
+      margin-top: lines(3);
     }
   }
 }

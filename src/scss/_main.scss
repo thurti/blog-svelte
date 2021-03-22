@@ -134,10 +134,6 @@ img{
   margin-top: lines(2);
   overflow: hidden;
 
-  @media (max-width: em($max-width)){
-    margin: lines(1) lines(0.5);
-  }
-
   background: url('/static/img/browser.svg') rgb(51 54 55);
   background-repeat: no-repeat;
   background-size:95%;
