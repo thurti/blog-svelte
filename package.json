@@ -5,7 +5,7 @@
     "defaults"
   ],
   "scripts": {
-    "deploy": "rsync --progress --copy-links -r --exclude '.DS_Store' public/ t3000.uberspace:~/html",
+    "deploy": "rsync --progress -r --exclude '.DS_Store' --exclude 'static/media' public/ t3000.uberspace:~/html && ssh t3000.uberspace 'supervisorctl restart blog-backend'",
     "build": "rollup -c && npm run sass-build",
     "dev": "rollup -c -w & npm run sass & npm run server > /dev/null 2>&1",
     "watch": "rollup -c -w & npm run sass",
