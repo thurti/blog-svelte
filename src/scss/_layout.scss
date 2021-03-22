@@ -34,8 +34,8 @@
       ;
   }
 
-  .pull-left,
-  .pull-right{
+  > .pull-left,
+  > .pull-right{
     margin-top: lines(0.5);
     padding: 0 lines(0.5);
     font-size: $font-smaller;
@@ -51,6 +51,11 @@
   }
 
   @media (min-width: em($max-width)){
+    > .pull-left,
+    > .pull-right{
+      margin-top: lines(1.25);
+    }
+
 
     > .pull-left{
       grid-column: left;
@@ -61,7 +66,7 @@
     }
 
     .browser + .pull-right{
-      margin-top: lines(3);
+      margin-top: lines(3.25);
     }
   }
 }
