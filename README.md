@@ -7,9 +7,12 @@ This is the svelte frontend for my personal blog. It fetches posts from a json a
 ## Routes
 | URL | View | Descrition |
 |-----|------| ---------- |
-| `/` | List.svelte | Linked list of post with preview. |
-| `/tag/:tag` | List.svelte | Linked list of posts for given tag. |
-| `/:slug` | Single.svelte | Renders single post. |
+| `/` | Home.svelte | Index page. |
+| `/articles` | PostList.svelte | Renders list of posts with tag `article`. |
+| `/articles/:slug` | PostSingle.svelte | Renders single post. |
+| `/portfolio` | PortfolioList.svelte | Renders list of posts with tag `portfolio`. |
+| `/portfolio/:slug` | PortfolioSingle.svelte | Renders single portfolio post. |
+| `/tag/:tag` | PostList.svelte | Linked list of posts for given tag. |
 | `/about` | About.svelte | About page. |
 
 ## Uses
