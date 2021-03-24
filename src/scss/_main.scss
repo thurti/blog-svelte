@@ -120,6 +120,12 @@ img{
   border-image-slice: 1;
 }
 
+table{
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+}
+
 .table-equal{
   th{
     font-weight: 600;
@@ -127,6 +133,14 @@ img{
 
   td{
     width: 50%;
+  }
+}
+
+ul.cols-3{
+  columns: auto 2;
+  
+  @include media-medium{
+    columns: auto 3;
   }
 }
 

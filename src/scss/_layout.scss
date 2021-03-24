@@ -95,4 +95,11 @@ footer{
   padding: 0;
 
   justify-content: space-around;
+
+  &.wrap{
+    flex-wrap: wrap;
+    @include media-medium{
+      flex-wrap: nowrap;
+    }
+  }
 }

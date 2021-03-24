@@ -61,7 +61,7 @@
   <h2>🖌 Frameworks</h2>
   <p>I think there is no right or wrong when it comes to frameworks. It is all about which framework fits best for the project and the team. Here are some frameworks I've already worked with.</p>
 
-  <ul style="columns: 3">
+  <ul class="cols-3">
     <li>Svelte</li>
     <li>VueJs</li>
     <li>React</li>
@@ -77,7 +77,7 @@
   </ul>
 
   <h2>🛠 Tools</h2>
-  <ul>
+  <ul class="cols-3">
     <li>Git</li>
     <li>Typescript</li>
     <li>Webpack</li>
@@ -91,7 +91,7 @@
   <h2>👾 What else?</h2>
   <p>I create stock music. You can have a listen on my profile at <a href="https://audiojungle.net/user/thurti">AudioJungle</a>.</p>
   <hr>
-  <div class="flex">
+  <div class="flex wrap">
     <div>
       <img src="static/img/head_c@2x.jpg" alt="Face" width="200" height="200" class="clip-circle" style="transform: rotate(-6deg)">
     </div>
