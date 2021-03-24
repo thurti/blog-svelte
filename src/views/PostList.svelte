@@ -10,7 +10,7 @@
   export let params = {};
 
   const title = params.title === "Tag" ? `Tag: ${params.slug}` : params.title; 
-  const url = params.url.replace(':slug', params.slug);
+  const url = params.url?.replace(':slug', params.slug) ?? params.url;
 
   const meta = {
     title: title,
