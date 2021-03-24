@@ -6,6 +6,7 @@
   export let slug;
   export let category = "articles";
   export let title;
+  export let title_short;
   export let teaser;
   export let preview;
   export let created_at;
@@ -18,7 +19,7 @@
 <a class="post-link no-hover" href="/{category}/{slug}" title={slug}>
   <article class="grid post--listing">
     <PostDate {created_at} format="y m/d" />
-    <PostTitle {title} />
+    <PostTitle title={title_short || title} />
 
     <section class="post__teaser">
       <div class="small post__tags text-capitalize">{tag_list}</div>
