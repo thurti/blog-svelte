@@ -23,7 +23,7 @@
 
 <PageTitle {title} />
 
-<main in:fade={{ duration: 150 }} use:prism>
+<main in:fade={{ duration: 150 }} use:prism={{componentsUrl: "/static/js/prismjs/components"}}>
   {#each content as post}
     <PostListItem {...post} />
   {/each}

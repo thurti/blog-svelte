@@ -19,7 +19,7 @@
   ]);
 </script>
 
-<article class="grid post--single" use:prism>
+<article class="grid post--single" use:prism={{componentsUrl: "/static/js/prismjs/components"}}>
   <hgroup class="post__hgroup">
     <PostDate {created_at} format="m d, y" />
     <PostTitle {title} />

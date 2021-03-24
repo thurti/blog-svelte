@@ -5,14 +5,15 @@
     "defaults"
   ],
   "scripts": {
-    "deploy": "rsync --progress -r --exclude '.DS_Store' --exclude 'static/media' public/ t3000.uberspace:~/html && ssh t3000.uberspace 'supervisorctl restart blog-backend'",
+    "deploy": "npm run copy-prism-components && rsync --progress -r --exclude '.DS_Store' --exclude 'static/media' public/ t3000.uberspace:~/html && ssh t3000.uberspace 'supervisorctl restart blog-backend'",
     "build": "rollup -c && npm run sass-build",
     "dev": "rollup -c -w & npm run sass & npm run server > /dev/null 2>&1",
     "watch": "rollup -c -w & npm run sass",
     "start": "sirv public --single",
     "sass": "sass --watch ./src/scss/style.scss ./public/static/build/style.css",
     "sass-build": "sass ./src/scss/style.scss ./public/static/build/style.css && uglifycss --output ./public/static/build/style.css ./public/static/build/style.css",
-    "server": "cd ../blog-server && npm run dev"
+    "server": "cd ../blog-server && npm run dev",
+    "copy-prism-components": "cp -r ./node_modules/prismjs/components ./public/static/js/prismjs"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
