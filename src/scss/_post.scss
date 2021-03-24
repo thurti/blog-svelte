@@ -16,6 +16,13 @@
       grid-column: bleed;
     }
   }
+
+  @include media-max-large{
+    & > .browser:not(video){
+      margin-left: lines(0.5);
+      margin-right: lines(0.5);
+    }
+  }
 }
 
 .post__date{
