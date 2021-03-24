@@ -10,13 +10,12 @@
   export let params = {};
 
   const title = params.title === "Tag" ? `Tag: ${params.slug}` : params.title; 
+  const url = params.url.replace(':slug', params.slug);
 
   const meta = {
     title: title,
     description: "This is my personal web development journal about things I've done and learned.",
-    url: params.url,
-    image: "marker_240.jpg",
-    imageAlt: "Weird Square Face",
+    url: url
   };
 </script>
 

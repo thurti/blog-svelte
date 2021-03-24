@@ -7,11 +7,9 @@
 
   const meta = {
     title: "About",
-    url: "about",
+    url: "/about",
     description: "Hi, my name is Thomas. I create frontend applications with HTML, CSS and JavaScript.",
-    slug: "about",
-    image: "marker_240.jpg",
-    imageAlt: "Weird Square Face",
+    slug: "about"
   };
 </script>
 

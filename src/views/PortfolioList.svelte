@@ -10,9 +10,7 @@
   const meta = {
     title: "Portfolio",
     description: "This is a selection of work that I have created in recent years.",
-    url: "portfolio",
-    image: "marker_240.jpg",
-    imageAlt: "Weird Square Face",
+    url: "/portfolio"
   };
 </script>
 

@@ -7,7 +7,7 @@
 
   export let title = "";
   export let description = "";
-  export let image = `${config.url}/static/media/marker_240.jpg`;
+  export let image = "static/media/marker_240.jpg";
   export let imageAlt = "Weird square face.";
   export let url = "";
   export let twitterCard = "summary_large_image"; //'summary'

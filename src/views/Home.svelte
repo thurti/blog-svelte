@@ -15,8 +15,6 @@
     title: "Hello",
     description: "Hi, my name is Thomas. I'm a frontend web developer.",
     url: "",
-    image: "marker_240.jpg",
-    imageAlt: "Weird Square Face",
   };
 </script>
 
