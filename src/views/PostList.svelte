@@ -15,7 +15,8 @@
   const meta = {
     title: title,
     description: "This is my personal web development journal about things I've done and learned.",
-    url: url
+    url: url,
+    twitterCard: "summary"
   };
 </script>
 

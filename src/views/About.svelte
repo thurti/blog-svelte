@@ -10,7 +10,8 @@
     title: "About",
     url: "/about",
     description: "Hi, my name is Thomas. I create frontend applications with HTML, CSS and JavaScript.",
-    slug: "about"
+    slug: "about",
+    twitterCard: "summary"
   };
 </script>
 

@@ -10,7 +10,8 @@
   const meta = {
     title: "Portfolio",
     description: "This is a selection of work that I have created in recent years.",
-    url: "/portfolio"
+    url: "/portfolio",
+    twitterCard: "summary"
   };
 </script>
 

@@ -15,6 +15,7 @@
     title: "Hello",
     description: "Hi, my name is Thomas. I'm a frontend web developer.",
     url: "",
+    twitterCard: "summary"
   };
 </script>
 
