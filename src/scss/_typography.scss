@@ -153,3 +153,7 @@ hr{
   @extend .happy-border;
   border-width: 0 0 2px 0;
 }
+
+.smaller{
+  font-size: $font-smaller;
+}

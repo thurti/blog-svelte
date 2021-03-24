@@ -2,6 +2,7 @@
   import Page from '../components/Page.svelte';
   import Meta from "../components/Meta.svelte";
   import PageTitle from '../components/PageTitle.svelte';
+  import FooterImprint from '../components/FooterImprint.svelte';
   import { page_scroll } from '../store';
   import { scrollWindowTo } from '../actions/scrollWindowTo';
 
@@ -106,3 +107,5 @@
     </div>
   </div>
 </Page>
+
+<FooterImprint />

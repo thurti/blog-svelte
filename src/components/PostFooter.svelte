@@ -1,9 +1,12 @@
 <script>
+import FooterImprint from "./FooterImprint.svelte";
+
   export let previous;
   export let next;
 </script>
 
 <footer>
+  <FooterImprint />
   <nav class="nav--post">
     {#if previous}
       <a href="/{previous.slug}" title={previous.slug} class="btn">

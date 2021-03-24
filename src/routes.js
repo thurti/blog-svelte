@@ -4,6 +4,8 @@ import Home from "./views/Home.svelte";
 import PostList from "./views/PostList.svelte";
 import PostSingle from "./views/PostSingle.svelte";
 import About from "./views/About.svelte";
+import Imprint from "./views/Imprint.svelte";
+import Privacy from "./views/Privacy.svelte";
 import NotFound from "./views/NotFound.svelte";
 import PortfolioSingle from "./views/PortfolioSingle.svelte";
 import PortfolioList from "./views/PortfolioList.svelte";
@@ -61,6 +63,20 @@ export const routes = [
     url: "/about",
     title: "About",
     view: About
+  },
+  {
+    name: "Imprint",
+    url: "/imprint",
+    title: "Imprint",
+    view: Imprint,
+    hide: true
+  },
+  {
+    name: "Privacy",
+    url: "/privacy",
+    title: "Privacy",
+    view: Privacy,
+    hide: true
   },
   {
     name: "NotFound",

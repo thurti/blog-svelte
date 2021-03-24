@@ -1,7 +1,7 @@
 <script>
   import { fade } from "svelte/transition";
   import PortfolioListItem from "../components/PortfolioListItem.svelte";
-  import FooterHeart from "../components/FooterHeart.svelte";
+  import FooterImprint from "../components/FooterImprint.svelte";
   import Meta from "../components/Meta.svelte";
   import PageTitle from "../components/PageTitle.svelte";
 
@@ -36,5 +36,5 @@
 </main>
 
 {#if content}
-  <FooterHeart />
+  <FooterImprint />
 {/if}

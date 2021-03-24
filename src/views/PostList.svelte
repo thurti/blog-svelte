@@ -3,7 +3,7 @@
   import { prism } from "svelte-prism-action";
   import Meta from "../components/Meta.svelte";
   import PostListItem from "../components/PostListItem.svelte";
-  import FooterHeart from "../components/FooterHeart.svelte";
+  import FooterImprint from "../components/FooterImprint.svelte";
   import PageTitle from "../components/PageTitle.svelte";
 
   export let content = [];
@@ -38,5 +38,5 @@
 </main>
 
 {#if content}
-  <FooterHeart />
+  <FooterImprint />
 {/if}
