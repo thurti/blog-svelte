@@ -76,6 +76,10 @@ img{
 
   color: $color-bg;
 
+  a{
+    color: $color-bg;
+  }
+
   @include media-dark{
     color: darken($color-bg, 5);
 
@@ -124,6 +128,7 @@ table{
   display: block;
   max-width: 100%;
   overflow: auto;
+  border: 0;
 }
 
 .table-equal{
