@@ -1,6 +1,7 @@
 <script>
   import marked from "marked";
   import { img2picture } from '../functions/img2picture';
+  import BackToTop from "./BackToTop.svelte";
   import PortfolioHero from "./PortfolioHero.svelte";
   import PortfolioInfo from "./PortfolioInfo.svelte";
   import PostDate from "./PostDate.svelte";
@@ -41,4 +42,5 @@
   
 </article>
 
+<BackToTop />
 <PostMeta {tags} />

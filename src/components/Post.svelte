@@ -6,6 +6,7 @@
   import PostTitle from "./PostTitle.svelte";
   import PostMeta from "./PostMeta.svelte";
   import GithubLink from "./GithubLink.svelte";
+  import BackToTop from "./BackToTop.svelte";
 
   export let title;
   export let created_at;
@@ -34,4 +35,5 @@
   {/if}
 </article>
 
+<BackToTop />
 <PostMeta {tags} github_url={github} github_text="Code on Github" />
