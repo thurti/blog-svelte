@@ -44,7 +44,7 @@
           <ul>
             <li>JavaScript/TypeScript</li>
             <li>HTML</li>
-            <li>CSS</li>
+            <li>CSS/SCSS</li>
           </ul>
         </td>
         <td>
@@ -64,14 +64,14 @@
   <ul class="cols-3">
     <li>Svelte</li>
     <li>VueJs</li>
-    <li>React</li>
+    <li>Angular</li>
     <li>Cypress</li>
     <li>Mocha</li>
     <li>Jasmine</li>
     <li>Sinon.JS</li>
+    <li>Ionic Framework</li>
     <li>Express</li>
     <li>Laravel</li>
-    <li>SlimPHP</li>
     <li>Bootstrap</li>
     <li>PHPUnit</li>
   </ul>
