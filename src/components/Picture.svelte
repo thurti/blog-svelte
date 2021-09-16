@@ -1,6 +1,6 @@
 <script>
+  import { onMount } from 'svelte';
   import { config } from '../config';
-
   export let classname;
   export let src;
   export let alt;
@@ -13,6 +13,12 @@
     "webp",
     "jpg"
   ];
+
+  let img;
+
+  onMount(() => {
+    img.src = img.dataset.src;
+  });
 </script>
 
 <picture class={classname}>
@@ -25,7 +31,8 @@
   {/each}
 
   <img 
-    src={`${src}_1200.jpg`}
+    bind:this={img}
+    data-src={`${src}_1200.jpg`}
     {alt}
     {width}
     {height}

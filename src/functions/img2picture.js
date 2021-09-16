@@ -1,4 +1,4 @@
-import Picture from '../components/Picture.svelte';
+import Picture from "../components/Picture.svelte";
 
 export function img2picture(html, sizes = []) {
   if (typeof document === "undefined") return html; //nodejs ssr
@@ -19,8 +19,10 @@ export function img2picture(html, sizes = []) {
       sizes: sizes
     };
 
-    const p = new Picture({target: tmp, props: props});
-    const picture = tmp.querySelector('picture:nth-child(2)').outerHTML;
+    const p = new Picture({ target: tmp, props: props });
+    const picture = tmp
+      .querySelector("picture:nth-child(2)")
+      .outerHTML.replace("data-src", "src");
     html = html.replace(image, picture);
 
     p.$destroy();
