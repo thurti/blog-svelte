@@ -17,7 +17,7 @@
   let img;
 
   onMount(() => {
-    img.src = img.dataset.src;
+    // img.src = img.dataset.src;
   });
 </script>
 
@@ -33,6 +33,7 @@
   <img 
     bind:this={img}
     data-src={`${src}_1200.jpg`}
+    srcset={config.img_sizes.reduce((acc, size) => `${src}_${size}.jpg ${size}w, ${acc}`, '')}
     {alt}
     {width}
     {height}
