@@ -19,6 +19,7 @@
 <svelte:head>
   {#if title}
     <title>{title_site}</title>
+    <link rel="me" href="https://social.anoxinon.de/@thurti">
     <meta name="title" content={title} />
     <meta property="og:title" content={title} />
     <meta property="twitter:title" content={title} />
