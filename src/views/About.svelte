@@ -73,7 +73,7 @@
     <li>Express</li>
     <li>Laravel</li>
     <li>Bootstrap</li>
-    <li>PHPUnit</li>
+    <li>Tailwind</li>
   </ul>
 
   <h2>🛠 Tools</h2>
