@@ -100,10 +100,12 @@
       <p>
         Feel free to contact me<br>
         <a href="mailto:contact@thomashurtig.de">contact@thomashurtig.de</a> <br><br>
-         via Twitter
+        via Github
+        <a href="https://github.com/thurti" title="github">github</a> <br>
+        or Twitter
         <a href="https://twitter.com/_thurti" title="twitter">@_thurti</a> <br>
-        or Github
-        <a href="https://github.com/thurti" title="github">github</a>
+         or Mastodon
+        <a href="https://social.anoxinon.de/@thurti" rel="me" title="mastodon">@thurti@social.anoxinon.de</a>
       </p>
     </div>
   </div>

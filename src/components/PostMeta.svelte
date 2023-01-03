@@ -1,5 +1,6 @@
 <script>
   import GithubLink from "./GithubLink.svelte";
+  import MastodonLink from "./MastodonLink.svelte";
   import Tags from "./Tags.svelte";
   import TwitterLink from "./TwitterLink.svelte";
 
@@ -14,6 +15,7 @@
     <p class="small">
       I'm a freelance frontend web developer based in Germany. <br>
       <TwitterLink text="" /> 
+      <MastodonLink text="" />
       <GithubLink url="https://github.com/thurti" text="" /> <br>
     </p>
     <p class="small">

@@ -1,10 +1,10 @@
-.logo{
+.logo {
   display: block;
   width: lines(1.5);
   height: auto;
   line-height: 0;
 
-  transition: fill .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: fill 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .logo__black {
@@ -18,34 +18,48 @@
 .icon-logo {
   position: relative;
 
-  path{
+  path {
     fill: var(--color-logo-black);
   }
 
-  &:hover{
-    path{
+  &:hover {
+    path {
       fill: var(--color-link-hover);
     }
   }
 }
 
-.logo-github{
+.logo-github {
   height: $font-large;
   top: 0.5rem;
   padding: 0 0.25em;
 
-  &.noText{
+  &.noText {
     top: 0;
   }
 }
 
-.logo-twitter{
+.logo-twitter {
   height: 2.75rem;
   top: 1.45rem;
   left: 0.75rem;
   padding: 0;
 
-  &.noText{
+  &.noText {
     top: 1rem;
+  }
+}
+
+.logo-mastodon {
+  height: $font-large;
+  top: 0.5rem;
+  padding: 0 0.25em;
+
+  &.noText {
+    top: 0;
+  }
+
+  .inner {
+    fill: var(--color-bg) !important;
   }
 }
