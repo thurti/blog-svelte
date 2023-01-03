@@ -1,6 +1,5 @@
-.grid{
-
-  @include media-medium{
+.grid {
+  @include media-medium {
     display: grid;
     max-width: em($max-width);
 
@@ -9,33 +8,32 @@
       *       (---------- BLEED ---------)
       * LEFT | BLEED-L | CENTER | BLEED-R | RIGHT
       */
-      grid-template-columns:
-        [ left-col-start
-          left-start ]
-            minmax(0, 1fr)                //LEFT
-        [ left-end 
-          bleed-start 
-          bleed-l-start ]
-            minmax(auto, lines(4))        //BLEED-L
-        [ bleed-l-end 
-          left-col-end 
-          center-start ] 
-            minmax(auto, lines(24))  //CENTER  
-        [ center-end 
-          right-col-start
-          bleed-r-start ]
-            minmax(auto, lines(4))        //BLEED-R
-        [ bleed-r-end 
-          bleed-end 
-          right-start ]
-            minmax(0, 1fr)                //RIGHT
-        [ right-end
-          right-col-end ]
-      ;
+    grid-template-columns:
+      [ left-col-start
+      left-start ]
+      minmax(0, 1fr) //LEFT
+      [ left-end
+      bleed-start
+      bleed-l-start ]
+      minmax(auto, lines(4)) //BLEED-L
+      [ bleed-l-end
+      left-col-end
+      center-start ]
+      minmax(auto, lines(24)) //CENTER
+      [ center-end
+      right-col-start
+      bleed-r-start ]
+      minmax(auto, lines(4)) //BLEED-R
+      [ bleed-r-end
+      bleed-end
+      right-start ]
+      minmax(0, 1fr) //RIGHT
+      [ right-end
+      right-col-end ];
   }
 
   > .pull-left,
-  > .pull-right{
+  > .pull-right {
     margin-top: lines(0.5);
     padding: 0 lines(0.5);
     font-size: $font-smaller;
@@ -43,29 +41,28 @@
   }
 
   picture + .pull-right,
-  video + .pull-right{
-    &:before{
+  video + .pull-right {
+    &:before {
       font-weight: 600;
-      content: 'Fig.: ';
+      content: "Fig.: ";
     }
   }
 
-  @media (min-width: em($max-width)){
+  @media (min-width: em($max-width)) {
     > .pull-left,
-    > .pull-right{
+    > .pull-right {
       margin-top: lines(1.25);
     }
 
-
-    > .pull-left{
+    > .pull-left {
       grid-column: left;
     }
-    
-    > .pull-right{
+
+    > .pull-right {
       grid-column: right;
     }
 
-    .browser + .pull-right{
+    .browser + .pull-right {
       margin-top: lines(3.25);
     }
   }
@@ -74,31 +71,31 @@
 header,
 .page-title,
 main,
-footer{
+footer {
   margin: 0 auto;
   max-width: em($max-width);
 }
 
-main > *{
-  @include media-max-small{
+main > * {
+  @include media-max-small {
     padding: 0 lines(0.5);
   }
 }
 
-footer{
+footer {
   margin: lines(1) auto 0;
 }
 
-.flex{
+.flex {
   display: flex;
   margin: 0;
   padding: 0;
 
   justify-content: space-around;
 
-  &.wrap{
+  &.wrap {
     flex-wrap: wrap;
-    @include media-medium{
+    @include media-medium {
       flex-wrap: nowrap;
     }
   }

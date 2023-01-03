@@ -1,27 +1,27 @@
-.gallery-portfolio{
+.gallery-portfolio {
   @extend .gallery;
-  
+
   grid-column: span left / right;
 
-  .gallery__item{
+  .gallery__item {
     flex-basis: em(300px);
   }
 
-  .gallery__image{
+  .gallery__image {
     height: auto;
     max-height: 80vh;
 
-    img{
+    img {
       object-position: top;
       padding-top: lines(3.25);
-      
-      @include media-medium{
-          padding-top: lines(4.25);
-        }
+
+      @include media-medium {
+        padding-top: lines(4.25);
+      }
     }
   }
 
-  .gallery__title{
+  .gallery__title {
     position: absolute;
     z-index: 1;
     margin: 0 auto;
@@ -31,8 +31,8 @@
     border: 0;
     border-top: 3px solid black;
 
-    &:not(.animated-bg-color){
-      background:#2e2b33;
+    &:not(.animated-bg-color) {
+      background: #2e2b33;
     }
   }
 }

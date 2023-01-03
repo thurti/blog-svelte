@@ -1,121 +1,127 @@
-.gallery{
+.gallery {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 
-  &.highlight-first{
-
-    .gallery__item{
-      @include media-medium{
-        &:first-child{
+  &.highlight-first {
+    .gallery__item {
+      @include media-medium {
+        &:first-child {
           flex-basis: 100%;
         }
       }
     }
 
-    .gallery__image{
-      @include media-medium{
-        .gallery__item:first-child &{
+    .gallery__image {
+      img {
+        object-position: center;
+      }
+      @include media-medium {
+        .gallery__item:first-child & {
           height: lines(8);
         }
       }
-    }    
+    }
   }
 }
 
-.gallery__item{
+.gallery__item {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0;
 
   margin: 0 lines(0.5) lines(1);
-  
+
   transform: scale(1);
 
-  &:hover{
-    img{
+  &:hover {
+    img {
       filter: hue-rotate(0deg);
       transform: scale(1.05);
     }
   }
 
-  &:active{
-    transform: scale(.995);
+  &:active {
+    transform: scale(0.995);
   }
 
-  & > article{
+  & > article {
     position: relative;
   }
 
-  &:nth-child(2n-1) .gallery__title.animated-bg-color{
+  &:nth-child(2n-1) .gallery__title.animated-bg-color {
     animation-duration: 5s;
     animation-delay: 1s;
   }
 
-  &:nth-child(3n-1) .gallery__title.animated-bg-color{
+  &:nth-child(3n-1) .gallery__title.animated-bg-color {
     animation-duration: 6s;
     animation-delay: 2s;
   }
 
-  &:nth-child(4n-1) .gallery__title.animated-bg-color{
+  &:nth-child(4n-1) .gallery__title.animated-bg-color {
     animation-duration: 7s;
     animation-delay: 3s;
   }
 
-  &:nth-child(5n-1) .gallery__title.animated-bg-color{
+  &:nth-child(5n-1) .gallery__title.animated-bg-color {
     animation-duration: 8s;
     animation-delay: 4s;
   }
 }
 
 .gallery__image,
-.gallery__title{
+.gallery__title {
   margin: 0;
 }
 
-.gallery__title{
+.gallery__title {
   padding-bottom: lines(0.25);
 
   color: $color-bg;
   text-shadow: 0 0 5px #00000033;
 
-  @include media-dark{
+  @include media-dark {
     color: darken($color-bg, 5);
 
-    a{
+    a {
       color: darken($color-bg, 5);
     }
   }
 
   h2,
-  h3{
+  h3 {
     margin-top: 0;
   }
-  
-  @include media-medium{
+
+  @include media-medium {
     padding: lines(0.5);
     height: auto;
   }
-  
+
   text-align: center;
 
-  .post__date{
+  .post__date {
     font-size: $font-smaller;
   }
 }
 
-.gallery__image{
+.gallery__image {
   display: block;
   height: lines(6);
   overflow: hidden;
-  
-  img{
+
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  width: 100%;
+
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition-property: filter, transform;
-    transition-duration: .9s;
+    transition-duration: 0.9s;
     transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     transform: scale(1, 1);
   }
