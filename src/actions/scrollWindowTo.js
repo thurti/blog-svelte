@@ -1,5 +1,9 @@
 export function scrollWindowTo(node, page_scroll) {
   if (typeof window !== "undefined") {
-    window.scrollTo(0, page_scroll);
+    if (window.location.hash) {
+      document.querySelector(window.location.hash)?.scrollIntoView();
+    } else {
+      window.scrollTo(0, page_scroll);
+    }
   }
 }

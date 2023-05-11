@@ -1,12 +1,12 @@
 <script context="module">
   import Navaid from "navaid";
-  
+
   export let router;
 </script>
 
 <script>
   import { onMount, onDestroy } from "svelte";
-  import { url, page_scroll } from '../store';
+  import { url, page_scroll } from "../store";
   import NotFound from "../views/NotFound.svelte";
 
   export let routes = [];
@@ -28,12 +28,18 @@
   }
 
   onMount(() => {
-    router = Navaid("/", () => view = NotFound);
+    router = Navaid("/", () => (view = NotFound));
 
     if (!ssr) {
       routes.forEach((route) => {
         if (route.url) {
           router.on(route.url, (parameter) => {
+            if (
+              typeof window !== "undefined" &&
+              $url === window.location.pathname
+            ) {
+              return;
+            }
 
             params = parameter;
             params.api = route.api;
@@ -43,7 +49,7 @@
             if (typeof window !== "undefined") {
               storeScrollPosition();
             }
-            
+
             view = route.view;
             component = route.component;
           });
@@ -59,5 +65,5 @@
     }
   });
 </script>
-  
+
 <svelte:component this={view} {component} {params} {prepopulate_content} />
