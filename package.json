@@ -11,7 +11,7 @@
     "watch": "rollup -c -w & npm run sass",
     "start": "sirv public --single",
     "sass": "sass --watch ./src/scss/style.scss ./public/static/build/style.css",
-    "sass-build": "sass ./src/scss/style.scss ./public/static/build/style.css && uglifycss --output ./public/static/build/style.css ./public/static/build/style.css",
+    "sass-build": "sass ./src/scss/style.scss ./public/static/build/style.css --style=compressed --no-source-map",
     "server": "cd ../blog-server && npm run dev",
     "copy-prism-components": "cp -r ./node_modules/prismjs/components ./public/static/js/prismjs"
   },
