@@ -36,6 +36,7 @@
           router.on(route.url, (parameter) => {
             if (
               typeof window !== "undefined" &&
+              $url !== "/" &&
               $url === window.location.pathname
             ) {
               return;
