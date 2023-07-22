@@ -1,15 +1,15 @@
 <script>
-  import Page from '../components/Page.svelte';
+  import Page from "../components/Page.svelte";
   import Meta from "../components/Meta.svelte";
-  import PageTitle from '../components/PageTitle.svelte';
-  import { page_scroll } from '../store';
-  import { scrollWindowTo } from '../actions/scrollWindowTo';
+  import PageTitle from "../components/PageTitle.svelte";
+  import { page_scroll } from "../store";
+  import { scrollWindowTo } from "../actions/scrollWindowTo";
 
   const meta = {
     title: "Imprint",
     url: "/imprint",
     description: "",
-    slug: "imprint"
+    slug: "imprint",
   };
 </script>
 
@@ -22,7 +22,10 @@
 <Page center={false}>
   <h2>Accountability</h2>
   <p>
-    Thomas Hurtig <br>
+    Thomas Hurtig <br />
+    c/o IP-Management #15561 <br />
+    Ludwig-Erhard-Straße 18 <br />
+    20459 Hamburg <br /><br />
     E-Mail: <a href="mailto:contact@thomashurtig.de">contact@thomashurtig.de</a>
   </p>
 
